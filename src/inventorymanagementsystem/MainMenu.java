@@ -6,8 +6,6 @@ package inventorymanagementsystem;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.util.Locale;
-import java.util.Vector;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -27,17 +25,24 @@ public class MainMenu extends javax.swing.JFrame {
         //center the Login Form
         this.setLocationRelativeTo(null);
         
-        Table.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
-        Table.getTableHeader().setOpaque(false);
-        Table.getTableHeader().setBackground(new Color(32, 136, 203));
-        Table.getTableHeader().setForeground(new Color(255,255,255));
-        Table.setRowHeight(25);
-        jTabbedPane1.hide();
-        stockFilesPanel.hide();
+        suppliesTable.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        suppliesTable.getTableHeader().setOpaque(false);
+        suppliesTable.getTableHeader().setBackground(new Color(32, 136, 203));
+        suppliesTable.getTableHeader().setForeground(new Color(255,255,255));
+        suppliesTable.setRowHeight(25);
+        tablePanel.hide();
+        suppliesPanel.hide();
         showTableFile();
         jPanel3.hide();
+        stockCardPanel.hide();
+        seppeFolder.hide();
+        seppePanel.hide();
+        seppeCard.hide();
+        ppeFolder.hide();
+        ppePanel.hide();
+        ppeCard.hide();
+        
     }
-   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,41 +65,55 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
+        ppe = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        smppe = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        supplies = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jPanel11 = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         Dashboard = new javax.swing.JPanel();
-        Files = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Inventory = new javax.swing.JPanel();
+        tablePanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        txtFolder = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        suppliesPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        suppliesTable = new javax.swing.JTable();
+        jPanel9 = new javax.swing.JPanel();
+        AddData = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        txtItem = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        txtDescription = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        txtOrder = new javax.swing.JTextField();
+        txtMeasure = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        txtStock = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        stockCardPanel = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
@@ -104,36 +123,108 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         reorderField = new javax.swing.JTextField();
         itemField = new javax.swing.JTextField();
-        descField = new javax.swing.JTextField();
+        descriptionField = new javax.swing.JTextField();
         measureField = new javax.swing.JTextField();
-        itemcodeField = new javax.swing.JTextField();
+        stockField = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        stockFilesPanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Table = new javax.swing.JTable();
-        jPanel14 = new javax.swing.JPanel();
-        AddData = new javax.swing.JButton();
-        txtItem = new javax.swing.JTextField();
-        txtDescription = new javax.swing.JTextField();
-        txtReference = new javax.swing.JTextField();
-        txtReceipt = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        txtMeasure = new javax.swing.JTextField();
-        tablePanel = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel22 = new javax.swing.JLabel();
-        txtFolder = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        Inventory = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        seppeFolder = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        txtFolder1 = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        seppePanel = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        seppeTable = new javax.swing.JTable();
+        jPanel11 = new javax.swing.JPanel();
+        AddData1 = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        txtEntity = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        txtFund = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        txtDes = new javax.swing.JTextField();
+        txtSEPropertyNo = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        txtSEProperty = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        seppeCard = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        entityField = new javax.swing.JTextField();
+        desField = new javax.swing.JTextField();
+        sePropertyNoField = new javax.swing.JTextField();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        sePropertyField = new javax.swing.JTextField();
+        jLabel54 = new javax.swing.JLabel();
+        fundField = new javax.swing.JTextField();
+        ppeFolder = new javax.swing.JPanel();
+        seppeFolder1 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        txtFolder2 = new javax.swing.JTextField();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        ppePanel = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        ppeTable = new javax.swing.JTable();
+        jPanel13 = new javax.swing.JPanel();
+        AddData2 = new javax.swing.JButton();
+        jLabel49 = new javax.swing.JLabel();
+        txtEntityY = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        txtFundD = new javax.swing.JTextField();
+        jLabel55 = new javax.swing.JLabel();
+        txtDesS = new javax.swing.JTextField();
+        txtNumber = new javax.swing.JTextField();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        txtPPE = new javax.swing.JTextField();
+        jButton13 = new javax.swing.JButton();
+        ppeCard = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        entityYField = new javax.swing.JTextField();
+        desSField = new javax.swing.JTextField();
+        numberField = new javax.swing.JTextField();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
+        ppeField = new javax.swing.JTextField();
+        jLabel65 = new javax.swing.JLabel();
+        fundDField = new javax.swing.JTextField();
         UserManagement = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -183,7 +274,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel5.setText("User Management");
         jPanel6.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 120, 30));
 
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 210, 40));
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 210, 40));
 
         jPanel7.setBackground(new java.awt.Color(51, 51, 51));
         jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -193,7 +284,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/dashboard.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/home.png"))); // NOI18N
         jPanel7.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 40, 40));
 
         jLabel7.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
@@ -219,107 +310,126 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/files.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/dashboard.png"))); // NOI18N
+        jLabel8.setToolTipText("");
         jPanel8.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 40, 40));
 
         jLabel9.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Files");
-        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 30, 30));
+        jLabel9.setText("Inventory");
+        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 80, 30));
 
-        jPanel13.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel13.addMouseListener(new java.awt.event.MouseAdapter() {
+        ppe.setBackground(new java.awt.Color(51, 51, 51));
+        ppe.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel13MouseClicked(evt);
+                ppeMouseClicked(evt);
             }
         });
 
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/stocks.png"))); // NOI18N
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/PPE.png"))); // NOI18N
 
         jLabel37.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setText("Stock Card");
+        jLabel37.setText("PPE");
 
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(10, 10, 10)
-                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+        javax.swing.GroupLayout ppeLayout = new javax.swing.GroupLayout(ppe);
+        ppe.setLayout(ppeLayout);
+        ppeLayout.setHorizontalGroup(
+            ppeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ppeLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(68, Short.MAX_VALUE))
+            .addGroup(ppeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ppeLayout.createSequentialGroup()
+                    .addContainerGap(8, Short.MAX_VALUE)
+                    .addComponent(jLabel36)
+                    .addContainerGap(117, Short.MAX_VALUE)))
         );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
+        ppeLayout.setVerticalGroup(
+            ppeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ppeLayout.createSequentialGroup()
+                .addGap(0, 22, Short.MAX_VALUE)
+                .addComponent(jLabel37))
+            .addGroup(ppeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ppeLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel13Layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel8.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 160, 40));
+        jPanel8.add(ppe, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 160, 40));
 
-        jPanel15.setBackground(new java.awt.Color(51, 51, 51));
+        smppe.setBackground(new java.awt.Color(51, 51, 51));
+        smppe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                smppeMouseClicked(evt);
+            }
+        });
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/SMPPE.png"))); // NOI18N
 
         jLabel39.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setText("RSMI");
+        jLabel39.setText("SEPPE");
 
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/supplies.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+        javax.swing.GroupLayout smppeLayout = new javax.swing.GroupLayout(smppe);
+        smppe.setLayout(smppeLayout);
+        smppeLayout.setHorizontalGroup(
+            smppeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(smppeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        smppeLayout.setVerticalGroup(
+            smppeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(smppeLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(smppeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
 
-        jPanel8.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, 40));
+        jPanel8.add(smppe, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, 30));
 
-        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 210, 40));
-
-        jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        supplies.setBackground(new java.awt.Color(51, 51, 51));
+        supplies.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel9MouseClicked(evt);
+                suppliesMouseClicked(evt);
             }
         });
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/inventory_1.png"))); // NOI18N
-        jPanel9.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 40, 40));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/SUPPLIES_1.png"))); // NOI18N
 
-        jLabel11.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Inventory");
-        jPanel9.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 60, 30));
+        jLabel46.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setText("SUPPLIES");
 
-        jPanel2.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 210, 40));
+        javax.swing.GroupLayout suppliesLayout = new javax.swing.GroupLayout(supplies);
+        supplies.setLayout(suppliesLayout);
+        suppliesLayout.setHorizontalGroup(
+            suppliesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(suppliesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel46)
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+        suppliesLayout.setVerticalGroup(
+            suppliesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, suppliesLayout.createSequentialGroup()
+                .addGroup(suppliesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel46)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel8.add(supplies, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 160, 30));
+
+        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 210, 40));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 9)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -333,43 +443,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/image-50x50.jpg"))); // NOI18N
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, 50));
-
-        jPanel11.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel11MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel11MouseEntered(evt);
-            }
-        });
-        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/files.png"))); // NOI18N
-        jPanel11.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 40, 40));
-
-        jLabel31.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel31.setText("Files");
-        jPanel11.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 30, 30));
-
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/files.png"))); // NOI18N
-        jPanel11.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 40, 40));
-
-        jLabel33.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("Files");
-        jPanel11.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 30, 30));
-
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/files.png"))); // NOI18N
-        jPanel11.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 40, 40));
-
-        jLabel35.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel35.setText("Files");
-        jPanel11.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 30, 30));
-
-        jPanel2.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 210, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 73, 210, 560));
 
@@ -417,16 +490,13 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 50));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/dashboard.png"))); // NOI18N
-        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 40, 40));
+        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 40, 40));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/files.png"))); // NOI18N
-        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 40, 40));
-
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/inventory_1.png"))); // NOI18N
-        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 40, 40));
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/home.png"))); // NOI18N
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 40, 40));
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/user.png"))); // NOI18N
-        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 40, 40));
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 40, 40));
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 73, 70, 560));
 
@@ -437,78 +507,322 @@ public class MainMenu extends javax.swing.JFrame {
         Dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jTabbedPane1.addTab("DASHBOARD", Dashboard);
 
-        Files.setBackground(new java.awt.Color(255, 255, 255));
-        Files.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        Files.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Inventory.setBackground(new java.awt.Color(255, 255, 255));
+        Inventory.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        Inventory.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search.png"))); // NOI18N
-        Files.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, -1, -1));
+        tablePanel.setBackground(new java.awt.Color(146, 180, 167));
+        tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        tablePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        Files.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, 270, -1));
-
-        jPanel3.setBackground(new java.awt.Color(0, 102, 102));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel10.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel22.setText("FOLDER NAME: ");
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 110, 30));
 
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("STOCK CARD");
-        jPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 120, -1));
+        txtFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel3.add(txtFolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 250, 30));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        jButton1.setText("Add ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 120, 30));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
+        jButton2.setText("Remove");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 30));
+
+        tablePanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 310, 210));
+
+        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "FOLDERS"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setShowHorizontalLines(true);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTable1);
+
+        tablePanel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 470));
+
+        Inventory.add(tablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
+
+        suppliesPanel.setBackground(new java.awt.Color(146, 180, 167));
+        suppliesPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        suppliesPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        suppliesTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        suppliesTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Item", "Description", "Stock No.", "Re-Oder Point", "Unit of Measurement"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        suppliesTable.setFocusable(false);
+        suppliesTable.setRowHeight(25);
+        suppliesTable.setSelectionBackground(new java.awt.Color(0, 102, 102));
+        suppliesTable.setShowHorizontalLines(true);
+        suppliesTable.setShowVerticalLines(true);
+        suppliesTable.getTableHeader().setReorderingAllowed(false);
+        suppliesTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suppliesTableMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(suppliesTable);
+
+        suppliesPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 772, 474));
+
+        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        AddData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        AddData.setText("ADD DATA");
+        AddData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddDataActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setText("ITEM");
+
+        txtItem.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtItemActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setText("DESCRIPTION");
+
+        txtDescription.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDescription.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDescriptionActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setText("RE-ORDER POINT");
+
+        txtOrder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtOrderActionPerformed(evt);
+            }
+        });
+
+        txtMeasure.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtMeasure.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMeasureActionPerformed(evt);
+            }
+        });
+
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel45.setText("UNIT OF MEASUREMENT");
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel20.setText("STOCK NO.");
+
+        txtStock.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtStock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStockActionPerformed(evt);
+            }
+        });
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
+        jButton3.setText("REMOVE");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(AddData)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+                            .addComponent(txtMeasure, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtOrder, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtStock)
+                            .addComponent(txtItem, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDescription, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel20)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(14, 14, 14))))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtDescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel20)
+                .addGap(4, 4, 4)
+                .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtMeasure, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
+        );
+
+        suppliesPanel.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 300, 360));
+
+        Inventory.add(suppliesPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
+
+        stockCardPanel.setBackground(new java.awt.Color(146, 180, 167));
+        stockCardPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        stockCardPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel12MouseClicked(evt);
+            }
+        });
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel21.setText("STOCK CARD");
+        jPanel12.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 120, -1));
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel24.setText("Unit of Measurement:");
-        jPanel10.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        jPanel12.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel29.setText("Entity Name:");
-        jPanel10.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jPanel12.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
+        jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel40.setText("MGB - CAR");
-        jPanel10.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, -1));
+        jPanel12.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
 
+        jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel41.setText("Re-order Point:");
-        jPanel10.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, -1));
+        jPanel12.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
 
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel42.setText("Item:");
-        jPanel10.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+        jPanel12.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
-        jLabel43.setText("Item Code:");
-        jPanel10.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+        jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel43.setText("Stock No.:");
+        jPanel12.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 80, -1));
 
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel44.setText("Description:");
-        jPanel10.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jPanel12.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         reorderField.setEditable(false);
+        reorderField.setBackground(new java.awt.Color(255, 255, 255));
         reorderField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reorderFieldActionPerformed(evt);
             }
         });
-        jPanel10.add(reorderField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 80, -1));
+        jPanel12.add(reorderField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 270, -1));
 
         itemField.setEditable(false);
-        jPanel10.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 160, -1));
+        itemField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 290, -1));
 
-        descField.setEditable(false);
-        descField.addActionListener(new java.awt.event.ActionListener() {
+        descriptionField.setEditable(false);
+        descriptionField.setBackground(new java.awt.Color(255, 255, 255));
+        descriptionField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descFieldActionPerformed(evt);
+                descriptionFieldActionPerformed(evt);
             }
         });
-        jPanel10.add(descField, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 120, -1));
+        jPanel12.add(descriptionField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 250, -1));
 
         measureField.setEditable(false);
-        jPanel10.add(measureField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 250, -1));
+        measureField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.add(measureField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 580, -1));
 
-        itemcodeField.setEditable(false);
-        jPanel10.add(itemcodeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 110, -1));
+        stockField.setEditable(false);
+        stockField.setBackground(new java.awt.Color(255, 255, 255));
+        stockField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stockFieldActionPerformed(evt);
+            }
+        });
+        jPanel12.add(stockField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 300, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -537,156 +851,55 @@ public class MainMenu extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Date", "Reference", "Receipt", "Issue", "Balance", "# of Days"
+                "Date", "Reference", "Receipt", "Issue", "Balance", "# of Days Consume"
             }
         ));
         jTable2.setShowGrid(true);
-        jTable2.setShowHorizontalLines(true);
-        jTable2.setShowVerticalLines(true);
         jScrollPane3.setViewportView(jTable2);
 
-        jPanel10.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 370, 280));
+        jPanel12.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
 
-        jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 390, 470));
+        stockCardPanel.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
 
-        Files.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 410, 490));
+        jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        stockFilesPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-
-        Table.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item", "Description", "Item Code", "Re-Oder Point", "Unit of Measurement"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        Table.setFocusable(false);
-        Table.setRowHeight(25);
-        Table.setSelectionBackground(new java.awt.Color(0, 102, 102));
-        Table.setShowHorizontalLines(true);
-        Table.setShowVerticalLines(true);
-        Table.getTableHeader().setReorderingAllowed(false);
-        Table.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TableMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(Table);
-
-        jPanel14.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        AddData.setText("ADD DATA");
-        AddData.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
+        jButton4.setText("SAVE");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AddDataActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        jPanel14.add(AddData, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, 170, 30));
+        jPanel10.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 350, 117, -1));
 
-        txtItem.setBackground(new java.awt.Color(0, 102, 102));
-        txtItem.setForeground(new java.awt.Color(255, 255, 255));
-        txtItem.addActionListener(new java.awt.event.ActionListener() {
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
+        jButton5.setText("PRINT");
+        jPanel10.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 118, -1));
+
+        jTextField1.setMinimumSize(new java.awt.Dimension(66, 22));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtItemActionPerformed(evt);
+                jTextField1ActionPerformed(evt);
             }
         });
-        jPanel14.add(txtItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 180, -1));
+        jPanel10.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 8, 224, 30));
 
-        txtDescription.setBackground(new java.awt.Color(0, 102, 102));
-        txtDescription.setForeground(new java.awt.Color(255, 255, 255));
-        txtDescription.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDescriptionActionPerformed(evt);
-            }
-        });
-        jPanel14.add(txtDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 180, -1));
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        jPanel10.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, -1, -1));
 
-        txtReference.setBackground(new java.awt.Color(0, 102, 102));
-        txtReference.setForeground(new java.awt.Color(255, 255, 255));
-        txtReference.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtReferenceActionPerformed(evt);
-            }
-        });
-        jPanel14.add(txtReference, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 180, -1));
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/enter.png"))); // NOI18N
+        jPanel10.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 8, 22, -1));
 
-        txtReceipt.setBackground(new java.awt.Color(0, 102, 102));
-        txtReceipt.setForeground(new java.awt.Color(255, 255, 255));
-        txtReceipt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtReceiptActionPerformed(evt);
-            }
-        });
-        jPanel14.add(txtReceipt, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 170, 20));
+        stockCardPanel.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("RE-ORDER POINT");
-        jPanel14.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 130, -1));
+        Inventory.add(stockCardPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("ITEM");
-        jPanel14.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 40, -1));
+        seppeFolder.setBackground(new java.awt.Color(146, 180, 167));
+        seppeFolder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("DESCRIPTION");
-        jPanel14.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
-
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("ITEM CODE");
-        jPanel14.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 80, -1));
-
-        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel45.setText("UNIT OF MEASUREMENT");
-        jPanel14.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 180, -1));
-
-        txtMeasure.setBackground(new java.awt.Color(0, 102, 102));
-        txtMeasure.setForeground(new java.awt.Color(255, 255, 255));
-        txtMeasure.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMeasureActionPerformed(evt);
-            }
-        });
-        jPanel14.add(txtMeasure, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 170, 20));
-
-        javax.swing.GroupLayout stockFilesPanelLayout = new javax.swing.GroupLayout(stockFilesPanel);
-        stockFilesPanel.setLayout(stockFilesPanelLayout);
-        stockFilesPanelLayout.setHorizontalGroup(
-            stockFilesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1)
-        );
-        stockFilesPanelLayout.setVerticalGroup(
-            stockFilesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(stockFilesPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        Files.add(stockFilesPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 710, 490));
-
-        tablePanel.setBackground(new java.awt.Color(0, 102, 102));
-        tablePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -702,83 +915,752 @@ public class MainMenu extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setShowHorizontalLines(true);
-        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTable3.setShowHorizontalLines(true);
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable1MouseClicked(evt);
+                jTable3MouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(0);
-        }
+        jScrollPane5.setViewportView(jTable3);
 
-        tablePanel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 420));
+        seppeFolder.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 470));
 
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("FOLDER NAME: ");
-        tablePanel.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 440, 110, 30));
+        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtFolder.setBackground(new java.awt.Color(0, 102, 102));
-        txtFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        txtFolder.setForeground(new java.awt.Color(255, 255, 255));
-        txtFolder.addActionListener(new java.awt.event.ActionListener() {
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel32.setText("FOLDER NAME: ");
+        jPanel15.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 110, 30));
+
+        txtFolder1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtFolder1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFolderActionPerformed(evt);
+                txtFolder1ActionPerformed(evt);
             }
         });
-        tablePanel.add(txtFolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, 180, 30));
+        jPanel15.add(txtFolder1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 250, 30));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/folder.png"))); // NOI18N
-        jButton1.setText("Add Folder");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        jButton7.setText("Add ");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton7ActionPerformed(evt);
             }
         });
-        tablePanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, -1, 30));
+        jPanel15.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 120, 30));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton2.setText("Remove Folder");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
+        jButton8.setText("Remove");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton8ActionPerformed(evt);
             }
         });
-        tablePanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, -1, 30));
+        jPanel15.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 30));
 
-        Files.add(tablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1120, 490));
+        seppeFolder.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 310, 210));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel15.setText("ALL UNITS");
-        Files.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 40));
+        Inventory.add(seppeFolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back.png"))); // NOI18N
-        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+        seppePanel.setBackground(new java.awt.Color(146, 180, 167));
+        seppePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        seppeTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        seppeTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Entity Name", "Fund Cluster", "SE Property", "Description", "SE Property No."
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        seppeTable.setFocusable(false);
+        seppeTable.setRowHeight(25);
+        seppeTable.setSelectionBackground(new java.awt.Color(0, 102, 102));
+        seppeTable.setShowHorizontalLines(true);
+        seppeTable.setShowVerticalLines(true);
+        seppeTable.getTableHeader().setReorderingAllowed(false);
+        seppeTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel21MouseClicked(evt);
+                seppeTableMouseClicked(evt);
             }
         });
-        Files.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 10, -1, -1));
+        jScrollPane4.setViewportView(seppeTable);
 
-        jTabbedPane1.addTab("FILES", Files);
+        seppePanel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 772, 474));
 
-        Inventory.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        javax.swing.GroupLayout InventoryLayout = new javax.swing.GroupLayout(Inventory);
-        Inventory.setLayout(InventoryLayout);
-        InventoryLayout.setHorizontalGroup(
-            InventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        AddData1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        AddData1.setText("ADD DATA");
+        AddData1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddData1ActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel23.setText("ENTITY NAME");
+
+        txtEntity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtEntity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEntityActionPerformed(evt);
+            }
+        });
+
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel27.setText("FUND CLUSTER");
+
+        txtFund.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtFund.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFundActionPerformed(evt);
+            }
+        });
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel30.setText("DESCRIPTION");
+
+        txtDes.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDesActionPerformed(evt);
+            }
+        });
+
+        txtSEPropertyNo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtSEPropertyNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSEPropertyNoActionPerformed(evt);
+            }
+        });
+
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel47.setText("SEMI-EXPENDABLE PROPERTY NO.");
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel31.setText("SEMI-EXPENDABLE PROPERTY");
+
+        txtSEProperty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtSEProperty.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSEPropertyActionPerformed(evt);
+            }
+        });
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
+        jButton6.setText("REMOVE");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(AddData1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+                            .addComponent(txtSEPropertyNo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDes, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSEProperty)
+                            .addComponent(txtEntity, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtFund, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel11Layout.createSequentialGroup()
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(14, 14, 14))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel30)
+                            .addComponent(jLabel47))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-        InventoryLayout.setVerticalGroup(
-            InventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtEntity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtFund, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel31)
+                .addGap(4, 4, 4)
+                .addComponent(txtSEProperty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtSEPropertyNo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddData1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
+
+        seppePanel.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 300, 360));
+
+        Inventory.add(seppePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
+
+        seppeCard.setBackground(new java.awt.Color(146, 180, 167));
+        seppeCard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
+        jButton9.setText("SAVE");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 350, 117, -1));
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
+        jButton10.setText("PRINT");
+        jPanel16.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 118, -1));
+
+        jTextField2.setMinimumSize(new java.awt.Dimension(66, 22));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 8, 224, 30));
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        jPanel16.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, -1, -1));
+
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/enter.png"))); // NOI18N
+        jPanel16.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 8, 22, -1));
+
+        seppeCard.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel17MouseClicked(evt);
+            }
+        });
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel35.setText("SEMI-EXPENDABLE PROPERTY CARD");
+        jPanel17.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 320, -1));
+
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel48.setText("Entity Name:");
+        jPanel17.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel51.setText("Semi-Expendable Property:");
+        jPanel17.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel52.setText("Semi-Expendable Property No.:");
+        jPanel17.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 220, 30));
+
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel53.setText("Description:");
+        jPanel17.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
+        entityField.setEditable(false);
+        entityField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.add(entityField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 240, -1));
+
+        desField.setEditable(false);
+        desField.setBackground(new java.awt.Color(255, 255, 255));
+        desField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desFieldActionPerformed(evt);
+            }
+        });
+        jPanel17.add(desField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, -1));
+
+        sePropertyNoField.setEditable(false);
+        sePropertyNoField.setBackground(new java.awt.Color(255, 255, 255));
+        sePropertyNoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sePropertyNoFieldActionPerformed(evt);
+            }
+        });
+        jPanel17.add(sePropertyNoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 132, 160, 20));
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Date", "Reference", "Receipt", "Issue", "Balance", "Amount", "Remarks"
+            }
+        ));
+        jTable4.setShowGrid(true);
+        jScrollPane6.setViewportView(jTable4);
+
+        jPanel17.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
+
+        sePropertyField.setEditable(false);
+        sePropertyField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.add(sePropertyField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 150, -1));
+
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel54.setText("Fund Cluster:");
+        jPanel17.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
+
+        fundField.setEditable(false);
+        fundField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.add(fundField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
+
+        seppeCard.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
+
+        Inventory.add(seppeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
+
+        ppeFolder.setBackground(new java.awt.Color(146, 180, 167));
+
+        seppeFolder1.setBackground(new java.awt.Color(146, 180, 167));
+        seppeFolder1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "FOLDERS"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable5.setShowHorizontalLines(true);
+        jTable5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable5MouseClicked(evt);
+            }
+        });
+        jScrollPane7.setViewportView(jTable5);
+
+        seppeFolder1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 770, 470));
+
+        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel38.setText("FOLDER NAME: ");
+        jPanel18.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 110, 30));
+
+        txtFolder2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtFolder2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFolder2ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(txtFolder2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 250, 30));
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        jButton11.setText("Add ");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 120, 30));
+
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
+        jButton12.setText("Remove");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 30));
+
+        seppeFolder1.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 130, 310, 210));
+
+        javax.swing.GroupLayout ppeFolderLayout = new javax.swing.GroupLayout(ppeFolder);
+        ppeFolder.setLayout(ppeFolderLayout);
+        ppeFolderLayout.setHorizontalGroup(
+            ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1110, Short.MAX_VALUE)
+            .addGroup(ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ppeFolderLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(seppeFolder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        ppeFolderLayout.setVerticalGroup(
+            ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+            .addGroup(ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ppeFolderLayout.createSequentialGroup()
+                    .addGap(0, 5, Short.MAX_VALUE)
+                    .addComponent(seppeFolder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 5, Short.MAX_VALUE)))
+        );
+
+        Inventory.add(ppeFolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
+
+        ppePanel.setBackground(new java.awt.Color(146, 180, 167));
+        ppePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ppeTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ppeTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Entity Name", "Fund Cluster", "PPE", "Description", "Property Number"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        ppeTable.setFocusable(false);
+        ppeTable.setRowHeight(25);
+        ppeTable.setSelectionBackground(new java.awt.Color(0, 102, 102));
+        ppeTable.setShowHorizontalLines(true);
+        ppeTable.setShowVerticalLines(true);
+        ppeTable.getTableHeader().setReorderingAllowed(false);
+        ppeTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ppeTableMouseClicked(evt);
+            }
+        });
+        jScrollPane8.setViewportView(ppeTable);
+
+        ppePanel.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 772, 474));
+
+        jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        AddData2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        AddData2.setText("ADD DATA");
+        AddData2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddData2ActionPerformed(evt);
+            }
+        });
+
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel49.setText("ENTITY NAME");
+
+        txtEntityY.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtEntityY.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEntityYActionPerformed(evt);
+            }
+        });
+
+        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel50.setText("FUND CLUSTER");
+
+        txtFundD.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtFundD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFundDActionPerformed(evt);
+            }
+        });
+
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel55.setText("DESCRIPTION");
+
+        txtDesS.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDesS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDesSActionPerformed(evt);
+            }
+        });
+
+        txtNumber.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumberActionPerformed(evt);
+            }
+        });
+
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel56.setText("PROPERTY NUMBER");
+
+        jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel57.setText("PROPERTY, PLANT AND EQUIPMENT ");
+
+        txtPPE.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtPPE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPPEActionPerformed(evt);
+            }
+        });
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
+        jButton13.setText("REMOVE");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addComponent(AddData2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+                            .addComponent(txtNumber, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDesS, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPPE)
+                            .addComponent(txtEntityY, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtFundD, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel57, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel50, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel49, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(14, 14, 14))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel55)
+                            .addComponent(jLabel56))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel49)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtEntityY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtFundD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel57)
+                .addGap(4, 4, 4)
+                .addComponent(txtPPE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtDesS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddData2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
+        );
+
+        ppePanel.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 300, 360));
+
+        Inventory.add(ppePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
+
+        ppeCard.setBackground(new java.awt.Color(146, 180, 167));
+        ppeCard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
+        jButton14.setText("SAVE");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jPanel19.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 350, 117, -1));
+
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
+        jButton15.setText("PRINT");
+        jPanel19.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 118, -1));
+
+        jTextField3.setMinimumSize(new java.awt.Dimension(66, 22));
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        jPanel19.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 8, 224, 30));
+
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        jPanel19.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, -1, -1));
+
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/enter.png"))); // NOI18N
+        jPanel19.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 8, 22, -1));
+
+        ppeCard.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
+
+        jPanel20.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel20MouseClicked(evt);
+            }
+        });
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel60.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel60.setText("PROPERTY CARD");
+        jPanel20.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 160, -1));
+
+        jLabel61.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel61.setText("Entity Name:");
+        jPanel20.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+
+        jLabel62.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel62.setText("Property, Plant and Equipment:");
+        jPanel20.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+
+        jLabel63.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel63.setText("Property Number:");
+        jPanel20.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 130, 30));
+
+        jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel64.setText("Description:");
+        jPanel20.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
+        entityYField.setEditable(false);
+        entityYField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel20.add(entityYField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 240, -1));
+
+        desSField.setEditable(false);
+        desSField.setBackground(new java.awt.Color(255, 255, 255));
+        desSField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desSFieldActionPerformed(evt);
+            }
+        });
+        jPanel20.add(desSField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, -1));
+
+        numberField.setEditable(false);
+        numberField.setBackground(new java.awt.Color(255, 255, 255));
+        numberField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberFieldActionPerformed(evt);
+            }
+        });
+        jPanel20.add(numberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 132, 250, 20));
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Date", "Reference", "Receipt", "Issue", "Balance", "Amount", "Remarks"
+            }
+        ));
+        jTable6.setShowGrid(true);
+        jScrollPane9.setViewportView(jTable6);
+
+        jPanel20.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
+
+        ppeField.setEditable(false);
+        ppeField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel20.add(ppeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 120, -1));
+
+        jLabel65.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel65.setText("Fund Cluster:");
+        jPanel20.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
+
+        fundDField.setEditable(false);
+        fundDField.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel20.add(fundDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
+
+        ppeCard.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
+
+        Inventory.add(ppeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
         jTabbedPane1.addTab("INVENTORY", Inventory);
 
@@ -786,7 +1668,7 @@ public class MainMenu extends javax.swing.JFrame {
         UserManagement.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jTabbedPane1.addTab("USER MANAGEMENT", UserManagement);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 1120, 580));
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 1130, 590));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -845,7 +1727,46 @@ public class MainMenu extends javax.swing.JFrame {
             x = 210;
         }
     }//GEN-LAST:event_jLabel3MouseClicked
-
+    private void enlarge(){
+        if (x == 210) {
+            jPanel2.setSize(210, 560);
+            Thread th = new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        for (int i = 210; i >= 0; i--) {
+                            Thread.sleep(1);
+                            jPanel2.setSize(i, 560);
+                            
+                        }
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
+            }; th.start();
+            x=0;
+        }
+    }
+    private void small(){
+        if (x == 0){
+            jPanel2.show();
+            jPanel2.setSize(x, 560);
+            Thread th = new Thread(){
+                @Override
+                public void run() {
+                    try { 
+                        for (int i = 0; i<=x; i++) {
+                            Thread.sleep(1);
+                            jPanel2.setSize(i, 560);
+                          }
+                    }catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
+            };th.start();
+            x = 210;
+        }
+    }
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
         labelcolor(jLabel2);
     }//GEN-LAST:event_jLabel2MouseEntered
@@ -880,6 +1801,28 @@ public class MainMenu extends javax.swing.JFrame {
         tblModel.addRow(row1);
         tblModel.addRow(row2);
         tblModel.addRow(row3);
+        
+        jTable3.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 16));
+        jTable3.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        jTable3.setOpaque(false);
+        jTable3.setBackground(new Color(255,255,255));
+        jTable3.setForeground(new Color(32, 136, 203));
+        jTable3.setRowHeight(25);
+        DefaultTableModel tblModel2 = (DefaultTableModel)jTable3.getModel();
+        tblModel2.addRow(row1);
+        tblModel2.addRow(row2);
+        tblModel2.addRow(row3);
+        
+        jTable5.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 16));
+        jTable5.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        jTable5.setOpaque(false);
+        jTable5.setBackground(new Color(255,255,255));
+        jTable5.setForeground(new Color(32, 136, 203));
+        jTable5.setRowHeight(25);
+        DefaultTableModel tblModel3 = (DefaultTableModel)jTable5.getModel();
+        tblModel3.addRow(row1);
+        tblModel3.addRow(row2);
+        tblModel3.addRow(row3);
     }
 
     int filesize = 40;
@@ -893,11 +1836,11 @@ public class MainMenu extends javax.swing.JFrame {
                 @Override
                 public void run() {
                     try {
-                        for (int i = 40; i <= 120; i++) {
+                        for (int i = 40; i <= 160; i++) {
                             Thread.sleep(1);
                             jPanel8.setSize(210, i);
-                            jPanel9.setLocation(0, 240);
-                            jPanel6.setLocation(0,290);
+                            //jPanel9.setLocation(0, 240);
+                            jPanel6.setLocation(0,280);
                    
                             
                         }
@@ -906,20 +1849,19 @@ public class MainMenu extends javax.swing.JFrame {
                     }
                 }
             }; th.start();
-            filesize=120;
+            filesize=160;
         }
         }else if(evt.getClickCount()==2){
-            if (filesize == 120) {
-            jPanel8.setSize(210, 120);
+            if (filesize == 160) {
+            jPanel8.setSize(210, 160);
             Thread th = new Thread() {
                 @Override
                 public void run() {
                     try {
-                        for (int i = 120; i >= 40; i--) {
+                        for (int i = 160; i >= 40; i--) {
                             Thread.sleep(1);
                             jPanel8.setSize(210, i);
-                            jPanel9.setLocation(0, 160);
-                            jPanel6.setLocation(0,210);
+                            jPanel6.setLocation(0,160);
                             
                         }
                     } catch (Exception e) {
@@ -931,17 +1873,58 @@ public class MainMenu extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jPanel8MouseClicked
-
+    private void sideMenu(){
+        jTabbedPane1.setSelectedIndex(1);
+         if (filesize == 40) {
+            jPanel8.setSize(210, 40);
+            Thread th = new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        for (int i = 40; i <= 160; i++) {
+                            Thread.sleep(1);
+                            jPanel8.setSize(210, i);
+                            //jPanel9.setLocation(0, 240);
+                            jPanel6.setLocation(0,280);
+                   
+                            
+                        }
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
+            }; th.start();
+            filesize=160;
+        }
+    }
+    private void sideMenu2(){
+        jTabbedPane1.setSelectedIndex(1);
+        if (filesize == 160) {
+            jPanel8.setSize(210, 160);
+            Thread th = new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        for (int i = 160; i >= 40; i--) {
+                            Thread.sleep(1);
+                            jPanel8.setSize(210, i);
+                            jPanel6.setLocation(0,160);
+                            
+                        }
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
+            }; th.start();
+            filesize=40;
+            }
+    }
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
         jTabbedPane1.setSelectedIndex(0);
     }//GEN-LAST:event_jPanel7MouseClicked
 
-    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
-        jTabbedPane1.setSelectedIndex(2);
-    }//GEN-LAST:event_jPanel9MouseClicked
-
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
-        jTabbedPane1.setSelectedIndex(3);
+        jTabbedPane1.setSelectedIndex(2);
     }//GEN-LAST:event_jPanel6MouseClicked
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
@@ -952,6 +1935,89 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel8MouseEntered
 
+    private void ppeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeMouseClicked
+        jTabbedPane1.setSelectedIndex(1);
+        jPanel3.show();
+        ppeFolder.show();
+        enlarge();
+        sideMenu();
+    }//GEN-LAST:event_ppeMouseClicked
+
+    private void suppliesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesMouseClicked
+        jTabbedPane1.setSelectedIndex(1);
+        jPanel3.show();
+        tablePanel.show();
+        enlarge();
+        sideMenu();
+    }//GEN-LAST:event_suppliesMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        if (!txtFolder.getText().isEmpty()) {
+            String folderName = txtFolder.getText();
+            String row[] = {folderName};
+
+            DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
+            tblModel.addRow(row);
+            txtFolder.setText("");
+        }else {
+            JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        if(evt.getClickCount()==2){
+            int selectedRow = jTable1.getSelectedRow();
+            if(selectedRow != -1){
+                suppliesPanel.show();
+                jPanel3.show();
+                tablePanel.hide();
+                jPanel2.hide();
+            }
+        } 
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void suppliesTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesTableMouseClicked
+        if(evt.getClickCount()==1){
+            int selectedRow = suppliesTable.getSelectedRow();
+            if(selectedRow != -1){
+                itemField.setText(suppliesTable.getValueAt(selectedRow, 0).toString());
+                descriptionField.setText(suppliesTable.getValueAt(selectedRow, 1).toString());
+                stockField.setText(suppliesTable.getValueAt(selectedRow, 2).toString());
+                reorderField.setText(suppliesTable.getValueAt(selectedRow, 3).toString());
+                measureField.setText(suppliesTable.getValueAt(selectedRow, 4).toString());
+                
+                stockCardPanel.show();
+                jPanel9.hide();
+                suppliesPanel.hide();
+                
+            }
+        }
+    }//GEN-LAST:event_suppliesTableMouseClicked
+
+    private void AddDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDataActionPerformed
+        if(txtItem.getText().equals("") || txtDescription.getText().equals("") || txtMeasure.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please Enter All Data! (Exception..Stock No. and Re-Order Point)");
+        }else {
+            String data[] = {txtItem.getText(), txtDescription.getText(), txtStock.getText(), txtOrder.getText(), txtMeasure.getText()};
+
+            DefaultTableModel tblModel = (DefaultTableModel)suppliesTable.getModel();
+
+            tblModel.addRow(data);
+            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            txtItem.setText("");
+            txtDescription.setText("");
+            txtOrder.setText("");
+            txtStock.setText("");
+            txtMeasure.setText("");
+
+        }
+    }//GEN-LAST:event_AddDataActionPerformed
+
     private void txtItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtItemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtItemActionPerformed
@@ -960,118 +2026,297 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescriptionActionPerformed
 
-    private void txtReferenceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReferenceActionPerformed
+    private void txtOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtReferenceActionPerformed
+    }//GEN-LAST:event_txtOrderActionPerformed
 
-    private void txtReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReceiptActionPerformed
+    private void txtMeasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMeasureActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtReceiptActionPerformed
+    }//GEN-LAST:event_txtMeasureActionPerformed
 
-    private void AddDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDataActionPerformed
-        if(txtItem.getText().equals("") || txtDescription.getText().equals("") || txtReference.getText().equals("") 
-                || txtReceipt.getText().equals("") || txtMeasure.getText().isEmpty() )  {
-            JOptionPane.showMessageDialog(this, "Please Enter All Data!");
-        }else {
-            String data[] = {txtItem.getText(), txtDescription.getText(), txtReference.getText(), txtReceipt.getText(), txtMeasure.getText()};
-            
-            DefaultTableModel tblModel = (DefaultTableModel)Table.getModel();
-            
-            tblModel.addRow(data);
-            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
-            txtItem.setText("");
-            txtDescription.setText("");
-            txtReference.setText("");
-            txtReceipt.setText("");
-            txtMeasure.setText("");
-            
-        }
-    }//GEN-LAST:event_AddDataActionPerformed
-
-    private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseClicked
+    private void txtStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel11MouseClicked
+    }//GEN-LAST:event_txtStockActionPerformed
 
-    private void jPanel11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseEntered
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel11MouseEntered
-
-    private void txtFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFolderActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        if (!txtFolder.getText().isEmpty()) {
-            String folderName = txtFolder.getText();
-            String row[] = {folderName};
-        
-            DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
-            tblModel.addRow(row);
-            txtFolder.setText("");   
-        }else {
-            JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        
-        
-        
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jPanel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MouseClicked
-        //jTabbedPane1.setLocation(70, 50);
-        //jTabbedPane1.setSize(1050, 580);
-        jTabbedPane1.show();
-    }//GEN-LAST:event_jPanel13MouseClicked
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void reorderFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reorderFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_reorderFieldActionPerformed
 
-    private void descFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descFieldActionPerformed
+    private void descriptionFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descriptionFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_descFieldActionPerformed
+    }//GEN-LAST:event_descriptionFieldActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void stockFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stockFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_stockFieldActionPerformed
 
-    private void TableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TableMouseClicked
-        if(evt.getClickCount()==1){
-            int selectedRow = Table.getSelectedRow();
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void smppeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smppeMouseClicked
+        jTabbedPane1.setSelectedIndex(1);
+        jPanel3.show();
+        seppeFolder.show();
+        enlarge();
+        sideMenu();
+    }//GEN-LAST:event_smppeMouseClicked
+
+    private void seppeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeTableMouseClicked
+       if(evt.getClickCount()==1){
+            int selectedRow = seppeTable.getSelectedRow();
             if(selectedRow != -1){
-             itemField.setText(Table.getValueAt(selectedRow, 0).toString()); 
-             descField.setText(Table.getValueAt(selectedRow, 1).toString());   
-             itemcodeField.setText(Table.getValueAt(selectedRow, 2).toString());   
-             reorderField.setText(Table.getValueAt(selectedRow, 3).toString());   
-             measureField.setText(Table.getValueAt(selectedRow, 4).toString()); 
+                entityField.setText(seppeTable.getValueAt(selectedRow, 0).toString());
+                fundField.setText(seppeTable.getValueAt(selectedRow, 1).toString());
+                sePropertyField.setText(seppeTable.getValueAt(selectedRow, 2).toString());
+                desField.setText(seppeTable.getValueAt(selectedRow, 3).toString());
+                sePropertyNoField.setText(seppeTable.getValueAt(selectedRow, 4).toString());
+                
+                seppeCard.show();
+                jPanel16.show();
+                jPanel11.hide();
+                seppePanel.hide();
+                
             }
         }
-    }//GEN-LAST:event_TableMouseClicked
+    }//GEN-LAST:event_seppeTableMouseClicked
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+    private void AddData1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData1ActionPerformed
+        if(txtEntity.getText().equals("") || txtFund.getText().equals("") || txtSEProperty.getText().isEmpty()
+                || txtDes.getText().equals("") || txtSEPropertyNo.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Please Enter Data!");
+        }else {
+            String data[] = {txtEntity.getText(), txtFund.getText(), txtSEProperty.getText(), txtDes.getText(), txtSEPropertyNo.getText()};
+
+            DefaultTableModel tblModel = (DefaultTableModel)seppeTable.getModel();
+
+            tblModel.addRow(data);
+            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            txtEntity.setText("");
+            txtFund.setText("");
+            txtSEProperty.setText("");
+            txtDes.setText("");
+            txtSEPropertyNo.setText("");
+
+        }
+    }//GEN-LAST:event_AddData1ActionPerformed
+
+    private void txtEntityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEntityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEntityActionPerformed
+
+    private void txtFundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFundActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFundActionPerformed
+
+    private void txtDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDesActionPerformed
+
+    private void txtSEPropertyNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSEPropertyNoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSEPropertyNoActionPerformed
+
+    private void txtSEPropertyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSEPropertyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSEPropertyActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
         if(evt.getClickCount()==2){
-            int selectedRow = jTable1.getSelectedRow();
-            if(selectedRow != -1){              
-                stockFilesPanel.show();
-                jPanel3.show();
-                tablePanel.hide();
+            int selectedRow = jTable3.getSelectedRow();
+            if(selectedRow != -1){
+                seppePanel.show();
+                jPanel11.show();
+                seppeFolder.hide();
                 jPanel2.hide();
             }
         }
-    }//GEN-LAST:event_jTable1MouseClicked
+    }//GEN-LAST:event_jTable3MouseClicked
 
-    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-
-    }//GEN-LAST:event_jLabel21MouseClicked
-
-    private void txtMeasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMeasureActionPerformed
+    private void txtFolder1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolder1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtMeasureActionPerformed
+    }//GEN-LAST:event_txtFolder1ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+         if (!txtFolder1.getText().isEmpty()) {
+            String folderName = txtFolder1.getText();
+            String row[] = {folderName};
+
+            DefaultTableModel tblModel = (DefaultTableModel)jTable3.getModel();
+            tblModel.addRow(row);
+            txtFolder1.setText("");
+        }else {
+            JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    }
+        private void jTable7MouseClicked(java.awt.event.MouseEvent evt) {                                     
+        if(evt.getClickCount()==2){
+            int selectedRow = jTable3.getSelectedRow();
+            if(selectedRow != -1){
+                seppePanel.show();
+                jPanel11.show();
+                seppeFolder.hide();
+                jPanel2.hide();
+            }
+        } 
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void desFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desFieldActionPerformed
+
+    private void sePropertyNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sePropertyNoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sePropertyNoFieldActionPerformed
+
+    private void jPanel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseClicked
+        
+    }//GEN-LAST:event_jPanel17MouseClicked
+
+    private void jPanel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel12MouseClicked
+
+    private void jTable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseClicked
+        if(evt.getClickCount()==2){
+            int selectedRow = jTable5.getSelectedRow();
+            if(selectedRow != -1){
+                ppePanel.show();
+                jPanel13.show();
+                ppeFolder.hide();
+                jPanel18.hide();
+                jPanel2.hide();
+            }
+        }
+    }//GEN-LAST:event_jTable5MouseClicked
+
+    private void txtFolder2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolder2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFolder2ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+         if (!txtFolder2.getText().isEmpty()) {
+            String folderName = txtFolder2.getText();
+            String row[] = {folderName};
+
+            DefaultTableModel tblModel = (DefaultTableModel)jTable5.getModel();
+            tblModel.addRow(row);
+            txtFolder2.setText("");
+        }else {
+            JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void ppeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeTableMouseClicked
+       if(evt.getClickCount()==1){
+            int selectedRow = ppeTable.getSelectedRow();
+            if(selectedRow != -1){
+                entityYField.setText(ppeTable.getValueAt(selectedRow, 0).toString());
+                fundDField.setText(ppeTable.getValueAt(selectedRow, 1).toString());
+                ppeField.setText(ppeTable.getValueAt(selectedRow, 2).toString());
+                desSField.setText(ppeTable.getValueAt(selectedRow, 3).toString());
+                numberField.setText(ppeTable.getValueAt(selectedRow, 4).toString());
+                
+                ppeCard.show();
+                jPanel19.show();
+                ppePanel.hide();
+                
+            }
+        }
+    }//GEN-LAST:event_ppeTableMouseClicked
+
+    private void AddData2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData2ActionPerformed
+        if(txtEntityY.getText().equals("") || txtFundD.getText().equals("") || txtPPE.getText().isEmpty()
+                || txtDesS.getText().equals("") || txtNumber.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Please Enter Data!");
+        }else {
+            String data[] = {txtEntityY.getText(), txtFundD.getText(), txtPPE.getText(), txtDesS.getText(), txtNumber.getText()};
+
+            DefaultTableModel tblModel = (DefaultTableModel)ppeTable.getModel();
+
+            tblModel.addRow(data);
+            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            txtEntityY.setText("");
+            txtFundD.setText("");
+            txtPPE.setText("");
+            txtDesS.setText("");
+            txtNumber.setText("");
+
+        }
+    }//GEN-LAST:event_AddData2ActionPerformed
+
+    private void txtEntityYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEntityYActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEntityYActionPerformed
+
+    private void txtFundDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFundDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFundDActionPerformed
+
+    private void txtDesSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDesSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDesSActionPerformed
+
+    private void txtNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNumberActionPerformed
+
+    private void txtPPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPPEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPPEActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    
+    
+  
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void desSFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desSFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desSFieldActionPerformed
+
+    private void numberFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numberFieldActionPerformed
+
+    private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel20MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1110,16 +2355,34 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddData;
+    private javax.swing.JButton AddData1;
+    private javax.swing.JButton AddData2;
     private javax.swing.JPanel Dashboard;
-    private javax.swing.JPanel Files;
     private javax.swing.JPanel Inventory;
-    private javax.swing.JTable Table;
     private javax.swing.JPanel UserManagement;
-    private javax.swing.JTextField descField;
+    private javax.swing.JTextField desField;
+    private javax.swing.JTextField desSField;
+    private javax.swing.JTextField descriptionField;
+    private javax.swing.JTextField entityField;
+    private javax.swing.JTextField entityYField;
+    private javax.swing.JTextField fundDField;
+    private javax.swing.JTextField fundField;
     private javax.swing.JTextField itemField;
-    private javax.swing.JTextField itemcodeField;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1160,18 +2423,43 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1182,20 +2470,63 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField measureField;
+    private javax.swing.JTextField numberField;
+    private javax.swing.JPanel ppe;
+    private javax.swing.JPanel ppeCard;
+    private javax.swing.JTextField ppeField;
+    private javax.swing.JPanel ppeFolder;
+    private javax.swing.JPanel ppePanel;
+    private javax.swing.JTable ppeTable;
     private javax.swing.JTextField reorderField;
-    private javax.swing.JPanel stockFilesPanel;
+    private javax.swing.JTextField sePropertyField;
+    private javax.swing.JTextField sePropertyNoField;
+    private javax.swing.JPanel seppeCard;
+    private javax.swing.JPanel seppeFolder;
+    private javax.swing.JPanel seppeFolder1;
+    private javax.swing.JPanel seppePanel;
+    private javax.swing.JTable seppeTable;
+    private javax.swing.JPanel smppe;
+    private javax.swing.JPanel stockCardPanel;
+    private javax.swing.JTextField stockField;
+    private javax.swing.JPanel supplies;
+    private javax.swing.JPanel suppliesPanel;
+    private javax.swing.JTable suppliesTable;
     private javax.swing.JPanel tablePanel;
+    private javax.swing.JTextField txtDes;
+    private javax.swing.JTextField txtDesS;
     private javax.swing.JTextField txtDescription;
+    private javax.swing.JTextField txtEntity;
+    private javax.swing.JTextField txtEntityY;
     private javax.swing.JTextField txtFolder;
+    private javax.swing.JTextField txtFolder1;
+    private javax.swing.JTextField txtFolder2;
+    private javax.swing.JTextField txtFund;
+    private javax.swing.JTextField txtFundD;
     private javax.swing.JTextField txtItem;
     private javax.swing.JTextField txtMeasure;
-    private javax.swing.JTextField txtReceipt;
-    private javax.swing.JTextField txtReference;
+    private javax.swing.JTextField txtNumber;
+    private javax.swing.JTextField txtOrder;
+    private javax.swing.JTextField txtPPE;
+    private javax.swing.JTextField txtSEProperty;
+    private javax.swing.JTextField txtSEPropertyNo;
+    private javax.swing.JTextField txtStock;
     // End of variables declaration//GEN-END:variables
 
     private void labelcolor(JLabel label) {
