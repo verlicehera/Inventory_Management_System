@@ -879,29 +879,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         stockCardTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "Date", "Reference", "Receipt", "Issue", "Balance", "# of Days Consume"
@@ -1414,35 +1392,18 @@ public class MainMenu extends javax.swing.JFrame {
 
         seppeCardTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Date", "Reference", "Receipt", "Issue", "Balance", "Amount", "Remarks"
             }
         ));
         seppeCardTable.setShowGrid(true);
+        seppeCardTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seppeCardTableMouseClicked(evt);
+            }
+        });
         jScrollPane6.setViewportView(seppeCardTable);
 
         seppeCardTablePanel.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
@@ -1873,29 +1834,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         ppeCardTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Date", "Reference", "Receipt", "Issue", "Balance", "Amount", "Remarks"
@@ -2578,9 +2517,12 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDateActionPerformed
 
     private void AddData3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData3ActionPerformed
-
+            
+            int receipt =Integer.parseInt( txtReceipt.getText());
+            int issue = Integer.parseInt(txtIssue.getText());
+            int balance = receipt - issue;
             DefaultTableModel tblModel = (DefaultTableModel)stockCardTable.getModel();
-            tblModel.addRow(new Object[]{txtDate.getText(), txtReference.getText(), txtReceipt.getText(), txtIssue.getText(), txtDays.getText()});
+            tblModel.addRow(new Object[]{txtDate.getText(), txtReference.getText(), txtReceipt.getText(), txtIssue.getText(), balance, txtDays.getText()});
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
             
             txtDate.setText("");
@@ -2629,12 +2571,13 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAmountActionPerformed
 
     private void AddData4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData4ActionPerformed
-        String data[] = {txtDatee.getText(), txtReferencee.getText(), txtReceiptt.getText(), txtIssuee.getText(), txtAmount.getText()};
-
+            int receipt =Integer.parseInt( txtReceiptt.getText());
+            int issue = Integer.parseInt(txtIssuee.getText());
+            int balance = receipt - issue;
             DefaultTableModel tblModel = (DefaultTableModel)seppeCardTable.getModel();
-
-            tblModel.addRow(data);
+            tblModel.addRow(new Object[]{txtDatee.getText(), txtReferencee.getText(), txtReceiptt.getText(), txtIssuee.getText(), balance, txtAmount.getText(), " "});
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            
             txtDatee.setText("");
             txtReferencee.setText("");
             txtReceiptt.setText("");
@@ -2667,12 +2610,13 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAmountttActionPerformed
 
     private void AddData5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData5ActionPerformed
-        String data[] = {txtDateee.getText(), txtReferenceee.getText(), txtReceipttt.getText(), txtIssueee.getText(), txtAmounttt.getText()};
-
+            int receipt =Integer.parseInt( txtReceipttt.getText());
+            int issue = Integer.parseInt(txtIssueee.getText());
+            int balance = receipt - issue;
             DefaultTableModel tblModel = (DefaultTableModel)ppeCardTable.getModel();
-
-            tblModel.addRow(data);
+            tblModel.addRow(new Object[]{txtDateee.getText(), txtReferenceee.getText(), txtReceipttt.getText(), txtIssueee.getText(), balance, txtAmounttt.getText(), " "});
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            
             txtDateee.setText("");
             txtReferenceee.setText("");
             txtReceipttt.setText("");
@@ -2685,7 +2629,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void stockCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTableMouseClicked
-         
+
     }//GEN-LAST:event_stockCardTableMouseClicked
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -2713,6 +2657,10 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel13.show();
         ppePanel.show();
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void seppeCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeCardTableMouseClicked
+         
+    }//GEN-LAST:event_seppeCardTableMouseClicked
 
     /**
      * @param args the command line arguments
