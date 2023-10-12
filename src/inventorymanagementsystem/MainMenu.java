@@ -6,8 +6,14 @@ package inventorymanagementsystem;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -30,6 +36,23 @@ public class MainMenu extends javax.swing.JFrame {
         suppliesTable.getTableHeader().setBackground(new Color(32, 136, 203));
         suppliesTable.getTableHeader().setForeground(new Color(255,255,255));
         suppliesTable.setRowHeight(25);
+        
+        seppeTable.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        seppeTable.getTableHeader().setOpaque(false);
+        seppeTable.getTableHeader().setBackground(new Color(32, 136, 203));
+        seppeTable.getTableHeader().setForeground(new Color(255,255,255));
+        seppeTable.setRowHeight(25);
+        
+        ppeTable.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        ppeTable.getTableHeader().setOpaque(false);
+        ppeTable.getTableHeader().setBackground(new Color(32, 136, 203));
+        ppeTable.getTableHeader().setForeground(new Color(255,255,255));
+        ppeTable.setRowHeight(25);
+        
+        stockCardTable.setRowHeight(20);
+        seppeCardTable.setRowHeight(20);
+        ppeCardTable.setRowHeight(20);
+       
         tablePanel.hide();
         suppliesPanel.hide();
         showTableFile();
@@ -41,6 +64,8 @@ public class MainMenu extends javax.swing.JFrame {
         ppeFolder.hide();
         ppePanel.hide();
         ppeCard.hide();
+        titleCard.hide();
+        
         
     }
 
@@ -112,7 +137,7 @@ public class MainMenu extends javax.swing.JFrame {
         txtStock = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         stockCardPanel = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
+        stockCardTablePanel = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
@@ -127,13 +152,22 @@ public class MainMenu extends javax.swing.JFrame {
         measureField = new javax.swing.JTextField();
         stockField = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        stockCardTable = new javax.swing.JTable();
         jPanel10 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        txtDate = new javax.swing.JTextField();
+        AddData3 = new javax.swing.JButton();
+        jLabel67 = new javax.swing.JLabel();
+        txtReference = new javax.swing.JTextField();
+        jLabel68 = new javax.swing.JLabel();
+        txtReceipt = new javax.swing.JTextField();
+        jLabel69 = new javax.swing.JLabel();
+        txtIssue = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
+        txtDays = new javax.swing.JTextField();
+        jButton10 = new javax.swing.JButton();
         seppeFolder = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -160,12 +194,21 @@ public class MainMenu extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         seppeCard = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        txtDatee = new javax.swing.JTextField();
+        jLabel72 = new javax.swing.JLabel();
+        txtReferencee = new javax.swing.JTextField();
+        jLabel73 = new javax.swing.JLabel();
+        txtReceiptt = new javax.swing.JTextField();
+        jLabel74 = new javax.swing.JLabel();
+        txtIssuee = new javax.swing.JTextField();
+        jLabel75 = new javax.swing.JLabel();
+        txtAmount = new javax.swing.JTextField();
+        AddData4 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
+        seppeCardTablePanel = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
@@ -175,7 +218,7 @@ public class MainMenu extends javax.swing.JFrame {
         desField = new javax.swing.JTextField();
         sePropertyNoField = new javax.swing.JTextField();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        seppeCardTable = new javax.swing.JTable();
         sePropertyField = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
         fundField = new javax.swing.JTextField();
@@ -206,12 +249,21 @@ public class MainMenu extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         ppeCard = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
+        jLabel76 = new javax.swing.JLabel();
+        txtDateee = new javax.swing.JTextField();
+        jLabel77 = new javax.swing.JLabel();
+        txtReferenceee = new javax.swing.JTextField();
+        jLabel78 = new javax.swing.JLabel();
+        txtReceipttt = new javax.swing.JTextField();
+        jLabel79 = new javax.swing.JLabel();
+        txtIssueee = new javax.swing.JTextField();
+        jLabel80 = new javax.swing.JLabel();
+        txtAmounttt = new javax.swing.JTextField();
+        AddData5 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jPanel20 = new javax.swing.JPanel();
+        ppeCardTablePanel = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
@@ -221,10 +273,11 @@ public class MainMenu extends javax.swing.JFrame {
         desSField = new javax.swing.JTextField();
         numberField = new javax.swing.JTextField();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
+        ppeCardTable = new javax.swing.JTable();
         ppeField = new javax.swing.JTextField();
         jLabel65 = new javax.swing.JLabel();
         fundDField = new javax.swing.JTextField();
+        titleCard = new javax.swing.JLabel();
         UserManagement = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -748,46 +801,46 @@ public class MainMenu extends javax.swing.JFrame {
         stockCardPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         stockCardPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel12.addMouseListener(new java.awt.event.MouseAdapter() {
+        stockCardTablePanel.setBackground(new java.awt.Color(255, 255, 255));
+        stockCardTablePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        stockCardTablePanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel12MouseClicked(evt);
+                stockCardTablePanelMouseClicked(evt);
             }
         });
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        stockCardTablePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel21.setText("STOCK CARD");
-        jPanel12.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 120, -1));
+        stockCardTablePanel.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 120, -1));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel24.setText("Unit of Measurement:");
-        jPanel12.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        stockCardTablePanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel29.setText("Entity Name:");
-        jPanel12.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        stockCardTablePanel.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel40.setText("MGB - CAR");
-        jPanel12.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
+        stockCardTablePanel.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
 
         jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel41.setText("Re-order Point:");
-        jPanel12.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
+        stockCardTablePanel.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
 
         jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel42.setText("Item:");
-        jPanel12.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+        stockCardTablePanel.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
         jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel43.setText("Stock No.:");
-        jPanel12.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 80, -1));
+        stockCardTablePanel.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 80, -1));
 
         jLabel44.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel44.setText("Description:");
-        jPanel12.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        stockCardTablePanel.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         reorderField.setEditable(false);
         reorderField.setBackground(new java.awt.Color(255, 255, 255));
@@ -796,11 +849,11 @@ public class MainMenu extends javax.swing.JFrame {
                 reorderFieldActionPerformed(evt);
             }
         });
-        jPanel12.add(reorderField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 270, -1));
+        stockCardTablePanel.add(reorderField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 270, -1));
 
         itemField.setEditable(false);
         itemField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel12.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 290, -1));
+        stockCardTablePanel.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 290, -1));
 
         descriptionField.setEditable(false);
         descriptionField.setBackground(new java.awt.Color(255, 255, 255));
@@ -809,11 +862,11 @@ public class MainMenu extends javax.swing.JFrame {
                 descriptionFieldActionPerformed(evt);
             }
         });
-        jPanel12.add(descriptionField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 250, -1));
+        stockCardTablePanel.add(descriptionField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 250, -1));
 
         measureField.setEditable(false);
         measureField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel12.add(measureField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 580, -1));
+        stockCardTablePanel.add(measureField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 580, -1));
 
         stockField.setEditable(false);
         stockField.setBackground(new java.awt.Color(255, 255, 255));
@@ -822,9 +875,9 @@ public class MainMenu extends javax.swing.JFrame {
                 stockFieldActionPerformed(evt);
             }
         });
-        jPanel12.add(stockField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 300, -1));
+        stockCardTablePanel.add(stockField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 300, -1));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        stockCardTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -854,12 +907,17 @@ public class MainMenu extends javax.swing.JFrame {
                 "Date", "Reference", "Receipt", "Issue", "Balance", "# of Days Consume"
             }
         ));
-        jTable2.setShowGrid(true);
-        jScrollPane3.setViewportView(jTable2);
+        stockCardTable.setShowGrid(true);
+        stockCardTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stockCardTableMouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(stockCardTable);
 
-        jPanel12.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
+        stockCardTablePanel.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
 
-        stockCardPanel.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
+        stockCardPanel.add(stockCardTablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
 
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -871,25 +929,94 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel10.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 350, 117, -1));
+        jPanel10.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 117, 30));
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
-        jButton5.setText("PRINT");
-        jPanel10.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 118, -1));
-
-        jTextField1.setMinimumSize(new java.awt.Dimension(66, 22));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/view.png"))); // NOI18N
+        jButton5.setText("VIEW");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jButton5ActionPerformed(evt);
             }
         });
-        jPanel10.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 8, 224, 30));
+        jPanel10.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 118, 30));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
-        jPanel10.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, -1, -1));
+        jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel66.setText("Date");
+        jPanel10.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/enter.png"))); // NOI18N
-        jPanel10.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 8, 22, -1));
+        txtDate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDateActionPerformed(evt);
+            }
+        });
+        jPanel10.add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
+
+        AddData3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        AddData3.setText("ADD");
+        AddData3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddData3ActionPerformed(evt);
+            }
+        });
+        jPanel10.add(AddData3, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 310, 120, 30));
+
+        jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel67.setText("Reference");
+        jPanel10.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        txtReference.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtReference.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReferenceActionPerformed(evt);
+            }
+        });
+        jPanel10.add(txtReference, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
+
+        jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel68.setText("Receipt");
+        jPanel10.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+
+        txtReceipt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtReceipt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReceiptActionPerformed(evt);
+            }
+        });
+        jPanel10.add(txtReceipt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
+
+        jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel69.setText("Issue");
+        jPanel10.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        txtIssue.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIssue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIssueActionPerformed(evt);
+            }
+        });
+        jPanel10.add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
+
+        jLabel70.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel70.setText("Number of Days Consume");
+        jPanel10.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        txtDays.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDays.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDaysActionPerformed(evt);
+            }
+        });
+        jPanel10.add(txtDays, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
+        jButton10.setText("PRINT");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel10.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 118, 30));
 
         stockCardPanel.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
 
@@ -1136,67 +1263,136 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
-        jButton9.setText("SAVE");
+        jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel71.setText("Date");
+        jPanel16.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        txtDatee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDatee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDateeActionPerformed(evt);
+            }
+        });
+        jPanel16.add(txtDatee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
+
+        jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel72.setText("Reference");
+        jPanel16.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        txtReferencee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtReferencee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReferenceeActionPerformed(evt);
+            }
+        });
+        jPanel16.add(txtReferencee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
+
+        jLabel73.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel73.setText("Receipt");
+        jPanel16.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+
+        txtReceiptt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtReceiptt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReceipttActionPerformed(evt);
+            }
+        });
+        jPanel16.add(txtReceiptt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
+
+        jLabel74.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel74.setText("Issue");
+        jPanel16.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        txtIssuee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIssuee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIssueeActionPerformed(evt);
+            }
+        });
+        jPanel16.add(txtIssuee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
+
+        jLabel75.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel75.setText("Amount");
+        jPanel16.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        txtAmount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtAmount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAmountActionPerformed(evt);
+            }
+        });
+        jPanel16.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
+
+        AddData4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        AddData4.setText("ADD ");
+        AddData4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddData4ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(AddData4, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 310, 120, 30));
+
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
+        jButton16.setText("SAVE");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 117, 30));
+
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
+        jButton17.setText("PRINT");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 118, 30));
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/view.png"))); // NOI18N
+        jButton9.setText("VIEW ");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel16.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 350, 117, -1));
-
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
-        jButton10.setText("PRINT");
-        jPanel16.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 118, -1));
-
-        jTextField2.setMinimumSize(new java.awt.Dimension(66, 22));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel16.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 8, 224, 30));
-
-        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
-        jPanel16.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, -1, -1));
-
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/enter.png"))); // NOI18N
-        jPanel16.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 8, 22, -1));
+        jPanel16.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 118, 30));
 
         seppeCard.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
 
-        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
+        seppeCardTablePanel.setBackground(new java.awt.Color(255, 255, 255));
+        seppeCardTablePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        seppeCardTablePanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel17MouseClicked(evt);
+                seppeCardTablePanelMouseClicked(evt);
             }
         });
-        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        seppeCardTablePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel35.setText("SEMI-EXPENDABLE PROPERTY CARD");
-        jPanel17.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 320, -1));
+        seppeCardTablePanel.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 320, -1));
 
         jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel48.setText("Entity Name:");
-        jPanel17.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+        seppeCardTablePanel.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
         jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel51.setText("Semi-Expendable Property:");
-        jPanel17.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        seppeCardTablePanel.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel52.setText("Semi-Expendable Property No.:");
-        jPanel17.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 220, 30));
+        seppeCardTablePanel.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 220, 30));
 
         jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel53.setText("Description:");
-        jPanel17.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        seppeCardTablePanel.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         entityField.setEditable(false);
         entityField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel17.add(entityField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 240, -1));
+        seppeCardTablePanel.add(entityField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 240, -1));
 
         desField.setEditable(false);
         desField.setBackground(new java.awt.Color(255, 255, 255));
@@ -1205,7 +1401,7 @@ public class MainMenu extends javax.swing.JFrame {
                 desFieldActionPerformed(evt);
             }
         });
-        jPanel17.add(desField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, -1));
+        seppeCardTablePanel.add(desField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, -1));
 
         sePropertyNoField.setEditable(false);
         sePropertyNoField.setBackground(new java.awt.Color(255, 255, 255));
@@ -1214,9 +1410,9 @@ public class MainMenu extends javax.swing.JFrame {
                 sePropertyNoFieldActionPerformed(evt);
             }
         });
-        jPanel17.add(sePropertyNoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 132, 160, 20));
+        seppeCardTablePanel.add(sePropertyNoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 132, 160, 20));
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        seppeCardTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -1246,24 +1442,24 @@ public class MainMenu extends javax.swing.JFrame {
                 "Date", "Reference", "Receipt", "Issue", "Balance", "Amount", "Remarks"
             }
         ));
-        jTable4.setShowGrid(true);
-        jScrollPane6.setViewportView(jTable4);
+        seppeCardTable.setShowGrid(true);
+        jScrollPane6.setViewportView(seppeCardTable);
 
-        jPanel17.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
+        seppeCardTablePanel.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
 
         sePropertyField.setEditable(false);
         sePropertyField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel17.add(sePropertyField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 150, -1));
+        seppeCardTablePanel.add(sePropertyField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 150, -1));
 
         jLabel54.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel54.setText("Fund Cluster:");
-        jPanel17.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
+        seppeCardTablePanel.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
 
         fundField.setEditable(false);
         fundField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel17.add(fundField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
+        seppeCardTablePanel.add(fundField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
 
-        seppeCard.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
+        seppeCard.add(seppeCardTablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
 
         Inventory.add(seppeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -1531,67 +1727,131 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
-        jButton14.setText("SAVE");
+        jLabel76.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel76.setText("Date");
+        jPanel19.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        txtDateee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDateee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDateeeActionPerformed(evt);
+            }
+        });
+        jPanel19.add(txtDateee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
+
+        jLabel77.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel77.setText("Reference");
+        jPanel19.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        txtReferenceee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtReferenceee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReferenceeeActionPerformed(evt);
+            }
+        });
+        jPanel19.add(txtReferenceee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
+
+        jLabel78.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel78.setText("Receipt");
+        jPanel19.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+
+        txtReceipttt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtReceipttt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReceiptttActionPerformed(evt);
+            }
+        });
+        jPanel19.add(txtReceipttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
+
+        jLabel79.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel79.setText("Issue");
+        jPanel19.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        txtIssueee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIssueee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIssueeeActionPerformed(evt);
+            }
+        });
+        jPanel19.add(txtIssueee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
+
+        jLabel80.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel80.setText("Amount");
+        jPanel19.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        txtAmounttt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtAmounttt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAmountttActionPerformed(evt);
+            }
+        });
+        jPanel19.add(txtAmounttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
+
+        AddData5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
+        AddData5.setText("ADD ");
+        AddData5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddData5ActionPerformed(evt);
+            }
+        });
+        jPanel19.add(AddData5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 120, 30));
+
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
+        jButton18.setText("SAVE");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+        jPanel19.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 117, 30));
+
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
+        jButton19.setText("PRINT");
+        jPanel19.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 118, 30));
+
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/view.png"))); // NOI18N
+        jButton14.setText("VIEW ");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
             }
         });
-        jPanel19.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 350, 117, -1));
-
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
-        jButton15.setText("PRINT");
-        jPanel19.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 118, -1));
-
-        jTextField3.setMinimumSize(new java.awt.Dimension(66, 22));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        jPanel19.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 8, 224, 30));
-
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
-        jPanel19.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, -1, -1));
-
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/enter.png"))); // NOI18N
-        jPanel19.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 8, 22, -1));
+        jPanel19.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 118, 30));
 
         ppeCard.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
 
-        jPanel20.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel20.addMouseListener(new java.awt.event.MouseAdapter() {
+        ppeCardTablePanel.setBackground(new java.awt.Color(255, 255, 255));
+        ppeCardTablePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        ppeCardTablePanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel20MouseClicked(evt);
+                ppeCardTablePanelMouseClicked(evt);
             }
         });
-        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ppeCardTablePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel60.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel60.setText("PROPERTY CARD");
-        jPanel20.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 160, -1));
+        ppeCardTablePanel.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 160, -1));
 
         jLabel61.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel61.setText("Entity Name:");
-        jPanel20.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+        ppeCardTablePanel.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
         jLabel62.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel62.setText("Property, Plant and Equipment:");
-        jPanel20.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        ppeCardTablePanel.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         jLabel63.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel63.setText("Property Number:");
-        jPanel20.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 130, 30));
+        ppeCardTablePanel.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 130, 30));
 
         jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel64.setText("Description:");
-        jPanel20.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        ppeCardTablePanel.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         entityYField.setEditable(false);
         entityYField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel20.add(entityYField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 240, -1));
+        ppeCardTablePanel.add(entityYField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 240, -1));
 
         desSField.setEditable(false);
         desSField.setBackground(new java.awt.Color(255, 255, 255));
@@ -1600,7 +1860,7 @@ public class MainMenu extends javax.swing.JFrame {
                 desSFieldActionPerformed(evt);
             }
         });
-        jPanel20.add(desSField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, -1));
+        ppeCardTablePanel.add(desSField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, -1));
 
         numberField.setEditable(false);
         numberField.setBackground(new java.awt.Color(255, 255, 255));
@@ -1609,9 +1869,9 @@ public class MainMenu extends javax.swing.JFrame {
                 numberFieldActionPerformed(evt);
             }
         });
-        jPanel20.add(numberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 132, 250, 20));
+        ppeCardTablePanel.add(numberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 132, 250, 20));
 
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+        ppeCardTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -1641,26 +1901,30 @@ public class MainMenu extends javax.swing.JFrame {
                 "Date", "Reference", "Receipt", "Issue", "Balance", "Amount", "Remarks"
             }
         ));
-        jTable6.setShowGrid(true);
-        jScrollPane9.setViewportView(jTable6);
+        ppeCardTable.setShowGrid(true);
+        jScrollPane9.setViewportView(ppeCardTable);
 
-        jPanel20.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
+        ppeCardTablePanel.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
 
         ppeField.setEditable(false);
         ppeField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel20.add(ppeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 120, -1));
+        ppeCardTablePanel.add(ppeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 120, -1));
 
         jLabel65.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel65.setText("Fund Cluster:");
-        jPanel20.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
+        ppeCardTablePanel.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
 
         fundDField.setEditable(false);
         fundDField.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel20.add(fundDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
+        ppeCardTablePanel.add(fundDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
 
-        ppeCard.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
+        ppeCard.add(ppeCardTablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
 
         Inventory.add(ppeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
+
+        titleCard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        titleCard.setText("PROPERTY, PLANT AND EQUIPMENT");
+        Inventory.add(titleCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 690, 40));
 
         jTabbedPane1.addTab("INVENTORY", Inventory);
 
@@ -1941,6 +2205,9 @@ public class MainMenu extends javax.swing.JFrame {
         ppeFolder.show();
         enlarge();
         sideMenu();
+        
+        titleCard.setText("PROPERTY, PLANT AND EQUIPMENT");
+        titleCard.show();
     }//GEN-LAST:event_ppeMouseClicked
 
     private void suppliesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesMouseClicked
@@ -1949,6 +2216,10 @@ public class MainMenu extends javax.swing.JFrame {
         tablePanel.show();
         enlarge();
         sideMenu();
+        
+        titleCard.hide();
+        titleCard.setText("SUPPLIES AND MATERIALS");
+        titleCard.show();
     }//GEN-LAST:event_suppliesMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -2054,20 +2325,20 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_stockFieldActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton4ActionPerformed
-
+ 
     private void smppeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smppeMouseClicked
         jTabbedPane1.setSelectedIndex(1);
         jPanel3.show();
         seppeFolder.show();
         enlarge();
         sideMenu();
+        
+        titleCard.hide();
+        titleCard.setText("SEMI-EXPENDABLE PROPERTY, PLANT AND EQUIPMENT");
+        titleCard.show();
     }//GEN-LAST:event_smppeMouseClicked
 
     private void seppeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeTableMouseClicked
@@ -2176,29 +2447,9 @@ public class MainMenu extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void stockCardTablePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTablePanelMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void desFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_desFieldActionPerformed
-
-    private void sePropertyNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sePropertyNoFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sePropertyNoFieldActionPerformed
-
-    private void jPanel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseClicked
-        
-    }//GEN-LAST:event_jPanel17MouseClicked
-
-    private void jPanel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel12MouseClicked
+    }//GEN-LAST:event_stockCardTablePanelMouseClicked
 
     private void jTable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseClicked
         if(evt.getClickCount()==2){
@@ -2298,14 +2549,6 @@ public class MainMenu extends javax.swing.JFrame {
   
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
     private void desSFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desSFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_desSFieldActionPerformed
@@ -2314,9 +2557,162 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_numberFieldActionPerformed
 
-    private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked
+    private void ppeCardTablePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeCardTablePanelMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel20MouseClicked
+    }//GEN-LAST:event_ppeCardTablePanelMouseClicked
+
+    private void seppeCardTablePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeCardTablePanelMouseClicked
+
+    }//GEN-LAST:event_seppeCardTablePanelMouseClicked
+
+    private void sePropertyNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sePropertyNoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sePropertyNoFieldActionPerformed
+
+    private void desFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desFieldActionPerformed
+
+    private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
+    
+    }//GEN-LAST:event_txtDateActionPerformed
+
+    private void AddData3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData3ActionPerformed
+
+            DefaultTableModel tblModel = (DefaultTableModel)stockCardTable.getModel();
+            tblModel.addRow(new Object[]{txtDate.getText(), txtReference.getText(), txtReceipt.getText(), txtIssue.getText(), txtDays.getText()});
+            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            
+            txtDate.setText("");
+            txtReference.setText("");
+            txtReceipt.setText("");
+            txtIssue.setText("");
+            txtDays.setText("");
+
+        
+    }//GEN-LAST:event_AddData3ActionPerformed
+
+    private void txtReferenceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReferenceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReferenceActionPerformed
+
+    private void txtReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReceiptActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReceiptActionPerformed
+
+    private void txtIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIssueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIssueActionPerformed
+
+    private void txtDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDaysActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDaysActionPerformed
+
+    private void txtDateeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDateeActionPerformed
+
+    private void txtReferenceeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReferenceeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReferenceeActionPerformed
+
+    private void txtReceipttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReceipttActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReceipttActionPerformed
+
+    private void txtIssueeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIssueeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIssueeActionPerformed
+
+    private void txtAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAmountActionPerformed
+
+    private void AddData4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData4ActionPerformed
+        String data[] = {txtDatee.getText(), txtReferencee.getText(), txtReceiptt.getText(), txtIssuee.getText(), txtAmount.getText()};
+
+            DefaultTableModel tblModel = (DefaultTableModel)seppeCardTable.getModel();
+
+            tblModel.addRow(data);
+            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            txtDatee.setText("");
+            txtReferencee.setText("");
+            txtReceiptt.setText("");
+            txtIssuee.setText("");
+            txtAmount.setText("");
+    }//GEN-LAST:event_AddData4ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void txtDateeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDateeeActionPerformed
+
+    private void txtReferenceeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReferenceeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReferenceeeActionPerformed
+
+    private void txtReceiptttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReceiptttActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReceiptttActionPerformed
+
+    private void txtIssueeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIssueeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIssueeeActionPerformed
+
+    private void txtAmountttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountttActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAmountttActionPerformed
+
+    private void AddData5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData5ActionPerformed
+        String data[] = {txtDateee.getText(), txtReferenceee.getText(), txtReceipttt.getText(), txtIssueee.getText(), txtAmounttt.getText()};
+
+            DefaultTableModel tblModel = (DefaultTableModel)ppeCardTable.getModel();
+
+            tblModel.addRow(data);
+            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            txtDateee.setText("");
+            txtReferenceee.setText("");
+            txtReceipttt.setText("");
+            txtIssueee.setText("");
+            txtAmounttt.setText("");
+    }//GEN-LAST:event_AddData5ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void stockCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTableMouseClicked
+         
+    }//GEN-LAST:event_stockCardTableMouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        stockCardPanel.hide();
+        jPanel9.show();
+        suppliesPanel.show();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        seppeCard.hide();
+        jPanel11.show();
+        seppePanel.show();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        ppeCard.hide();
+        jPanel13.show();
+        ppePanel.show();
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2357,6 +2753,9 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton AddData;
     private javax.swing.JButton AddData1;
     private javax.swing.JButton AddData2;
+    private javax.swing.JButton AddData3;
+    private javax.swing.JButton AddData4;
+    private javax.swing.JButton AddData5;
     private javax.swing.JPanel Dashboard;
     private javax.swing.JPanel Inventory;
     private javax.swing.JPanel UserManagement;
@@ -2374,7 +2773,10 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2389,8 +2791,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -2409,8 +2809,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -2436,8 +2834,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
@@ -2445,21 +2841,33 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -2478,18 +2886,14 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
-    private javax.swing.JTable jTable6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField measureField;
     private javax.swing.JTextField numberField;
     private javax.swing.JPanel ppe;
     private javax.swing.JPanel ppeCard;
+    private javax.swing.JTable ppeCardTable;
+    private javax.swing.JPanel ppeCardTablePanel;
     private javax.swing.JTextField ppeField;
     private javax.swing.JPanel ppeFolder;
     private javax.swing.JPanel ppePanel;
@@ -2498,17 +2902,28 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JTextField sePropertyField;
     private javax.swing.JTextField sePropertyNoField;
     private javax.swing.JPanel seppeCard;
+    private javax.swing.JTable seppeCardTable;
+    private javax.swing.JPanel seppeCardTablePanel;
     private javax.swing.JPanel seppeFolder;
     private javax.swing.JPanel seppeFolder1;
     private javax.swing.JPanel seppePanel;
     private javax.swing.JTable seppeTable;
     private javax.swing.JPanel smppe;
     private javax.swing.JPanel stockCardPanel;
+    private javax.swing.JTable stockCardTable;
+    private javax.swing.JPanel stockCardTablePanel;
     private javax.swing.JTextField stockField;
     private javax.swing.JPanel supplies;
     private javax.swing.JPanel suppliesPanel;
     private javax.swing.JTable suppliesTable;
     private javax.swing.JPanel tablePanel;
+    private javax.swing.JLabel titleCard;
+    private javax.swing.JTextField txtAmount;
+    private javax.swing.JTextField txtAmounttt;
+    private javax.swing.JTextField txtDate;
+    private javax.swing.JTextField txtDatee;
+    private javax.swing.JTextField txtDateee;
+    private javax.swing.JTextField txtDays;
     private javax.swing.JTextField txtDes;
     private javax.swing.JTextField txtDesS;
     private javax.swing.JTextField txtDescription;
@@ -2519,11 +2934,20 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JTextField txtFolder2;
     private javax.swing.JTextField txtFund;
     private javax.swing.JTextField txtFundD;
+    private javax.swing.JTextField txtIssue;
+    private javax.swing.JTextField txtIssuee;
+    private javax.swing.JTextField txtIssueee;
     private javax.swing.JTextField txtItem;
     private javax.swing.JTextField txtMeasure;
     private javax.swing.JTextField txtNumber;
     private javax.swing.JTextField txtOrder;
     private javax.swing.JTextField txtPPE;
+    private javax.swing.JTextField txtReceipt;
+    private javax.swing.JTextField txtReceiptt;
+    private javax.swing.JTextField txtReceipttt;
+    private javax.swing.JTextField txtReference;
+    private javax.swing.JTextField txtReferencee;
+    private javax.swing.JTextField txtReferenceee;
     private javax.swing.JTextField txtSEProperty;
     private javax.swing.JTextField txtSEPropertyNo;
     private javax.swing.JTextField txtStock;

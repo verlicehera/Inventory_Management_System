@@ -38,7 +38,6 @@ public class Login extends javax.swing.JFrame {
         Password = new javax.swing.JPasswordField();
         Login = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -161,14 +160,6 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("I don't have an account.");
         Left.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 411, 134, 26));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/exit.png"))); // NOI18N
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
-        Left.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 6, -1, 37));
-
         jLabel10.setForeground(new java.awt.Color(51, 102, 255));
         jLabel10.setText("Sign up");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -277,10 +268,6 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_LoginMouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-         System.exit(0);
-    }//GEN-LAST:event_jLabel9MouseClicked
-
     private void LoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseExited
         
     }//GEN-LAST:event_LoginMouseExited
@@ -312,7 +299,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

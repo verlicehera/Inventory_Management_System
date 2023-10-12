@@ -40,7 +40,6 @@ public class SignUp extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         confirmpass = new javax.swing.JPasswordField();
-        jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -207,14 +206,6 @@ public class SignUp extends javax.swing.JFrame {
         });
         jPanel3.add(confirmpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 326, 160, 36));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/exit.png"))); // NOI18N
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 4, -1, 37));
-
         jLabel12.setForeground(new java.awt.Color(0, 102, 255));
         jLabel12.setText("Log in");
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -260,10 +251,6 @@ public class SignUp extends javax.swing.JFrame {
     private void confirmpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmpassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_confirmpassActionPerformed
-
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-         System.exit(0);
-    }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         Login LoginFrame = new Login();
@@ -363,7 +350,6 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
