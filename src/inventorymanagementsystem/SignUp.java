@@ -136,11 +136,11 @@ public class SignUp extends javax.swing.JFrame {
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 59, -1, 73));
 
         jLabel2.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel2.setText("Full Name");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 150, 87, -1));
 
-        fname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        fname.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         fname.setForeground(new java.awt.Color(102, 102, 102));
         fname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,11 +150,11 @@ public class SignUp extends javax.swing.JFrame {
         jPanel3.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 176, 350, 37));
 
         jLabel3.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel3.setText("Username");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 225, 87, -1));
 
-        uname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        uname.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         uname.setForeground(new java.awt.Color(102, 102, 102));
         uname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,10 +164,11 @@ public class SignUp extends javax.swing.JFrame {
         jPanel3.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 251, 350, 37));
 
         jLabel4.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel4.setText("Password");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 300, 87, -1));
 
+        pass.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passActionPerformed(evt);
@@ -175,7 +176,8 @@ public class SignUp extends javax.swing.JFrame {
         });
         jPanel3.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 326, 162, 36));
 
-        jLabel9.setText("I have an account ");
+        jLabel9.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        jLabel9.setText("I have an account. ");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 453, -1, 26));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
@@ -195,10 +197,11 @@ public class SignUp extends javax.swing.JFrame {
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 388, 165, 37));
 
         jLabel10.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel10.setText("Confirm Password");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 130, 20));
 
+        confirmpass.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         confirmpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmpassActionPerformed(evt);
@@ -206,8 +209,9 @@ public class SignUp extends javax.swing.JFrame {
         });
         jPanel3.add(confirmpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 326, 160, 36));
 
+        jLabel12.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 102, 255));
-        jLabel12.setText("Log in");
+        jLabel12.setText("Login");
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel12MouseClicked(evt);
@@ -245,7 +249,47 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_passActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String fullname = fname.getText();
+        String username = uname.getText();
+        String password = String.valueOf(pass.getPassword());
+        String password2 = String.valueOf(confirmpass.getPassword());
         
+        if (verifyFields()) {
+            if(!checkUsername(username)) {
+                PreparedStatement ps;
+                ResultSet rs;
+                String registerUserQuery = "INSERT INTO `users`(`Full name`, `username`, `password`) VALUES (?, ?, ?)";
+                
+                try {
+                    
+                    ps = (PreparedStatement) My_CNX.getConnection().prepareStatement(registerUserQuery);
+                    ps.setString(1, fullname);
+                    ps.setString(2, username);
+                    ps.setString(3, password);
+                    
+                    if(ps.executeUpdate() !=0) {
+                        JOptionPane.showMessageDialog(null, "Your Account has been created");
+                        
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Error: Check Your Information");
+                    }
+                    
+                    fname.setText("");
+                    uname.setText("");
+                    pass.setText("");
+                    confirmpass.setText("");
+                    
+                    Login LoginFrame = new Login();
+                    LoginFrame.setVisible(true);
+                    LoginFrame.pack();
+                    LoginFrame.setLocationRelativeTo(null);
+                    this.dispose();
+                    
+                } catch (SQLException ex) {
+                    Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void confirmpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmpassActionPerformed
@@ -297,13 +341,13 @@ public class SignUp extends javax.swing.JFrame {
         if (fullname.trim().equals("") || username.trim().equals("") || password.trim().equals("") 
                 || password2.trim().equals(""))
         {
-            JOptionPane.showMessageDialog(null,"One  or More Fields are Empty!", "Empty Fields", 2);
+            JOptionPane.showMessageDialog(null,"One or More Fields are Empty!", "Empty Fields", 2);
             return false;
         }
         
         //check if the 2 passwords are equals
-        else if(password.equals(password2)) {
-            JOptionPane.showMessageDialog(null,"Password doesn't match!", "Copnfirm Password!", 2);
+        if(!password.equals(password2)) {
+            JOptionPane.showMessageDialog(null,"Password doesn't match!", "Confirm Password!", 2);
             return false;
     }
         //if everything is ok

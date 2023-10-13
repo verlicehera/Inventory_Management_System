@@ -38,7 +38,7 @@ public class Login extends javax.swing.JFrame {
         Password = new javax.swing.JPasswordField();
         Login = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        signUp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -112,7 +112,7 @@ public class Login extends javax.swing.JFrame {
         Left.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 63, -1, 65));
 
         jLabel2.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel2.setText("Username");
         Left.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 164, 73, -1));
 
@@ -126,7 +126,7 @@ public class Login extends javax.swing.JFrame {
         Left.add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 196, 352, 37));
 
         jLabel3.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel3.setText("Password");
         Left.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 251, 70, -1));
 
@@ -157,17 +157,27 @@ public class Login extends javax.swing.JFrame {
         });
         Left.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 349, 177, 32));
 
+        jLabel4.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel4.setText("I don't have an account.");
-        Left.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 411, 134, 26));
+        Left.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 411, 140, 26));
 
-        jLabel10.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel10.setText("Sign up");
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
+        signUp.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        signUp.setForeground(new java.awt.Color(51, 102, 255));
+        signUp.setText("Sign up");
+        signUp.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                signUpFocusGained(evt);
             }
         });
-        Left.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 416, 50, -1));
+        signUp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUpMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                signUpMouseEntered(evt);
+            }
+        });
+        Left.add(signUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 416, 50, -1));
 
         jPanel1.add(Left);
         Left.setBounds(400, 0, 400, 500);
@@ -272,13 +282,21 @@ public class Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_LoginMouseExited
 
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+    private void signUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpMouseClicked
        SignUp signupFrame = new SignUp();
         signupFrame.setVisible(true);
         signupFrame.pack();
         signupFrame.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jLabel10MouseClicked
+    }//GEN-LAST:event_signUpMouseClicked
+
+    private void signUpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpMouseEntered
+
+    }//GEN-LAST:event_signUpMouseEntered
+
+    private void signUpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_signUpFocusGained
+
+    }//GEN-LAST:event_signUpFocusGained
 
     /**
      * @param args the command line arguments
@@ -291,7 +309,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel Right;
     private javax.swing.JTextField Username;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -300,5 +317,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel signUp;
     // End of variables declaration//GEN-END:variables
 }
