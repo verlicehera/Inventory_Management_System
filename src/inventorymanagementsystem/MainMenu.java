@@ -302,7 +302,6 @@ public class MainMenu extends javax.swing.JFrame {
         searchIcon = new javax.swing.JLabel();
         UserManagement = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
         jPanel14 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jLabel59 = new javax.swing.JLabel();
@@ -313,7 +312,6 @@ public class MainMenu extends javax.swing.JFrame {
         positionTxt = new javax.swing.JLabel();
         emailTxt = new javax.swing.JLabel();
         usernameTxt = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         jLabel81 = new javax.swing.JLabel();
@@ -327,6 +325,18 @@ public class MainMenu extends javax.swing.JFrame {
         jButton22 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
+        jLabel85 = new javax.swing.JLabel();
+        cnTxt = new javax.swing.JTextField();
+        jLabel86 = new javax.swing.JLabel();
+        plTxt = new javax.swing.JTextField();
+        jLabel87 = new javax.swing.JLabel();
+        bdtxt = new javax.swing.JTextField();
+        jLabel88 = new javax.swing.JLabel();
+        adTxt = new javax.swing.JTextField();
+        jLabel89 = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
+        emTxt = new javax.swing.JTextField();
+        psTxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1977,7 +1987,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel12.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 520, 20));
 
         jPanel14.setBackground(new java.awt.Color(189, 196, 167));
 
@@ -2048,15 +2057,6 @@ public class MainMenu extends javax.swing.JFrame {
         usernameTxt.setText("@verlice_hera");
         jPanel12.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 210, 20));
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/edit information.png"))); // NOI18N
-        jButton15.setText("Edit Information");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, -1, 31));
-
         jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save edited information.png"))); // NOI18N
         jButton20.setText("Save");
         jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2069,7 +2069,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
-        jPanel12.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 120, 31));
+        jPanel12.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 400, 120, 31));
 
         jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/log out.png"))); // NOI18N
         jButton21.setText("Log out");
@@ -2083,43 +2083,43 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton21ActionPerformed(evt);
             }
         });
-        jPanel12.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 120, 31));
+        jPanel12.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, 120, 31));
 
         jLabel81.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel81.setForeground(new java.awt.Color(102, 102, 102));
         jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/contact.png"))); // NOI18N
         jLabel81.setText("Contact Number");
-        jPanel12.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 240, 22));
+        jPanel12.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 240, 22));
 
         contactTxt.setText("09193792333");
-        jPanel12.add(contactTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 220, 30));
+        jPanel12.add(contactTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 200, 30));
 
         jLabel82.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel82.setForeground(new java.awt.Color(102, 102, 102));
         jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/language.png"))); // NOI18N
         jLabel82.setText("Preferrred Languages");
-        jPanel12.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 170, 22));
+        jPanel12.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 170, 22));
 
         languageTxt.setText("English, Tagalog");
-        jPanel12.add(languageTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 220, 30));
+        jPanel12.add(languageTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 200, 30));
 
         jLabel83.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel83.setForeground(new java.awt.Color(102, 102, 102));
         jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/birthdate.png"))); // NOI18N
         jLabel83.setText("Birthdate");
-        jPanel12.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 240, 22));
+        jPanel12.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 240, 22));
 
         birthdateTxt.setText("October 23, 2000");
-        jPanel12.add(birthdateTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 260, 30));
+        jPanel12.add(birthdateTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 220, 30));
 
         jLabel84.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel84.setForeground(new java.awt.Color(102, 102, 102));
         jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/address.png"))); // NOI18N
         jLabel84.setText("Address");
-        jPanel12.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 240, 20));
+        jPanel12.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 240, 40));
 
         addressTxt.setText("Pagudpud, Ilocos Norte");
-        jPanel12.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 260, 30));
+        jPanel12.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 220, 30));
 
         jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
         jButton22.setText("Delete Account");
@@ -2133,19 +2133,104 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton22ActionPerformed(evt);
             }
         });
-        jPanel12.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, -1, 31));
+        jPanel12.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 160, 31));
 
         jPanel17.setBackground(new java.awt.Color(189, 196, 167));
+
+        jLabel85.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/contact.png"))); // NOI18N
+        jLabel85.setText("Contact Number");
+
+        cnTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cnTxtActionPerformed(evt);
+            }
+        });
+
+        jLabel86.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel86.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/language.png"))); // NOI18N
+        jLabel86.setText("Preferrred Languages");
+
+        jLabel87.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel87.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/birthdate.png"))); // NOI18N
+        jLabel87.setText("Birthdate");
+
+        jLabel88.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel88.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/address.png"))); // NOI18N
+        jLabel88.setText("Address");
+
+        jLabel89.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel89.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/email.png"))); // NOI18N
+        jLabel89.setText("Email");
+
+        jLabel90.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel90.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/position.png"))); // NOI18N
+        jLabel90.setText("Position");
+
+        psTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                psTxtActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 268, Short.MAX_VALUE)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(psTxt)
+                    .addComponent(adTxt)
+                    .addComponent(bdtxt)
+                    .addComponent(plTxt)
+                    .addComponent(cnTxt)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel85)
+                            .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 36, Short.MAX_VALUE))
+                    .addComponent(emTxt))
+                .addContainerGap())
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel85)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(plTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bdtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(adTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(psTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
         );
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
@@ -2165,9 +2250,9 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel12.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 280, 290));
+        jPanel12.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 300, 370));
 
-        UserManagement.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 860, 440));
+        UserManagement.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 860, 450));
 
         jLabel15.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(102, 102, 102));
@@ -2975,10 +3060,6 @@ public class MainMenu extends javax.swing.JFrame {
          
     }//GEN-LAST:event_seppeCardTableMouseClicked
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
-
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
        
     }//GEN-LAST:event_jButton20ActionPerformed
@@ -3010,6 +3091,14 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void cnTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cnTxtActionPerformed
+
+    private void psTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_psTxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3056,12 +3145,16 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel Dashboard;
     private javax.swing.JPanel Inventory;
     private javax.swing.JPanel UserManagement;
+    private javax.swing.JTextField adTxt;
     private javax.swing.JTextField addressTxt;
+    private javax.swing.JTextField bdtxt;
     private javax.swing.JTextField birthdateTxt;
+    private javax.swing.JTextField cnTxt;
     private javax.swing.JTextField contactTxt;
     private javax.swing.JTextField desField;
     private javax.swing.JTextField desSField;
     private javax.swing.JTextField descriptionField;
+    private javax.swing.JTextField emTxt;
     private javax.swing.JLabel emailTxt;
     private javax.swing.JTextField entityField;
     private javax.swing.JTextField entityYField;
@@ -3075,7 +3168,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
@@ -3173,7 +3265,13 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -3207,7 +3305,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable3;
@@ -3215,6 +3312,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JTextField languageTxt;
     private javax.swing.JTextField measureField;
     private javax.swing.JTextField numberField;
+    private javax.swing.JTextField plTxt;
     private javax.swing.JLabel positionTxt;
     private javax.swing.JPanel ppe;
     private javax.swing.JPanel ppeCard;
@@ -3224,6 +3322,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel ppeFolder;
     private javax.swing.JPanel ppePanel;
     private javax.swing.JTable ppeTable;
+    private javax.swing.JTextField psTxt;
     private javax.swing.JTextField reorderField;
     private javax.swing.JTextField sePropertyField;
     private javax.swing.JTextField sePropertyNoField;
