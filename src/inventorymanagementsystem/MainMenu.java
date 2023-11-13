@@ -5,6 +5,7 @@
 package inventorymanagementsystem;
 
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
 import java.awt.Color;
 import java.awt.Font;
 import java.io.BufferedWriter;
@@ -30,9 +31,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MainMenu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainMenu
-     */
+    public Statement st;
     public MainMenu() {
         initComponents();
          
@@ -87,7 +86,7 @@ public class MainMenu extends javax.swing.JFrame {
         
         UserManagement.hide();
         
-        
+        showTableSupplies();
         
         
     }
@@ -2729,10 +2728,36 @@ public class MainMenu extends javax.swing.JFrame {
         }
     } 
      
-    
+   public void showTableSupplies () {
+       try {
+           
+           Connection conn = (Connection) My_CNX.getConnection();
+           st = (Statement) conn.createStatement();
+           String sql = "SELECT * FROM `supplies`";
+           
+           ResultSet rrs = st.executeQuery(sql);
+           
+           DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+           model.setRowCount(0);
+           model.setColumnCount(0);
+           model.addColumn("Folders");
+           
+           while(rrs.next()){
+               String folder = rrs.getString("Folders");
+               
+               Object[] row = {
+                   folder
+               };
+               model.addRow(row);
+           }
+          
+       } catch(Exception e){
+       
+       }
+   } 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                          
+                           
             if (!txtFolder.getText().isEmpty()) {
                 String folderName = txtFolder.getText();
                 String row[] = {folderName};
@@ -2741,6 +2766,7 @@ public class MainMenu extends javax.swing.JFrame {
                 tblModel.addRow(row);
                 saveTableDataToDB();
                 txtFolder.setText("");
+                showTableSupplies();
 
             }else {
                 JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
