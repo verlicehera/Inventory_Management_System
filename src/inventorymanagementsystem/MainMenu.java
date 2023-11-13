@@ -4,13 +4,19 @@
  */
 package inventorymanagementsystem;
 
+import com.mysql.jdbc.Connection;
 import java.awt.Color;
 import java.awt.Font;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -95,6 +101,7 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel17 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -128,9 +135,38 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         Dashboard = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jPanel26 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel92 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel90 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel91 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
+        jLabel86 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jPanel28 = new javax.swing.JPanel();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jPanel29 = new javax.swing.JPanel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel89 = new javax.swing.JLabel();
+        searchBar1 = new javax.swing.JTextField();
         Inventory = new javax.swing.JPanel();
         tablePanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -305,39 +341,34 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jLabel59 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        fullName = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        positionTxt = new javax.swing.JLabel();
-        emailTxt = new javax.swing.JLabel();
-        usernameTxt = new javax.swing.JLabel();
-        jButton20 = new javax.swing.JButton();
+        fullNameTxt = new javax.swing.JLabel();
+        nameTxt = new javax.swing.JLabel();
         jButton21 = new javax.swing.JButton();
         jLabel81 = new javax.swing.JLabel();
         contactTxt = new javax.swing.JTextField();
-        jLabel82 = new javax.swing.JLabel();
         languageTxt = new javax.swing.JTextField();
         jLabel83 = new javax.swing.JLabel();
         birthdateTxt = new javax.swing.JTextField();
-        jLabel84 = new javax.swing.JLabel();
-        addressTxt = new javax.swing.JTextField();
         jButton22 = new javax.swing.JButton();
-        jPanel17 = new javax.swing.JPanel();
-        jPanel20 = new javax.swing.JPanel();
+        jLabel84 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
-        cnTxt = new javax.swing.JTextField();
-        jLabel86 = new javax.swing.JLabel();
-        plTxt = new javax.swing.JTextField();
         jLabel87 = new javax.swing.JLabel();
-        bdtxt = new javax.swing.JTextField();
-        jLabel88 = new javax.swing.JLabel();
-        adTxt = new javax.swing.JTextField();
-        jLabel89 = new javax.swing.JLabel();
-        jLabel90 = new javax.swing.JLabel();
-        emTxt = new javax.swing.JTextField();
-        psTxt = new javax.swing.JTextField();
+        languageTxt1 = new javax.swing.JTextField();
+        languageTxt2 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        birthdateTxt1 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -368,7 +399,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jLabel2MouseExited(evt);
             }
         });
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 40, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 50, -1));
 
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -554,7 +585,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/image-50x50.jpg"))); // NOI18N
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, 50));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 73, 210, 560));
 
@@ -618,50 +649,303 @@ public class MainMenu extends javax.swing.JFrame {
         Dashboard.setBackground(new java.awt.Color(146, 180, 167));
         Dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel23.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel16.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel16.setText("DASHBOARD");
+        jLabel16.setMaximumSize(new java.awt.Dimension(316, 39));
+        jLabel16.setMinimumSize(new java.awt.Dimension(316, 39));
+        jLabel16.setPreferredSize(new java.awt.Dimension(316, 39));
+        Dashboard.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 320, 40));
+
+        jPanel26.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel26.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
+        jPanel26.setMinimumSize(new java.awt.Dimension(610, 421));
+        jPanel26.setPreferredSize(new java.awt.Dimension(610, 421));
+        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel27.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel88.setBackground(new java.awt.Color(0, 102, 153));
+        jLabel88.setFont(new java.awt.Font("Serif", 1, 11)); // NOI18N
+        jLabel88.setText("WELCOME TO INVENTORY MANAGEMENT SYSTEM! ");
+        jPanel27.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 21, 336, 24));
+        jPanel27.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(731, 21, 43, -1));
+        jPanel27.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 21, -1, 30));
+
+        jPanel26.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, -1));
+
+        jPanel20.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel20.setMinimumSize(new java.awt.Dimension(0, 0));
+        jPanel20.setPreferredSize(new java.awt.Dimension(193, 58));
+
+        jTextField1.setFont(new java.awt.Font("Serif", 1, 10)); // NOI18N
+        jTextField1.setText("BALANCE");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jTextField2.setText("   1600");
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel92))
+        );
+
+        jPanel26.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(559, 69, 203, -1));
+
+        jPanel21.setBackground(new java.awt.Color(0, 153, 153));
+
+        jTextField3.setText("    1900");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
+        jTextField4.setFont(new java.awt.Font("Serif", 1, 11)); // NOI18N
+        jTextField4.setText("  RECEIPT");
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addGap(0, 122, Short.MAX_VALUE)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel90)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jPanel26.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 69, -1, 58));
+
+        jPanel23.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel23.setPreferredSize(new java.awt.Dimension(193, 58));
+
+        jTextField5.setFont(new java.awt.Font("Serif", 1, 10)); // NOI18N
+        jTextField5.setText(" ISSUANCE ");
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
+        jTextField6.setText("    300");
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel91))
         );
 
-        Dashboard.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 430, 240));
+        jPanel26.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 69, -1, -1));
 
-        jPanel24.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel93.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel26.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 168, 12, 205));
+
+        jPanel24.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
 
-        Dashboard.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 430, 240));
+        jPanel26.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 168, 189, 244));
 
-        jPanel25.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField7.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jTextField7.setText("Recent Activities");
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+
+        jTextField8.setFont(new java.awt.Font("Serif", 1, 9)); // NOI18N
+        jTextField8.setText("  See All");
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+
+        jPanel28.setBackground(new java.awt.Color(189, 196, 167));
+
+        jTextField9.setText("Issued To:");
+
+        jTextField10.setText("Issued To:");
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
+
+        jTextField11.setText("Issued To:");
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField9)
+                    .addComponent(jTextField10)
+                    .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 890, Short.MAX_VALUE)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(11, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField7)
+                .addGap(11, 11, 11)
+                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 230, Short.MAX_VALUE)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        Dashboard.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 890, 230));
+        jPanel26.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 168, -1, -1));
+
+        jTextField12.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jTextField12.setText("Stocks Status:");
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
+        jPanel29.setLayout(jPanel29Layout);
+        jPanel29Layout.setHorizontalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel29Layout.setVerticalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addComponent(jLabel89)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel26.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 168, -1, 244));
+
+        searchBar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBar1ActionPerformed(evt);
+            }
+        });
+        jPanel26.add(searchBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 214, -1, -1));
+
+        Dashboard.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 780, 450));
 
         jTabbedPane1.addTab("DASHBOARD", Dashboard);
 
@@ -681,6 +965,11 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 110, 30));
 
         txtFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtFolder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFolderActionPerformed(evt);
+            }
+        });
         jPanel3.add(txtFolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 250, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
@@ -2028,48 +2317,10 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel12.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 150, 140));
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel16.setText("Position");
-        jPanel12.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, -1, -1));
-
-        fullName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        fullName.setForeground(new java.awt.Color(102, 102, 102));
-        fullName.setText("Hera Verlice");
-        jPanel12.add(fullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
-
-        jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel34.setText("Email");
-        jPanel12.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
-
-        jLabel58.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel58.setText("Username");
-        jPanel12.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, -1, -1));
-
-        positionTxt.setText("Department Supervisor");
-        jPanel12.add(positionTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 220, 20));
-
-        emailTxt.setText("heraverlice1023@gmail.com");
-        jPanel12.add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 210, 20));
-
-        usernameTxt.setText("@verlice_hera");
-        jPanel12.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 210, 20));
-
-        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save edited information.png"))); // NOI18N
-        jButton20.setText("Save");
-        jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton20MouseClicked(evt);
-            }
-        });
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 400, 120, 31));
+        fullNameTxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fullNameTxt.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel12.add(fullNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
+        jPanel12.add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 130, 30));
 
         jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/log out.png"))); // NOI18N
         jButton21.setText("Log out");
@@ -2083,43 +2334,34 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton21ActionPerformed(evt);
             }
         });
-        jPanel12.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, 120, 31));
+        jPanel12.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 120, 31));
 
         jLabel81.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel81.setForeground(new java.awt.Color(102, 102, 102));
         jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/contact.png"))); // NOI18N
         jLabel81.setText("Contact Number");
-        jPanel12.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 240, 22));
+        jPanel12.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 240, 22));
 
-        contactTxt.setText("09193792333");
-        jPanel12.add(contactTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 200, 30));
+        contactTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contactTxtActionPerformed(evt);
+            }
+        });
+        jPanel12.add(contactTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 190, -1));
 
-        jLabel82.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel82.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/language.png"))); // NOI18N
-        jLabel82.setText("Preferrred Languages");
-        jPanel12.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 170, 22));
-
-        languageTxt.setText("English, Tagalog");
-        jPanel12.add(languageTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 200, 30));
+        languageTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                languageTxtActionPerformed(evt);
+            }
+        });
+        jPanel12.add(languageTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 190, -1));
 
         jLabel83.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel83.setForeground(new java.awt.Color(102, 102, 102));
         jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/birthdate.png"))); // NOI18N
         jLabel83.setText("Birthdate");
-        jPanel12.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 240, 22));
-
-        birthdateTxt.setText("October 23, 2000");
-        jPanel12.add(birthdateTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 220, 30));
-
-        jLabel84.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel84.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/address.png"))); // NOI18N
-        jLabel84.setText("Address");
-        jPanel12.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 240, 40));
-
-        addressTxt.setText("Pagudpud, Ilocos Norte");
-        jPanel12.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 220, 30));
+        jPanel12.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 130, 20));
+        jPanel12.add(birthdateTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 190, -1));
 
         jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
         jButton22.setText("Delete Account");
@@ -2133,131 +2375,54 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton22ActionPerformed(evt);
             }
         });
-        jPanel12.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 160, 31));
+        jPanel12.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 160, 31));
 
-        jPanel17.setBackground(new java.awt.Color(189, 196, 167));
+        jLabel84.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel84.setText("Name");
+        jPanel12.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 100, -1));
 
         jLabel85.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel85.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/contact.png"))); // NOI18N
-        jLabel85.setText("Contact Number");
-
-        cnTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnTxtActionPerformed(evt);
-            }
-        });
-
-        jLabel86.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel86.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/language.png"))); // NOI18N
-        jLabel86.setText("Preferrred Languages");
+        jLabel85.setText("Email");
+        jPanel12.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 130, 30));
 
         jLabel87.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
         jLabel87.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/birthdate.png"))); // NOI18N
-        jLabel87.setText("Birthdate");
+        jLabel87.setText("Position");
+        jPanel12.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 90, 30));
 
-        jLabel88.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel88.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/address.png"))); // NOI18N
-        jLabel88.setText("Address");
-
-        jLabel89.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel89.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/email.png"))); // NOI18N
-        jLabel89.setText("Email");
-
-        jLabel90.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel90.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/position.png"))); // NOI18N
-        jLabel90.setText("Position");
-
-        psTxt.addActionListener(new java.awt.event.ActionListener() {
+        languageTxt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                psTxtActionPerformed(evt);
+                languageTxt1ActionPerformed(evt);
             }
         });
+        jPanel12.add(languageTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 190, -1));
 
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(psTxt)
-                    .addComponent(adTxt)
-                    .addComponent(bdtxt)
-                    .addComponent(plTxt)
-                    .addComponent(cnTxt)
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel85)
-                            .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 36, Short.MAX_VALUE))
-                    .addComponent(emTxt))
-                .addContainerGap())
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel85)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(plTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bdtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(adTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(psTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12))
-        );
+        languageTxt2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                languageTxt2ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(languageTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 158, 190, -1));
 
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel33.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel33.setText("Username");
+        jPanel12.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 150, 30));
 
-        jPanel12.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 300, 370));
+        birthdateTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                birthdateTxt1ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(birthdateTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 262, 190, 30));
 
-        UserManagement.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 860, 450));
+        UserManagement.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 780, 450));
 
         jLabel15.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(102, 102, 102));
         jLabel15.setText("USER MANAGEMENT");
-        UserManagement.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 16, 320, 40));
+        UserManagement.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 320, 40));
 
         jTabbedPane1.addTab("USER MANAGEMENT", UserManagement);
 
@@ -2380,31 +2545,22 @@ public class MainMenu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLabel7MouseClicked
     public void showTableFile(){
-        Object row1[] = {" Medical-Laboratory Supplies"};
-        Object row2[] = {" Office Supplies"};
-        Object row3[] = {" Other Supplies and Materials"};
-        
+       
         jTable1.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 16));
         jTable1.setFont(new Font("Segoe UI", Font.BOLD, 14));
         jTable1.setOpaque(false);
         jTable1.setBackground(new Color(255,255,255));
         jTable1.setForeground(new Color(32, 136, 203));
         jTable1.setRowHeight(25);
-        DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
-        tblModel.addRow(row1);
-        tblModel.addRow(row2);
-        tblModel.addRow(row3);
         
+
         jTable3.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 16));
         jTable3.setFont(new Font("Segoe UI", Font.BOLD, 14));
         jTable3.setOpaque(false);
         jTable3.setBackground(new Color(255,255,255));
         jTable3.setForeground(new Color(32, 136, 203));
         jTable3.setRowHeight(25);
-        DefaultTableModel tblModel2 = (DefaultTableModel)jTable3.getModel();
-        tblModel2.addRow(row1);
-        tblModel2.addRow(row2);
-        tblModel2.addRow(row3);
+       
         
         jTable5.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 16));
         jTable5.setFont(new Font("Segoe UI", Font.BOLD, 14));
@@ -2412,10 +2568,7 @@ public class MainMenu extends javax.swing.JFrame {
         jTable5.setBackground(new Color(255,255,255));
         jTable5.setForeground(new Color(32, 136, 203));
         jTable5.setRowHeight(25);
-        DefaultTableModel tblModel3 = (DefaultTableModel)jTable5.getModel();
-        tblModel3.addRow(row1);
-        tblModel3.addRow(row2);
-        tblModel3.addRow(row3);
+       
     }
 
     int filesize = 40;
@@ -2555,25 +2708,53 @@ public class MainMenu extends javax.swing.JFrame {
         titleCard.show();
     }//GEN-LAST:event_suppliesMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        if (!txtFolder.getText().isEmpty()) {
-            String folderName = txtFolder.getText();
-            String row[] = {folderName};
+     public void saveTableDataToDB() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
-            DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
-            tblModel.addRow(row);
-            txtFolder.setText("");
-        }else {
-            JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
+            String sql = "INSERT INTO supplies (Folders) VALUES (?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setString(1, txtFolder.getText());
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
         }
+    } 
+     
+    
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                          
+            if (!txtFolder.getText().isEmpty()) {
+                String folderName = txtFolder.getText();
+                String row[] = {folderName};
+
+                DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
+                tblModel.addRow(row);
+                saveTableDataToDB();
+                txtFolder.setText("");
+
+            }else {
+                JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+           
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    
+    
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if(evt.getClickCount()==2){
             int selectedRow = jTable1.getSelectedRow();
@@ -2603,7 +2784,32 @@ public class MainMenu extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_suppliesTableMouseClicked
+public void saveTableDataToSuppliesFolder() {
+            System.out.println("Test");
+            DefaultTableModel model = (DefaultTableModel) suppliesTable.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO suppliesfolders (ID,Item, Description, `Stock Number`, `Re-Order Point`, `Unit of Measurement`) VALUES (?,?,?,?,?,?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setInt(1,3);
+            statement.setString(2, txtItem.getText());
+            statement.setString(3, txtDescription.getText());
+            statement.setString(4, txtStock.getText());
+            statement.setString(5, txtOrder.getText());
+            statement.setString(6, txtMeasure.getText());
+            
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+}
     private void AddDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDataActionPerformed
         if(txtItem.getText().equals("") || txtDescription.getText().equals("") || txtMeasure.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please Enter All Data! (Exception..Stock No. and Re-Order Point)");
@@ -2613,6 +2819,7 @@ public class MainMenu extends javax.swing.JFrame {
             DefaultTableModel tblModel = (DefaultTableModel)suppliesTable.getModel();
 
             tblModel.addRow(data);
+            saveTableDataToSuppliesFolder();
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
             txtItem.setText("");
             txtDescription.setText("");
@@ -2695,7 +2902,32 @@ public class MainMenu extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_seppeTableMouseClicked
+public void saveTableDataToSeppeFolder() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) seppeTable.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO `seppefolders`(`ID`, `Entity Name`, `Fund Cluster`, `SE Property`, `Description`, `SE Property Number`) VALUES (?,?,?,?,?,?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setInt(1,2);
+            statement.setString(2, txtEntity.getText());
+            statement.setString(3, txtFund.getText());
+            statement.setString(4, txtSEProperty.getText());
+            statement.setString(5, txtDes.getText());
+            statement.setString(6, txtSEPropertyNo.getText());
+            
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+}
     private void AddData1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData1ActionPerformed
         if(txtEntity.getText().equals("") || txtFund.getText().equals("") || txtSEProperty.getText().isEmpty()
                 || txtDes.getText().equals("") || txtSEPropertyNo.getText().equals("")) {
@@ -2706,6 +2938,7 @@ public class MainMenu extends javax.swing.JFrame {
             DefaultTableModel tblModel = (DefaultTableModel)seppeTable.getModel();
 
             tblModel.addRow(data);
+            saveTableDataToSeppeFolder();
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
             txtEntity.setText("");
             txtFund.setText("");
@@ -2755,7 +2988,26 @@ public class MainMenu extends javax.swing.JFrame {
     private void txtFolder1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolder1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFolder1ActionPerformed
+    public void saveTableDataToDBb() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO seppe (Folders) VALUES (?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setString(1, txtFolder1.getText());
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+    }
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
          if (!txtFolder1.getText().isEmpty()) {
             String folderName = txtFolder1.getText();
@@ -2763,6 +3015,7 @@ public class MainMenu extends javax.swing.JFrame {
 
             DefaultTableModel tblModel = (DefaultTableModel)jTable3.getModel();
             tblModel.addRow(row);
+            saveTableDataToDBb();
             txtFolder1.setText("");
         }else {
             JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
@@ -2803,7 +3056,26 @@ public class MainMenu extends javax.swing.JFrame {
     private void txtFolder2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolder2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFolder2ActionPerformed
+public void saveTableDataToDBc() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO ppe (Folders) VALUES (?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setString(1, txtFolder2.getText());
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+    }
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
          if (!txtFolder2.getText().isEmpty()) {
             String folderName = txtFolder2.getText();
@@ -2811,7 +3083,10 @@ public class MainMenu extends javax.swing.JFrame {
 
             DefaultTableModel tblModel = (DefaultTableModel)jTable5.getModel();
             tblModel.addRow(row);
+            saveTableDataToDBc();
             txtFolder2.setText("");
+            
+            
         }else {
             JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
             jPanel18.hide();
@@ -2839,7 +3114,32 @@ public class MainMenu extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_ppeTableMouseClicked
+public void saveTableDataToPpeFolder() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) ppeTable.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO `ppefolders`(`ID`, `Entity Name`, `Fund Cluster`, `PPE`, `Description`, `Property Number`) VALUES (?,?,?,?,?,?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setInt(1,1);
+            statement.setString(2, txtEntityY.getText());
+            statement.setString(3, txtFundD.getText());
+            statement.setString(4, txtPPE.getText());
+            statement.setString(5, txtDesS.getText());
+            statement.setString(6, txtNumber.getText());
+            
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+}
     private void AddData2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData2ActionPerformed
         if(txtEntityY.getText().equals("") || txtFundD.getText().equals("") || txtPPE.getText().isEmpty()
                 || txtDesS.getText().equals("") || txtNumber.getText().equals("")) {
@@ -2850,6 +3150,7 @@ public class MainMenu extends javax.swing.JFrame {
             DefaultTableModel tblModel = (DefaultTableModel)ppeTable.getModel();
 
             tblModel.addRow(data);
+            saveTableDataToPpeFolder();
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
             txtEntityY.setText("");
             txtFundD.setText("");
@@ -2913,7 +3214,26 @@ public class MainMenu extends javax.swing.JFrame {
     private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
     
     }//GEN-LAST:event_txtDateActionPerformed
+public void saveTableDataToSuppliesCard() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) stockCardTable.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO suppliesfolders (Folders) VALUES (?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setString(1, txtReference.getText());
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+}
     private void AddData3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData3ActionPerformed
             
             int receipt =Integer.parseInt( txtReceipt.getText());
@@ -2967,7 +3287,26 @@ public class MainMenu extends javax.swing.JFrame {
     private void txtAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAmountActionPerformed
+public void saveTableDataToSeppeCard() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) seppeCardTable.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO suppliesfolders (Folders) VALUES (?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setString(1, txtReference.getText());
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+}
     private void AddData4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData4ActionPerformed
             int receipt =Integer.parseInt( txtReceiptt.getText());
             int issue = Integer.parseInt(txtIssuee.getText());
@@ -3006,7 +3345,26 @@ public class MainMenu extends javax.swing.JFrame {
     private void txtAmountttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountttActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAmountttActionPerformed
+public void saveTableDataToppeCard() {
+            System.out.println("");
+            DefaultTableModel model = (DefaultTableModel) ppeCardTable.getModel();
+            int rows = model.getRowCount();
+            
+            try {
+            Connection conn = (Connection) My_CNX.getConnection(); 
 
+            String sql = "INSERT INTO suppliesfolders (Folders) VALUES (?)"; 
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setString(1, txtReferenceee.getText());
+            statement.executeUpdate();
+  
+            statement.close();
+            conn.close(); // Close the connection
+        } catch (SQLException e) {
+        }
+}
     private void AddData5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData5ActionPerformed
             int receipt =Integer.parseInt( txtReceipttt.getText());
             int issue = Integer.parseInt(txtIssueee.getText());
@@ -3060,14 +3418,6 @@ public class MainMenu extends javax.swing.JFrame {
          
     }//GEN-LAST:event_seppeCardTableMouseClicked
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-       
-    }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
-        
-    }//GEN-LAST:event_jButton20MouseClicked
-
     private void jButton21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseClicked
         //show Login Page
                 Login login = new Login();
@@ -3092,13 +3442,69 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton22ActionPerformed
 
-    private void cnTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnTxtActionPerformed
+    private void contactTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnTxtActionPerformed
+    }//GEN-LAST:event_contactTxtActionPerformed
 
-    private void psTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psTxtActionPerformed
+    private void languageTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageTxt1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_psTxtActionPerformed
+    }//GEN-LAST:event_languageTxt1ActionPerformed
+
+    private void languageTxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageTxt2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_languageTxt2ActionPerformed
+
+    private void languageTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_languageTxtActionPerformed
+
+    private void birthdateTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthdateTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birthdateTxt1ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void searchBar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchBar1ActionPerformed
+
+    private void txtFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFolderActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3145,20 +3551,15 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel Dashboard;
     private javax.swing.JPanel Inventory;
     private javax.swing.JPanel UserManagement;
-    private javax.swing.JTextField adTxt;
-    private javax.swing.JTextField addressTxt;
-    private javax.swing.JTextField bdtxt;
     private javax.swing.JTextField birthdateTxt;
-    private javax.swing.JTextField cnTxt;
+    private javax.swing.JTextField birthdateTxt1;
     private javax.swing.JTextField contactTxt;
     private javax.swing.JTextField desField;
     private javax.swing.JTextField desSField;
     private javax.swing.JTextField descriptionField;
-    private javax.swing.JTextField emTxt;
-    private javax.swing.JLabel emailTxt;
     private javax.swing.JTextField entityField;
     private javax.swing.JTextField entityYField;
-    private javax.swing.JLabel fullName;
+    private javax.swing.JLabel fullNameTxt;
     private javax.swing.JTextField fundDField;
     private javax.swing.JTextField fundField;
     private javax.swing.JTextField itemField;
@@ -3173,7 +3574,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
@@ -3209,7 +3609,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -3272,6 +3672,9 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -3285,10 +3688,15 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -3309,11 +3717,24 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable5;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField languageTxt;
+    private javax.swing.JTextField languageTxt1;
+    private javax.swing.JTextField languageTxt2;
     private javax.swing.JTextField measureField;
+    private javax.swing.JLabel nameTxt;
     private javax.swing.JTextField numberField;
-    private javax.swing.JTextField plTxt;
-    private javax.swing.JLabel positionTxt;
     private javax.swing.JPanel ppe;
     private javax.swing.JPanel ppeCard;
     private javax.swing.JTable ppeCardTable;
@@ -3322,11 +3743,11 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel ppeFolder;
     private javax.swing.JPanel ppePanel;
     private javax.swing.JTable ppeTable;
-    private javax.swing.JTextField psTxt;
     private javax.swing.JTextField reorderField;
     private javax.swing.JTextField sePropertyField;
     private javax.swing.JTextField sePropertyNoField;
     private javax.swing.JTextField searchBar;
+    private javax.swing.JTextField searchBar1;
     private javax.swing.JLabel searchIcon;
     private javax.swing.JPanel seppeCard;
     private javax.swing.JTable seppeCardTable;
@@ -3378,7 +3799,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JTextField txtSEProperty;
     private javax.swing.JTextField txtSEPropertyNo;
     private javax.swing.JTextField txtStock;
-    private javax.swing.JLabel usernameTxt;
     // End of variables declaration//GEN-END:variables
 
     private void labelcolor(JLabel label) {
@@ -3387,6 +3807,10 @@ public class MainMenu extends javax.swing.JFrame {
     
     private void resetlabelcolor(JLabel label) {
         label.setBackground(new java.awt.Color(54,70,78));
+    }
+
+    private boolean verifyFields() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
    
 }

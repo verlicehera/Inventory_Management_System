@@ -1,4 +1,4 @@
-package inventorymanagementsystem;
+ package inventorymanagementsystem;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.sql.Connection;
@@ -13,6 +13,10 @@ public class My_CNX {
     private static String dbname = "inventory_system";
     private static Integer portnumber = 3306;
     private static String password = "";
+    private static String contact = "";
+    private static String birth = "";
+    private static String email ="";
+    private static String position = "";
     
     
     public static Connection getConnection()
@@ -24,8 +28,11 @@ public class My_CNX {
         datasource.setServerName(fullname);
         datasource.setUser(username);
         datasource.setPassword(password);
+        
+        
         datasource.setDatabaseName(dbname);
         datasource.setPortNumber(portnumber);
+        
         
         try {
             cnx = datasource.getConnection();

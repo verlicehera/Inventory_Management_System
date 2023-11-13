@@ -32,13 +32,13 @@ public class Login extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         Left = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         Username = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         Password = new javax.swing.JPasswordField();
         Login = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         signUp = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -111,11 +111,6 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("LOGIN");
         Left.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 63, -1, 65));
 
-        jLabel2.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel2.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        jLabel2.setText("Username");
-        Left.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 164, 73, -1));
-
         Username.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         Username.setForeground(new java.awt.Color(102, 102, 102));
         Username.addActionListener(new java.awt.event.ActionListener() {
@@ -124,11 +119,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
         Left.add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 196, 352, 37));
-
-        jLabel3.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel3.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        jLabel3.setText("Password");
-        Left.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 251, 70, -1));
 
         Password.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         Password.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +145,7 @@ public class Login extends javax.swing.JFrame {
                 LoginActionPerformed(evt);
             }
         });
-        Left.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 349, 177, 32));
+        Left.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 160, 32));
 
         jLabel4.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel4.setText("I don't have an account.");
@@ -178,6 +168,19 @@ public class Login extends javax.swing.JFrame {
             }
         });
         Left.add(signUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 416, 50, -1));
+
+        jLabel10.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel10.setText("Username");
+        Left.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 100, -1));
+
+        jLabel9.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel9.setText("Password");
+        jLabel9.setMaximumSize(new java.awt.Dimension(88, 30));
+        jLabel9.setMinimumSize(new java.awt.Dimension(88, 30));
+        jLabel9.setPreferredSize(new java.awt.Dimension(88, 30));
+        Left.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
         jPanel1.add(Left);
         Left.setBounds(400, 0, 400, 500);
@@ -219,7 +222,7 @@ public class Login extends javax.swing.JFrame {
         String password = String.valueOf(Password.getPassword());
         
         //create a query to check if the username and the password exist in the database
-        String query = "SELECT * FROM users WHERE  username = ? and password = ?";
+        String query = "SELECT * FROM signup WHERE  username = ? and password = ?";
         
         try {
             st = My_CNX.getConnection().prepareStatement(query);
@@ -256,7 +259,7 @@ public class Login extends javax.swing.JFrame {
         String password = String.valueOf(Password.getPassword());
         
         //create a query to check if the username and the password exist in the database
-        String query = "SELECT * FROM users WHERE  username = '"+username+"' and password = '"+password+"'";
+        String query = "SELECT * FROM signup WHERE  username = '"+username+"' and password = '"+password+"'";
         
         try {
             st = My_CNX.getConnection().prepareStatement(query);
@@ -309,13 +312,13 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel Right;
     private javax.swing.JTextField Username;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel signUp;
     // End of variables declaration//GEN-END:variables
