@@ -87,6 +87,8 @@ public class MainMenu extends javax.swing.JFrame {
         UserManagement.hide();
         
         showTableSupplies();
+        showTableSeppe();
+        showTablePpe();
         
         
     }
@@ -210,7 +212,6 @@ public class MainMenu extends javax.swing.JFrame {
         stockCardTable = new javax.swing.JTable();
         jPanel10 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jLabel66 = new javax.swing.JLabel();
         txtDate = new javax.swing.JTextField();
         AddData3 = new javax.swing.JButton();
@@ -222,7 +223,6 @@ public class MainMenu extends javax.swing.JFrame {
         txtIssue = new javax.swing.JTextField();
         jLabel70 = new javax.swing.JLabel();
         txtDays = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
         seppeFolder = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -261,8 +261,6 @@ public class MainMenu extends javax.swing.JFrame {
         txtAmount = new javax.swing.JTextField();
         AddData4 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
         seppeCardTablePanel = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
@@ -316,8 +314,6 @@ public class MainMenu extends javax.swing.JFrame {
         txtAmounttt = new javax.swing.JTextField();
         AddData5 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
         ppeCardTablePanel = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
@@ -1300,20 +1296,11 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel10.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 117, 30));
-
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/view.png"))); // NOI18N
-        jButton5.setText("VIEW");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel10.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 118, 30));
+        jPanel10.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 117, 30));
 
         jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel66.setText("Date");
-        jPanel10.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel10.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         txtDate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDate.addActionListener(new java.awt.event.ActionListener() {
@@ -1321,7 +1308,7 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDateActionPerformed(evt);
             }
         });
-        jPanel10.add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
+        jPanel10.add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 300, 30));
 
         AddData3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
         AddData3.setText("ADD");
@@ -1330,11 +1317,11 @@ public class MainMenu extends javax.swing.JFrame {
                 AddData3ActionPerformed(evt);
             }
         });
-        jPanel10.add(AddData3, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 310, 120, 30));
+        jPanel10.add(AddData3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 30));
 
         jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel67.setText("Reference");
-        jPanel10.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jPanel10.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         txtReference.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReference.addActionListener(new java.awt.event.ActionListener() {
@@ -1342,11 +1329,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReferenceActionPerformed(evt);
             }
         });
-        jPanel10.add(txtReference, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
+        jPanel10.add(txtReference, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 300, 30));
 
         jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel68.setText("Receipt");
-        jPanel10.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        jPanel10.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
         txtReceipt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReceipt.addActionListener(new java.awt.event.ActionListener() {
@@ -1354,11 +1341,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReceiptActionPerformed(evt);
             }
         });
-        jPanel10.add(txtReceipt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
+        jPanel10.add(txtReceipt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 300, 30));
 
         jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel69.setText("Issue");
-        jPanel10.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jPanel10.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
         txtIssue.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtIssue.addActionListener(new java.awt.event.ActionListener() {
@@ -1366,11 +1353,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtIssueActionPerformed(evt);
             }
         });
-        jPanel10.add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
+        jPanel10.add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 300, 30));
 
         jLabel70.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel70.setText("Number of Days Consume");
-        jPanel10.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        jPanel10.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
 
         txtDays.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDays.addActionListener(new java.awt.event.ActionListener() {
@@ -1378,16 +1365,7 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDaysActionPerformed(evt);
             }
         });
-        jPanel10.add(txtDays, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
-
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
-        jButton10.setText("PRINT");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-        jPanel10.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 118, 30));
+        jPanel10.add(txtDays, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 300, 30));
 
         stockCardPanel.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
 
@@ -1636,7 +1614,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel71.setText("Date");
-        jPanel16.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel16.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         txtDatee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDatee.addActionListener(new java.awt.event.ActionListener() {
@@ -1644,11 +1622,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDateeActionPerformed(evt);
             }
         });
-        jPanel16.add(txtDatee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
+        jPanel16.add(txtDatee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 300, 30));
 
         jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel72.setText("Reference");
-        jPanel16.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jPanel16.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
         txtReferencee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReferencee.addActionListener(new java.awt.event.ActionListener() {
@@ -1656,11 +1634,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReferenceeActionPerformed(evt);
             }
         });
-        jPanel16.add(txtReferencee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
+        jPanel16.add(txtReferencee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 300, 30));
 
         jLabel73.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel73.setText("Receipt");
-        jPanel16.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        jPanel16.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
         txtReceiptt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReceiptt.addActionListener(new java.awt.event.ActionListener() {
@@ -1668,11 +1646,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReceipttActionPerformed(evt);
             }
         });
-        jPanel16.add(txtReceiptt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
+        jPanel16.add(txtReceiptt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 300, 30));
 
         jLabel74.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel74.setText("Issue");
-        jPanel16.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jPanel16.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
         txtIssuee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtIssuee.addActionListener(new java.awt.event.ActionListener() {
@@ -1680,11 +1658,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtIssueeActionPerformed(evt);
             }
         });
-        jPanel16.add(txtIssuee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
+        jPanel16.add(txtIssuee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 300, 30));
 
         jLabel75.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel75.setText("Amount");
-        jPanel16.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        jPanel16.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
 
         txtAmount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtAmount.addActionListener(new java.awt.event.ActionListener() {
@@ -1692,7 +1670,7 @@ public class MainMenu extends javax.swing.JFrame {
                 txtAmountActionPerformed(evt);
             }
         });
-        jPanel16.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
+        jPanel16.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 300, 30));
 
         AddData4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
         AddData4.setText("ADD ");
@@ -1701,7 +1679,7 @@ public class MainMenu extends javax.swing.JFrame {
                 AddData4ActionPerformed(evt);
             }
         });
-        jPanel16.add(AddData4, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 310, 120, 30));
+        jPanel16.add(AddData4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 120, 30));
 
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
         jButton16.setText("SAVE");
@@ -1710,25 +1688,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        jPanel16.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 117, 30));
-
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
-        jButton17.setText("PRINT");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
-            }
-        });
-        jPanel16.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 118, 30));
-
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/view.png"))); // NOI18N
-        jButton9.setText("VIEW ");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        jPanel16.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 118, 30));
+        jPanel16.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 117, 30));
 
         seppeCard.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
 
@@ -2083,7 +2043,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel76.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel76.setText("Date");
-        jPanel19.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel19.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         txtDateee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDateee.addActionListener(new java.awt.event.ActionListener() {
@@ -2091,11 +2051,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDateeeActionPerformed(evt);
             }
         });
-        jPanel19.add(txtDateee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
+        jPanel19.add(txtDateee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 300, 30));
 
         jLabel77.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel77.setText("Reference");
-        jPanel19.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jPanel19.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         txtReferenceee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReferenceee.addActionListener(new java.awt.event.ActionListener() {
@@ -2103,11 +2063,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReferenceeeActionPerformed(evt);
             }
         });
-        jPanel19.add(txtReferenceee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
+        jPanel19.add(txtReferenceee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 300, 30));
 
         jLabel78.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel78.setText("Receipt");
-        jPanel19.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        jPanel19.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
         txtReceipttt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReceipttt.addActionListener(new java.awt.event.ActionListener() {
@@ -2115,11 +2075,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReceiptttActionPerformed(evt);
             }
         });
-        jPanel19.add(txtReceipttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
+        jPanel19.add(txtReceipttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 300, 30));
 
         jLabel79.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel79.setText("Issue");
-        jPanel19.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jPanel19.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
         txtIssueee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtIssueee.addActionListener(new java.awt.event.ActionListener() {
@@ -2127,11 +2087,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtIssueeeActionPerformed(evt);
             }
         });
-        jPanel19.add(txtIssueee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
+        jPanel19.add(txtIssueee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 300, 30));
 
         jLabel80.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel80.setText("Amount");
-        jPanel19.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        jPanel19.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
 
         txtAmounttt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtAmounttt.addActionListener(new java.awt.event.ActionListener() {
@@ -2139,7 +2099,7 @@ public class MainMenu extends javax.swing.JFrame {
                 txtAmountttActionPerformed(evt);
             }
         });
-        jPanel19.add(txtAmounttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
+        jPanel19.add(txtAmounttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 300, 30));
 
         AddData5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
         AddData5.setText("ADD ");
@@ -2148,7 +2108,7 @@ public class MainMenu extends javax.swing.JFrame {
                 AddData5ActionPerformed(evt);
             }
         });
-        jPanel19.add(AddData5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 120, 30));
+        jPanel19.add(AddData5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 30));
 
         jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
         jButton18.setText("SAVE");
@@ -2157,20 +2117,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton18ActionPerformed(evt);
             }
         });
-        jPanel19.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 117, 30));
-
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/print.png"))); // NOI18N
-        jButton19.setText("PRINT");
-        jPanel19.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 118, 30));
-
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/view.png"))); // NOI18N
-        jButton14.setText("VIEW ");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
-            }
-        });
-        jPanel19.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 118, 30));
+        jPanel19.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 117, 30));
 
         ppeCard.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
 
@@ -2852,6 +2799,7 @@ public void saveTableDataToSuppliesFolder() {
             txtOrder.setText("");
             txtStock.setText("");
             txtMeasure.setText("");
+            
 
         }
     }//GEN-LAST:event_AddDataActionPerformed
@@ -3034,6 +2982,33 @@ public void saveTableDataToSeppeFolder() {
         } catch (SQLException e) {
         }
     }
+    public void showTableSeppe () {
+       try {
+           
+           Connection conn = (Connection) My_CNX.getConnection();
+           st = (Statement) conn.createStatement();
+           String sql = "SELECT * FROM `seppe`";
+           
+           ResultSet rrs = st.executeQuery(sql);
+           
+           DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+           model.setRowCount(0);
+           model.setColumnCount(0);
+           model.addColumn("Folders");
+           
+           while(rrs.next()){
+               String folder = rrs.getString("Folders");
+               
+               Object[] row = {
+                   folder
+               };
+               model.addRow(row);
+           }
+          
+       } catch(Exception e){
+       
+       }
+   } 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
          if (!txtFolder1.getText().isEmpty()) {
             String folderName = txtFolder1.getText();
@@ -3043,6 +3018,8 @@ public void saveTableDataToSeppeFolder() {
             tblModel.addRow(row);
             saveTableDataToDBb();
             txtFolder1.setText("");
+            showTableSeppe();
+            
         }else {
             JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -3102,6 +3079,33 @@ public void saveTableDataToDBc() {
         } catch (SQLException e) {
         }
     }
+    public void showTablePpe () {
+       try {
+           
+           Connection conn = (Connection) My_CNX.getConnection();
+           st = (Statement) conn.createStatement();
+           String sql = "SELECT * FROM `ppe`";
+           
+           ResultSet rrs = st.executeQuery(sql);
+           
+           DefaultTableModel model = (DefaultTableModel) jTable5.getModel();
+           model.setRowCount(0);
+           model.setColumnCount(0);
+           model.addColumn("Folders");
+           
+           while(rrs.next()){
+               String folder = rrs.getString("Folders");
+               
+               Object[] row = {
+                   folder
+               };
+               model.addRow(row);
+           }
+          
+       } catch(Exception e){
+       
+       }
+   } 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
          if (!txtFolder2.getText().isEmpty()) {
             String folderName = txtFolder2.getText();
@@ -3111,6 +3115,7 @@ public void saveTableDataToDBc() {
             tblModel.addRow(row);
             saveTableDataToDBc();
             txtFolder2.setText("");
+            showTablePpe();
             
             
         }else {
@@ -3225,18 +3230,6 @@ public void saveTableDataToPpeFolder() {
         // TODO add your handling code here:
     }//GEN-LAST:event_ppeCardTablePanelMouseClicked
 
-    private void seppeCardTablePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeCardTablePanelMouseClicked
-
-    }//GEN-LAST:event_seppeCardTablePanelMouseClicked
-
-    private void sePropertyNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sePropertyNoFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sePropertyNoFieldActionPerformed
-
-    private void desFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_desFieldActionPerformed
-
     private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
     
     }//GEN-LAST:event_txtDateActionPerformed
@@ -3293,26 +3286,6 @@ public void saveTableDataToSuppliesCard() {
     private void txtDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDaysActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDaysActionPerformed
-
-    private void txtDateeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDateeActionPerformed
-
-    private void txtReferenceeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReferenceeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtReferenceeActionPerformed
-
-    private void txtReceipttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReceipttActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtReceipttActionPerformed
-
-    private void txtIssueeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIssueeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIssueeActionPerformed
-
-    private void txtAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAmountActionPerformed
 public void saveTableDataToSeppeCard() {
             System.out.println("");
             DefaultTableModel model = (DefaultTableModel) seppeCardTable.getModel();
@@ -3333,25 +3306,6 @@ public void saveTableDataToSeppeCard() {
         } catch (SQLException e) {
         }
 }
-    private void AddData4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData4ActionPerformed
-            int receipt =Integer.parseInt( txtReceiptt.getText());
-            int issue = Integer.parseInt(txtIssuee.getText());
-            int balance = receipt - issue;
-            DefaultTableModel tblModel = (DefaultTableModel)seppeCardTable.getModel();
-            tblModel.addRow(new Object[]{txtDatee.getText(), txtReferencee.getText(), txtReceiptt.getText(), txtIssuee.getText(), balance, txtAmount.getText(), " "});
-            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
-            
-            txtDatee.setText("");
-            txtReferencee.setText("");
-            txtReceiptt.setText("");
-            txtIssuee.setText("");
-            txtAmount.setText("");
-    }//GEN-LAST:event_AddData4ActionPerformed
-
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
-
     private void txtDateeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateeeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDateeeActionPerformed
@@ -3413,36 +3367,6 @@ public void saveTableDataToppeCard() {
     private void stockCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTableMouseClicked
 
     }//GEN-LAST:event_stockCardTableMouseClicked
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        stockCardPanel.hide();
-        jPanel9.show();
-        suppliesPanel.show();
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        seppeCard.hide();
-        jPanel11.show();
-        seppePanel.show();
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        ppeCard.hide();
-        jPanel13.show();
-        ppePanel.show();
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void seppeCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeCardTableMouseClicked
-         
-    }//GEN-LAST:event_seppeCardTableMouseClicked
 
     private void jButton21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseClicked
         //show Login Page
@@ -3532,6 +3456,61 @@ public void saveTableDataToppeCard() {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFolderActionPerformed
 
+    private void seppeCardTablePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeCardTablePanelMouseClicked
+
+    }//GEN-LAST:event_seppeCardTablePanelMouseClicked
+
+    private void seppeCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeCardTableMouseClicked
+
+    }//GEN-LAST:event_seppeCardTableMouseClicked
+
+    private void sePropertyNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sePropertyNoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sePropertyNoFieldActionPerformed
+
+    private void desFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desFieldActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void AddData4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData4ActionPerformed
+        int receipt =Integer.parseInt( txtReceiptt.getText());
+        int issue = Integer.parseInt(txtIssuee.getText());
+        int balance = receipt - issue;
+        DefaultTableModel tblModel = (DefaultTableModel)seppeCardTable.getModel();
+        tblModel.addRow(new Object[]{txtDatee.getText(), txtReferencee.getText(), txtReceiptt.getText(), txtIssuee.getText(), balance, txtAmount.getText(), " "});
+        JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+
+        txtDatee.setText("");
+        txtReferencee.setText("");
+        txtReceiptt.setText("");
+        txtIssuee.setText("");
+        txtAmount.setText("");
+    }//GEN-LAST:event_AddData4ActionPerformed
+
+    private void txtAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAmountActionPerformed
+
+    private void txtIssueeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIssueeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIssueeActionPerformed
+
+    private void txtReceipttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReceipttActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReceipttActionPerformed
+
+    private void txtReferenceeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReferenceeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReferenceeActionPerformed
+
+    private void txtDateeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDateeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3590,25 +3569,19 @@ public void saveTableDataToppeCard() {
     private javax.swing.JTextField fundField;
     private javax.swing.JTextField itemField;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
