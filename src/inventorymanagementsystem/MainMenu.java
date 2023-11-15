@@ -89,6 +89,9 @@ public class MainMenu extends javax.swing.JFrame {
         showTableSupplies();
         showTableSeppe();
         showTablePpe();
+        showTableSuppliesFolders();
+        showTableSeppeFolders();
+        showTablePpeFolders();
         
         
     }
@@ -2783,6 +2786,39 @@ public void saveTableDataToSuppliesFolder() {
         } catch (SQLException e) {
         }
 }
+    public void showTableSuppliesFolders() {
+    try {
+        Connection conn = (Connection) My_CNX.getConnection();
+        st = (Statement) conn.createStatement();
+        String sql = "SELECT * FROM `suppliesfolders`";
+        ResultSet rrs = st.executeQuery(sql);
+
+        DefaultTableModel model = (DefaultTableModel) suppliesTable.getModel();
+        model.setRowCount(0);
+        model.setColumnCount(0);
+        model.addColumn("Item");
+        model.addColumn("Description");
+        model.addColumn("Stock No.");
+        model.addColumn("Re-Order Point");
+        model.addColumn("Unit of Measurement");
+
+        while (rrs.next()) {
+            String a = rrs.getString("Item");
+            String b = rrs.getString("Description");
+            String c = rrs.getString("Stock Number");
+            String d = rrs.getString("Re-Order Point");
+            String e = rrs.getString("Unit of Measurement");
+
+            Object[] row = { a, b, c, d, e };
+            model.addRow(row);
+        }
+
+    } catch (SQLException e) {
+        // Handle exceptions appropriately, e.g., log or display an error message.
+
+    }
+}
+
     private void AddDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDataActionPerformed
         if(txtItem.getText().equals("") || txtDescription.getText().equals("") || txtMeasure.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please Enter All Data! (Exception..Stock No. and Re-Order Point)");
@@ -2794,11 +2830,13 @@ public void saveTableDataToSuppliesFolder() {
             tblModel.addRow(data);
             saveTableDataToSuppliesFolder();
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            showTableSuppliesFolders();
             txtItem.setText("");
             txtDescription.setText("");
             txtOrder.setText("");
             txtStock.setText("");
             txtMeasure.setText("");
+            
             
 
         }
@@ -2902,6 +2940,38 @@ public void saveTableDataToSeppeFolder() {
         } catch (SQLException e) {
         }
 }
+public void showTableSeppeFolders() {
+    try {
+        Connection conn = (Connection) My_CNX.getConnection();
+        st = (Statement) conn.createStatement();
+        String sql = "SELECT * FROM `seppefolders`";
+        ResultSet rrs = st.executeQuery(sql);
+
+        DefaultTableModel model = (DefaultTableModel) seppeTable.getModel();
+        model.setRowCount(0);
+        model.setColumnCount(0);
+        model.addColumn("Entity Name");
+        model.addColumn("Fund Cluster");
+        model.addColumn("SE Property");
+        model.addColumn("Description");
+        model.addColumn("SE Property No.");
+
+        while (rrs.next()) {
+            String a = rrs.getString("Entity Name");
+            String b = rrs.getString("Fund Cluster");
+            String c = rrs.getString("SE Property");
+            String d = rrs.getString("Description");
+            String e = rrs.getString("SE Property Number");
+
+            Object[] row = { a, b, c, d, e };
+            model.addRow(row);
+        }
+
+    } catch (SQLException e) {
+        // Handle exceptions appropriately, e.g., log or display an error message.
+
+    }
+}
     private void AddData1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData1ActionPerformed
         if(txtEntity.getText().equals("") || txtFund.getText().equals("") || txtSEProperty.getText().isEmpty()
                 || txtDes.getText().equals("") || txtSEPropertyNo.getText().equals("")) {
@@ -2914,6 +2984,7 @@ public void saveTableDataToSeppeFolder() {
             tblModel.addRow(data);
             saveTableDataToSeppeFolder();
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            showTableSeppeFolders();
             txtEntity.setText("");
             txtFund.setText("");
             txtSEProperty.setText("");
@@ -3171,6 +3242,38 @@ public void saveTableDataToPpeFolder() {
         } catch (SQLException e) {
         }
 }
+public void showTablePpeFolders() {
+    try {
+        Connection conn = (Connection) My_CNX.getConnection();
+        st = (Statement) conn.createStatement();
+        String sql = "SELECT * FROM `ppefolders`";
+        ResultSet rrs = st.executeQuery(sql);
+
+        DefaultTableModel model = (DefaultTableModel) ppeTable.getModel();
+        model.setRowCount(0);
+        model.setColumnCount(0);
+        model.addColumn("Entity Name");
+        model.addColumn("Fund Cluster");
+        model.addColumn("PPE");
+        model.addColumn("Description");
+        model.addColumn("Property Number");
+
+        while (rrs.next()) {
+            String a = rrs.getString("Entity Name");
+            String b = rrs.getString("Fund Cluster");
+            String c = rrs.getString("PPE");
+            String d = rrs.getString("Description");
+            String e = rrs.getString("Property Number");
+
+            Object[] row = { a, b, c, d, e };
+            model.addRow(row);
+        }
+
+    } catch (SQLException e) {
+        // Handle exceptions appropriately, e.g., log or display an error message.
+
+    }
+}
     private void AddData2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData2ActionPerformed
         if(txtEntityY.getText().equals("") || txtFundD.getText().equals("") || txtPPE.getText().isEmpty()
                 || txtDesS.getText().equals("") || txtNumber.getText().equals("")) {
@@ -3183,6 +3286,7 @@ public void saveTableDataToPpeFolder() {
             tblModel.addRow(data);
             saveTableDataToPpeFolder();
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            showTablePpeFolders();
             txtEntityY.setText("");
             txtFundD.setText("");
             txtPPE.setText("");
