@@ -22,7 +22,9 @@ import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 
 /**
@@ -81,8 +83,28 @@ public class MainMenu extends javax.swing.JFrame {
         ppeCard.hide();
         titleCard.hide();
         
-        searchIcon.hide();
-        searchBar.hide();
+        suppliesBack.hide();
+        suppliesSearchBar.hide();
+        suppliesSearch.hide();
+        suppliesFoldersBack.hide();
+        suppliesFoldersSearchBar.hide();
+        suppliesFoldersSearch.hide();
+        
+        seppeSearch.hide();
+        seppeSearchBar.hide();
+        seppeSearch.hide();
+        seppeFoldersBack.hide();
+        seppeFoldersSearchBar.hide();
+        seppeFoldersSearch.hide();
+        
+        ppeBack.hide();
+        ppeSearchBar.hide();
+        ppeSearch.hide();
+        ppeFoldersBack.hide();
+        ppeFoldersSearchBar.hide();
+        ppeFoldersSearch.hide();
+        
+
         
         UserManagement.hide();
         
@@ -92,6 +114,8 @@ public class MainMenu extends javax.swing.JFrame {
         showTableSuppliesFolders();
         showTableSeppeFolders();
         showTablePpeFolders();
+        showTableSuppliesStockCard();
+       
         
         
     }
@@ -140,37 +164,11 @@ public class MainMenu extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         Dashboard = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        jPanel26 = new javax.swing.JPanel();
-        jPanel27 = new javax.swing.JPanel();
-        jLabel88 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
-        jPanel20 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel92 = new javax.swing.JLabel();
-        jPanel21 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel90 = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jPanel24 = new javax.swing.JPanel();
-        jLabel86 = new javax.swing.JLabel();
-        jPanel25 = new javax.swing.JPanel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jPanel28 = new javax.swing.JPanel();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jPanel29 = new javax.swing.JPanel();
-        jTextField12 = new javax.swing.JTextField();
-        jLabel89 = new javax.swing.JLabel();
-        searchBar1 = new javax.swing.JTextField();
         Inventory = new javax.swing.JPanel();
         tablePanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -180,6 +178,9 @@ public class MainMenu extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        suppliesSearchBar = new javax.swing.JTextField();
+        suppliesSearch = new javax.swing.JLabel();
+        suppliesBack = new javax.swing.JLabel();
         suppliesPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         suppliesTable = new javax.swing.JTable();
@@ -196,6 +197,9 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         txtStock = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        suppliesFoldersBack = new javax.swing.JLabel();
+        suppliesFoldersSearchBar = new javax.swing.JTextField();
+        suppliesFoldersSearch = new javax.swing.JLabel();
         stockCardPanel = new javax.swing.JPanel();
         stockCardTablePanel = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
@@ -234,6 +238,9 @@ public class MainMenu extends javax.swing.JFrame {
         txtFolder1 = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        seppeBack = new javax.swing.JLabel();
+        seppeSearchBar = new javax.swing.JTextField();
+        seppeSearch = new javax.swing.JLabel();
         seppePanel = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         seppeTable = new javax.swing.JTable();
@@ -250,6 +257,9 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         txtSEProperty = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
+        seppeFoldersBack = new javax.swing.JLabel();
+        seppeFoldersSearchBar = new javax.swing.JTextField();
+        seppeFoldersSearch = new javax.swing.JLabel();
         seppeCard = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jLabel71 = new javax.swing.JLabel();
@@ -279,7 +289,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel54 = new javax.swing.JLabel();
         fundField = new javax.swing.JTextField();
         ppeFolder = new javax.swing.JPanel();
-        seppeFolder1 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
         jPanel18 = new javax.swing.JPanel();
@@ -287,6 +296,9 @@ public class MainMenu extends javax.swing.JFrame {
         txtFolder2 = new javax.swing.JTextField();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        ppeBack = new javax.swing.JLabel();
+        ppeSearchBar = new javax.swing.JTextField();
+        ppeSearch = new javax.swing.JLabel();
         ppePanel = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
         ppeTable = new javax.swing.JTable();
@@ -303,6 +315,9 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel57 = new javax.swing.JLabel();
         txtPPE = new javax.swing.JTextField();
         jButton13 = new javax.swing.JButton();
+        ppeFoldersBack = new javax.swing.JLabel();
+        ppeFoldersSearchBar = new javax.swing.JTextField();
+        ppeFoldersSearch = new javax.swing.JLabel();
         ppeCard = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
         jLabel76 = new javax.swing.JLabel();
@@ -332,30 +347,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel65 = new javax.swing.JLabel();
         fundDField = new javax.swing.JTextField();
         titleCard = new javax.swing.JLabel();
-        searchBar = new javax.swing.JTextField();
-        searchIcon = new javax.swing.JLabel();
         UserManagement = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
-        jPanel22 = new javax.swing.JPanel();
-        jLabel59 = new javax.swing.JLabel();
-        fullNameTxt = new javax.swing.JLabel();
-        nameTxt = new javax.swing.JLabel();
-        jButton21 = new javax.swing.JButton();
-        jLabel81 = new javax.swing.JLabel();
-        contactTxt = new javax.swing.JTextField();
-        languageTxt = new javax.swing.JTextField();
-        jLabel83 = new javax.swing.JLabel();
-        birthdateTxt = new javax.swing.JTextField();
-        jButton22 = new javax.swing.JButton();
-        jLabel84 = new javax.swing.JLabel();
-        jLabel85 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        languageTxt1 = new javax.swing.JTextField();
-        languageTxt2 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        birthdateTxt1 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -407,12 +399,13 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/user.png"))); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/logouts.png"))); // NOI18N
         jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 40, 40));
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("User Management");
+        jLabel5.setText("Log out Account");
         jPanel6.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 120, 30));
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 210, 40));
@@ -648,302 +641,43 @@ public class MainMenu extends javax.swing.JFrame {
         Dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel16.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel16.setText("DASHBOARD");
+        jLabel16.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel16.setText("SYSTEM");
         jLabel16.setMaximumSize(new java.awt.Dimension(316, 39));
         jLabel16.setMinimumSize(new java.awt.Dimension(316, 39));
         jLabel16.setPreferredSize(new java.awt.Dimension(316, 39));
-        Dashboard.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 320, 40));
+        Dashboard.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 300, 150, 30));
 
-        jPanel26.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel26.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
-        jPanel26.setMinimumSize(new java.awt.Dimension(610, 421));
-        jPanel26.setPreferredSize(new java.awt.Dimension(610, 421));
-        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel34.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel34.setText("WELCOME TO");
+        jLabel34.setMaximumSize(new java.awt.Dimension(316, 39));
+        jLabel34.setMinimumSize(new java.awt.Dimension(316, 39));
+        jLabel34.setPreferredSize(new java.awt.Dimension(316, 39));
+        Dashboard.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 230, 240, 30));
 
-        jPanel27.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel94.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
+        jLabel94.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel94.setText("INVENTORY MANAGEMENT");
+        jLabel94.setMaximumSize(new java.awt.Dimension(316, 39));
+        jLabel94.setMinimumSize(new java.awt.Dimension(316, 39));
+        jLabel94.setPreferredSize(new java.awt.Dimension(316, 39));
+        Dashboard.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 430, 40));
 
-        jLabel88.setBackground(new java.awt.Color(0, 102, 153));
-        jLabel88.setFont(new java.awt.Font("Serif", 1, 11)); // NOI18N
-        jLabel88.setText("WELCOME TO INVENTORY MANAGEMENT SYSTEM! ");
-        jPanel27.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 21, 336, 24));
-        jPanel27.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(731, 21, 43, -1));
-        jPanel27.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 21, -1, 30));
+        jLabel95.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel95.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/mgbLogo (2).png"))); // NOI18N
+        Dashboard.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 630, 570));
 
-        jPanel26.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, -1));
+        jLabel58.setFont(new java.awt.Font("Showcard Gothic", 1, 20)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel58.setText("Mines and Geosciences Bureau");
+        Dashboard.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, -1, -1));
 
-        jPanel20.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel20.setMinimumSize(new java.awt.Dimension(0, 0));
-        jPanel20.setPreferredSize(new java.awt.Dimension(193, 58));
-
-        jTextField1.setFont(new java.awt.Font("Serif", 1, 10)); // NOI18N
-        jTextField1.setText("BALANCE");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jTextField2.setText("   1600");
-
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel92))
-        );
-
-        jPanel26.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(559, 69, 203, -1));
-
-        jPanel21.setBackground(new java.awt.Color(0, 153, 153));
-
-        jTextField3.setText("    1900");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-
-        jTextField4.setFont(new java.awt.Font("Serif", 1, 11)); // NOI18N
-        jTextField4.setText("  RECEIPT");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel21Layout.createSequentialGroup()
-                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel21Layout.createSequentialGroup()
-                .addGap(0, 122, Short.MAX_VALUE)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel90)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jPanel26.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 69, -1, 58));
-
-        jPanel23.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel23.setPreferredSize(new java.awt.Dimension(193, 58));
-
-        jTextField5.setFont(new java.awt.Font("Serif", 1, 10)); // NOI18N
-        jTextField5.setText(" ISSUANCE ");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-
-        jTextField6.setText("    300");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel91))
-        );
-
-        jPanel26.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 69, -1, -1));
-
-        jLabel93.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel26.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 168, 12, 205));
-
-        jPanel24.setBackground(new java.awt.Color(204, 204, 204));
-
-        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
-        jPanel24.setLayout(jPanel24Layout);
-        jPanel24Layout.setHorizontalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
-        );
-        jPanel24Layout.setVerticalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-        );
-
-        jPanel26.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 168, 189, 244));
-
-        jTextField7.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jTextField7.setText("Recent Activities");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
-
-        jTextField8.setFont(new java.awt.Font("Serif", 1, 9)); // NOI18N
-        jTextField8.setText("  See All");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
-
-        jPanel28.setBackground(new java.awt.Color(189, 196, 167));
-
-        jTextField9.setText("Issued To:");
-
-        jTextField10.setText("Issued To:");
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
-
-        jTextField11.setText("Issued To:");
-
-        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
-        jPanel28.setLayout(jPanel28Layout);
-        jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField9)
-                    .addComponent(jTextField10)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel25Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField7)
-                .addGap(11, 11, 11)
-                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel25Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        jPanel26.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 168, -1, -1));
-
-        jTextField12.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jTextField12.setText("Stocks Status:");
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
-        jPanel29.setLayout(jPanel29Layout);
-        jPanel29Layout.setHorizontalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel29Layout.setVerticalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addComponent(jLabel89)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jPanel26.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 168, -1, 244));
-
-        searchBar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchBar1ActionPerformed(evt);
-            }
-        });
-        jPanel26.add(searchBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 214, -1, -1));
-
-        Dashboard.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 780, 450));
+        jLabel82.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel82.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel82.setText("Finance and Administrative Division");
+        Dashboard.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, -1, -1));
 
         jTabbedPane1.addTab("DASHBOARD", Dashboard);
 
@@ -1016,6 +750,37 @@ public class MainMenu extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable1);
 
         tablePanel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 470));
+
+        suppliesSearchBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                suppliesSearchBarActionPerformed(evt);
+            }
+        });
+        suppliesSearchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                suppliesSearchBarKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                suppliesSearchBarKeyReleased(evt);
+            }
+        });
+        tablePanel.add(suppliesSearchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 240, 30));
+
+        suppliesSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        suppliesSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suppliesSearchMouseClicked(evt);
+            }
+        });
+        tablePanel.add(suppliesSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, 30));
+
+        suppliesBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        suppliesBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suppliesBackMouseClicked(evt);
+            }
+        });
+        tablePanel.add(suppliesBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, 30));
 
         Inventory.add(tablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -1128,37 +893,34 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(17, 17, 17)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtMeasure, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtOrder, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtStock, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtDescription, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addComponent(AddData)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(txtItem, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, Short.MAX_VALUE)))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(AddData)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
-                            .addComponent(txtMeasure, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtOrder, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtStock)
-                            .addComponent(txtItem, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDescription, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel18)
-                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(14, 14, 14))))
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel19))
+                        .addGap(83, 83, 83)))
+                .addGap(17, 17, 17))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addContainerGap(10, Short.MAX_VALUE)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1166,26 +928,54 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtDescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel20)
                 .addGap(4, 4, 4)
                 .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel45)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtMeasure, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AddData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(18, 18, 18))
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38))
         );
 
-        suppliesPanel.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 300, 360));
+        suppliesPanel.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 70, 300, 360));
+
+        suppliesFoldersBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        suppliesFoldersBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suppliesFoldersBackMouseClicked(evt);
+            }
+        });
+        suppliesPanel.add(suppliesFoldersBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, 30));
+
+        suppliesFoldersSearchBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                suppliesFoldersSearchBarActionPerformed(evt);
+            }
+        });
+        suppliesFoldersSearchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                suppliesFoldersSearchBarKeyReleased(evt);
+            }
+        });
+        suppliesPanel.add(suppliesFoldersSearchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 240, 30));
+
+        suppliesFoldersSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        suppliesFoldersSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suppliesFoldersSearchMouseClicked(evt);
+            }
+        });
+        suppliesPanel.add(suppliesFoldersSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, 30));
 
         Inventory.add(suppliesPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -1439,6 +1229,34 @@ public class MainMenu extends javax.swing.JFrame {
 
         seppeFolder.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 310, 210));
 
+        seppeBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        seppeBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seppeBackMouseClicked(evt);
+            }
+        });
+        seppeFolder.add(seppeBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, 30));
+
+        seppeSearchBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seppeSearchBarActionPerformed(evt);
+            }
+        });
+        seppeSearchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                seppeSearchBarKeyReleased(evt);
+            }
+        });
+        seppeFolder.add(seppeSearchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 240, 30));
+
+        seppeSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        seppeSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seppeSearchMouseClicked(evt);
+            }
+        });
+        seppeFolder.add(seppeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, 30));
+
         Inventory.add(seppeFolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
         seppePanel.setBackground(new java.awt.Color(146, 180, 167));
@@ -1607,6 +1425,34 @@ public class MainMenu extends javax.swing.JFrame {
 
         seppePanel.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 300, 360));
 
+        seppeFoldersBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        seppeFoldersBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seppeFoldersBackMouseClicked(evt);
+            }
+        });
+        seppePanel.add(seppeFoldersBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, 30));
+
+        seppeFoldersSearchBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seppeFoldersSearchBarActionPerformed(evt);
+            }
+        });
+        seppeFoldersSearchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                seppeFoldersSearchBarKeyReleased(evt);
+            }
+        });
+        seppePanel.add(seppeFoldersSearchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 240, 30));
+
+        seppeFoldersSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        seppeFoldersSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seppeFoldersSearchMouseClicked(evt);
+            }
+        });
+        seppePanel.add(seppeFoldersSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, 30));
+
         Inventory.add(seppePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
         seppeCard.setBackground(new java.awt.Color(146, 180, 167));
@@ -1693,7 +1539,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel16.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 117, 30));
 
-        seppeCard.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
+        seppeCard.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, 320, 410));
 
         seppeCardTablePanel.setBackground(new java.awt.Color(255, 255, 255));
         seppeCardTablePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1781,9 +1627,7 @@ public class MainMenu extends javax.swing.JFrame {
         Inventory.add(seppeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
         ppeFolder.setBackground(new java.awt.Color(146, 180, 167));
-
-        seppeFolder1.setBackground(new java.awt.Color(146, 180, 167));
-        seppeFolder1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ppeFolder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
@@ -1810,7 +1654,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(jTable5);
 
-        seppeFolder1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 770, 470));
+        ppeFolder.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 470));
 
         jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1845,28 +1689,35 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel18.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 30));
 
-        seppeFolder1.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 130, 310, 210));
+        ppeFolder.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 160, 310, 210));
 
-        javax.swing.GroupLayout ppeFolderLayout = new javax.swing.GroupLayout(ppeFolder);
-        ppeFolder.setLayout(ppeFolderLayout);
-        ppeFolderLayout.setHorizontalGroup(
-            ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1110, Short.MAX_VALUE)
-            .addGroup(ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(ppeFolderLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(seppeFolder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        ppeFolderLayout.setVerticalGroup(
-            ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-            .addGroup(ppeFolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(ppeFolderLayout.createSequentialGroup()
-                    .addGap(0, 5, Short.MAX_VALUE)
-                    .addComponent(seppeFolder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 5, Short.MAX_VALUE)))
-        );
+        ppeBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        ppeBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ppeBackMouseClicked(evt);
+            }
+        });
+        ppeFolder.add(ppeBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, 30));
+
+        ppeSearchBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppeSearchBarActionPerformed(evt);
+            }
+        });
+        ppeSearchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ppeSearchBarKeyReleased(evt);
+            }
+        });
+        ppeFolder.add(ppeSearchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 240, 30));
+
+        ppeSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        ppeSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ppeSearchMouseClicked(evt);
+            }
+        });
+        ppeFolder.add(ppeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, 30));
 
         Inventory.add(ppeFolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -1899,6 +1750,9 @@ public class MainMenu extends javax.swing.JFrame {
         ppeTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ppeTableMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ppeTableMouseEntered(evt);
             }
         });
         jScrollPane8.setViewportView(ppeTable);
@@ -2035,6 +1889,34 @@ public class MainMenu extends javax.swing.JFrame {
         );
 
         ppePanel.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 300, 360));
+
+        ppeFoldersBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        ppeFoldersBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ppeFoldersBackMouseClicked(evt);
+            }
+        });
+        ppePanel.add(ppeFoldersBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, 30));
+
+        ppeFoldersSearchBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppeFoldersSearchBarActionPerformed(evt);
+            }
+        });
+        ppeFoldersSearchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ppeFoldersSearchBarKeyReleased(evt);
+            }
+        });
+        ppePanel.add(ppeFoldersSearchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 240, 30));
+
+        ppeFoldersSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
+        ppeFoldersSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ppeFoldersSearchMouseClicked(evt);
+            }
+        });
+        ppePanel.add(ppeFoldersSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, 30));
 
         Inventory.add(ppePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -2208,171 +2090,10 @@ public class MainMenu extends javax.swing.JFrame {
         titleCard.setText("PROPERTY, PLANT AND EQUIPMENT");
         Inventory.add(titleCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 690, 40));
 
-        searchBar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchBarActionPerformed(evt);
-            }
-        });
-        Inventory.add(searchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 300, 30));
-
-        searchIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/search (2).png"))); // NOI18N
-        Inventory.add(searchIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, -1, 30));
-
         jTabbedPane1.addTab("INVENTORY", Inventory);
 
         UserManagement.setBackground(new java.awt.Color(146, 180, 167));
         UserManagement.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel14.setBackground(new java.awt.Color(189, 196, 167));
-
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/Hera.jpg"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(jLabel59)
-                .addGap(23, 23, 23))
-        );
-
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jPanel12.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 150, 140));
-
-        fullNameTxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        fullNameTxt.setForeground(new java.awt.Color(102, 102, 102));
-        jPanel12.add(fullNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
-        jPanel12.add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 130, 30));
-
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/log out.png"))); // NOI18N
-        jButton21.setText("Log out");
-        jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton21MouseClicked(evt);
-            }
-        });
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 120, 31));
-
-        jLabel81.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel81.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/contact.png"))); // NOI18N
-        jLabel81.setText("Contact Number");
-        jPanel12.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 240, 22));
-
-        contactTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contactTxtActionPerformed(evt);
-            }
-        });
-        jPanel12.add(contactTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 190, -1));
-
-        languageTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                languageTxtActionPerformed(evt);
-            }
-        });
-        jPanel12.add(languageTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 190, -1));
-
-        jLabel83.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel83.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/birthdate.png"))); // NOI18N
-        jLabel83.setText("Birthdate");
-        jPanel12.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 130, 20));
-        jPanel12.add(birthdateTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 190, -1));
-
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton22.setText("Delete Account");
-        jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton22MouseClicked(evt);
-            }
-        });
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 160, 31));
-
-        jLabel84.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel84.setText("Name");
-        jPanel12.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 100, -1));
-
-        jLabel85.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel85.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel85.setText("Email");
-        jPanel12.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 130, 30));
-
-        jLabel87.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel87.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel87.setText("Position");
-        jPanel12.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 90, 30));
-
-        languageTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                languageTxt1ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(languageTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 190, -1));
-
-        languageTxt2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                languageTxt2ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(languageTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 158, 190, -1));
-
-        jLabel33.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel33.setText("Username");
-        jPanel12.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 150, 30));
-
-        birthdateTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                birthdateTxt1ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(birthdateTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 262, 190, 30));
-
-        UserManagement.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 780, 450));
-
-        jLabel15.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel15.setText("USER MANAGEMENT");
-        UserManagement.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 320, 40));
-
         jTabbedPane1.addTab("USER MANAGEMENT", UserManagement);
 
         jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 1130, 590));
@@ -2619,7 +2340,11 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel7MouseClicked
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
-        jTabbedPane1.setSelectedIndex(2);
+        //show Login Page
+                Login login = new Login();
+                login.setVisible(true);
+                login.pack();
+                this.dispose();
     }//GEN-LAST:event_jPanel6MouseClicked
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
@@ -2632,8 +2357,8 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void ppeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeMouseClicked
         jTabbedPane1.setSelectedIndex(1);
-        searchIcon.show();
-        searchBar.show();
+        /*searchIcon.show();
+        searchBar.show();*/
         jPanel3.show();
         ppeFolder.show();
         enlarge();
@@ -2645,8 +2370,8 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void suppliesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesMouseClicked
         jTabbedPane1.setSelectedIndex(1);
-        searchIcon.show();
-        searchBar.show();
+        /*searchIcon.show();
+        searchBar.show();*/
         jPanel3.show();
         tablePanel.show();
         enlarge();
@@ -2735,6 +2460,7 @@ public class MainMenu extends javax.swing.JFrame {
         if(evt.getClickCount()==2){
             int selectedRow = jTable1.getSelectedRow();
             if(selectedRow != -1){
+                showTableSuppliesFolders();
                 suppliesPanel.show();
                 jPanel3.show();
                 tablePanel.hide();
@@ -2742,24 +2468,6 @@ public class MainMenu extends javax.swing.JFrame {
             }
         } 
     }//GEN-LAST:event_jTable1MouseClicked
-
-    private void suppliesTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesTableMouseClicked
-        if(evt.getClickCount()==1){
-            int selectedRow = suppliesTable.getSelectedRow();
-            if(selectedRow != -1){
-                itemField.setText(suppliesTable.getValueAt(selectedRow, 0).toString());
-                descriptionField.setText(suppliesTable.getValueAt(selectedRow, 1).toString());
-                stockField.setText(suppliesTable.getValueAt(selectedRow, 2).toString());
-                reorderField.setText(suppliesTable.getValueAt(selectedRow, 3).toString());
-                measureField.setText(suppliesTable.getValueAt(selectedRow, 4).toString());
-                
-                stockCardPanel.show();
-                jPanel9.hide();
-                suppliesPanel.hide();
-                
-            }
-        }
-    }//GEN-LAST:event_suppliesTableMouseClicked
 public void saveTableDataToSuppliesFolder() {
             System.out.println("Test");
             DefaultTableModel model = (DefaultTableModel) suppliesTable.getModel();
@@ -2771,13 +2479,15 @@ public void saveTableDataToSuppliesFolder() {
             String sql = "INSERT INTO suppliesfolders (ID,Item, Description, `Stock Number`, `Re-Order Point`, `Unit of Measurement`) VALUES (?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
-
-            statement.setInt(1,3);
+            int row =  jTable1.convertRowIndexToModel(jTable1.getSelectedRow());
+            statement.setInt(1,row+1);
             statement.setString(2, txtItem.getText());
             statement.setString(3, txtDescription.getText());
             statement.setString(4, txtStock.getText());
             statement.setString(5, txtOrder.getText());
             statement.setString(6, txtMeasure.getText());
+            
+            
             
             statement.executeUpdate();
   
@@ -2790,7 +2500,9 @@ public void saveTableDataToSuppliesFolder() {
     try {
         Connection conn = (Connection) My_CNX.getConnection();
         st = (Statement) conn.createStatement();
-        String sql = "SELECT * FROM `suppliesfolders`";
+        int rows =  jTable1.convertRowIndexToModel(jTable1.getSelectedRow());
+        int selected = rows+1;
+        String sql = "SELECT * FROM `suppliesfolders` where ID = '"+selected+"' ";
         ResultSet rrs = st.executeQuery(sql);
 
         DefaultTableModel model = (DefaultTableModel) suppliesTable.getModel();
@@ -2818,53 +2530,7 @@ public void saveTableDataToSuppliesFolder() {
 
     }
 }
-
-    private void AddDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDataActionPerformed
-        if(txtItem.getText().equals("") || txtDescription.getText().equals("") || txtMeasure.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please Enter All Data! (Exception..Stock No. and Re-Order Point)");
-        }else {
-            String data[] = {txtItem.getText(), txtDescription.getText(), txtStock.getText(), txtOrder.getText(), txtMeasure.getText()};
-
-            DefaultTableModel tblModel = (DefaultTableModel)suppliesTable.getModel();
-
-            tblModel.addRow(data);
-            saveTableDataToSuppliesFolder();
-            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
-            showTableSuppliesFolders();
-            txtItem.setText("");
-            txtDescription.setText("");
-            txtOrder.setText("");
-            txtStock.setText("");
-            txtMeasure.setText("");
-            
-            
-
-        }
-    }//GEN-LAST:event_AddDataActionPerformed
-
-    private void txtItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtItemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtItemActionPerformed
-
-    private void txtDescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescriptionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDescriptionActionPerformed
-
-    private void txtOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtOrderActionPerformed
-
-    private void txtMeasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMeasureActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMeasureActionPerformed
-
-    private void txtStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtStockActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    
 
     private void reorderFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reorderFieldActionPerformed
         // TODO add your handling code here:
@@ -2884,8 +2550,6 @@ public void saveTableDataToSuppliesFolder() {
  
     private void smppeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smppeMouseClicked
         jTabbedPane1.setSelectedIndex(1);
-        searchIcon.show();
-        searchBar.show();
         jPanel3.show();
         seppeFolder.show();
         enlarge();
@@ -2915,18 +2579,19 @@ public void saveTableDataToSuppliesFolder() {
         }
     }//GEN-LAST:event_seppeTableMouseClicked
 public void saveTableDataToSeppeFolder() {
-            System.out.println("");
+            System.out.println("Test");
             DefaultTableModel model = (DefaultTableModel) seppeTable.getModel();
             int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
 
-            String sql = "INSERT INTO `seppefolders`(`ID`, `Entity Name`, `Fund Cluster`, `SE Property`, `Description`, `SE Property Number`) VALUES (?,?,?,?,?,?)"; 
+            String sql = "INSERT INTO seppefolders (ID, `Entity Name`, `Fund Cluster`, `SE Property`, `Description`, `SE Property Number`) VALUES (?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
+            int row =  jTable3.convertRowIndexToModel(jTable3.getSelectedRow());
 
-            statement.setInt(1,2);
+            statement.setInt(1,row+1);
             statement.setString(2, txtEntity.getText());
             statement.setString(3, txtFund.getText());
             statement.setString(4, txtSEProperty.getText());
@@ -2944,7 +2609,9 @@ public void showTableSeppeFolders() {
     try {
         Connection conn = (Connection) My_CNX.getConnection();
         st = (Statement) conn.createStatement();
-        String sql = "SELECT * FROM `seppefolders`";
+        int rows =  jTable3.convertRowIndexToModel(jTable3.getSelectedRow());
+        int selected = rows+1;
+        String sql = "SELECT * FROM `seppefolders` where ID ='"+selected+"'";
         ResultSet rrs = st.executeQuery(sql);
 
         DefaultTableModel model = (DefaultTableModel) seppeTable.getModel();
@@ -3022,6 +2689,7 @@ public void showTableSeppeFolders() {
         if(evt.getClickCount()==2){
             int selectedRow = jTable3.getSelectedRow();
             if(selectedRow != -1){
+                showTableSeppeFolders();
                 seppePanel.show();
                 jPanel11.show();
                 seppeFolder.hide();
@@ -3113,23 +2781,6 @@ public void showTableSeppeFolders() {
     private void stockCardTablePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTablePanelMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_stockCardTablePanelMouseClicked
-
-    private void jTable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseClicked
-        if(evt.getClickCount()==2){
-            int selectedRow = jTable5.getSelectedRow();
-            if(selectedRow != -1){
-                ppePanel.show();
-                jPanel13.show();
-                ppeFolder.hide();
-                jPanel18.hide();
-                jPanel2.hide();
-            }
-        }
-    }//GEN-LAST:event_jTable5MouseClicked
-
-    private void txtFolder2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolder2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFolder2ActionPerformed
 public void saveTableDataToDBc() {
             System.out.println("");
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
@@ -3177,28 +2828,6 @@ public void saveTableDataToDBc() {
        
        }
    } 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-         if (!txtFolder2.getText().isEmpty()) {
-            String folderName = txtFolder2.getText();
-            String row[] = {folderName};
-
-            DefaultTableModel tblModel = (DefaultTableModel)jTable5.getModel();
-            tblModel.addRow(row);
-            saveTableDataToDBc();
-            txtFolder2.setText("");
-            showTablePpe();
-            
-            
-        }else {
-            JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
-            jPanel18.hide();
-            jTable5.hide();        }
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
-
     private void ppeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeTableMouseClicked
        if(evt.getClickCount()==1){
             int selectedRow = ppeTable.getSelectedRow();
@@ -3217,18 +2846,19 @@ public void saveTableDataToDBc() {
         }
     }//GEN-LAST:event_ppeTableMouseClicked
 public void saveTableDataToPpeFolder() {
-            System.out.println("");
+            System.out.println("Test");
             DefaultTableModel model = (DefaultTableModel) ppeTable.getModel();
             int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
 
-            String sql = "INSERT INTO `ppefolders`(`ID`, `Entity Name`, `Fund Cluster`, `PPE`, `Description`, `Property Number`) VALUES (?,?,?,?,?,?)"; 
+            String sql = "INSERT INTO ppefolders(ID, `Entity Name`, `Fund Cluster`, `PPE`, `Description`, `Property Number`) VALUES (?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
+            int row =  jTable5.convertRowIndexToModel(jTable5.getSelectedRow());
 
-            statement.setInt(1,1);
+            statement.setInt(1,row+1);
             statement.setString(2, txtEntityY.getText());
             statement.setString(3, txtFundD.getText());
             statement.setString(4, txtPPE.getText());
@@ -3246,7 +2876,9 @@ public void showTablePpeFolders() {
     try {
         Connection conn = (Connection) My_CNX.getConnection();
         st = (Statement) conn.createStatement();
-        String sql = "SELECT * FROM `ppefolders`";
+        int rows =  jTable5.convertRowIndexToModel(jTable5.getSelectedRow());
+        int selected = rows+1;
+        String sql = "SELECT * FROM `ppefolders` where ID = '"+selected+"'";
         ResultSet rrs = st.executeQuery(sql);
 
         DefaultTableModel model = (DefaultTableModel) ppeTable.getModel();
@@ -3337,33 +2969,89 @@ public void showTablePpeFolders() {
     private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
     
     }//GEN-LAST:event_txtDateActionPerformed
-public void saveTableDataToSuppliesCard() {
+public void saveTableDataToStockCard() {
             System.out.println("");
             DefaultTableModel model = (DefaultTableModel) stockCardTable.getModel();
-            int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
 
-            String sql = "INSERT INTO suppliesfolders (Folders) VALUES (?)"; 
+            String sql = "INSERT INTO suppliescard (ID, Date, Reference, Receipt, Issue, Balance, `# of Days Consume`) VALUES (?,?,?,?,?,?,?)"; 
 
+            
             PreparedStatement statement = conn.prepareStatement(sql);
-
-            statement.setString(1, txtReference.getText());
+            int rows =  suppliesTable.convertRowIndexToModel(suppliesTable.getSelectedRow());
+            statement.setInt(1,rows+1 );
+            statement.setString(2, txtDate.getText());
+            statement.setString(3, txtReference.getText());
+            statement.setString(4, txtReceipt.getText());
+            statement.setString(5, txtIssue.getText());
+            if(txtReceipt.getText().equals("")){
+                
+            }else{
+            int receipt = Integer.parseInt( txtReceipt.getText());
+            int issue = Integer.parseInt(txtIssue.getText());
+            int balance = receipt - issue;
+            statement.setInt(6, balance);
+            }
+            statement.setString(7, txtDays.getText());
+            
             statement.executeUpdate();
   
             statement.close();
             conn.close(); // Close the connection
         } catch (SQLException e) {
         }
+    } 
+    public void showTableSuppliesStockCard() {
+    try {
+        Connection conn = (Connection) My_CNX.getConnection();
+        st = (Statement) conn.createStatement();
+        int rows =  suppliesTable.convertRowIndexToModel(suppliesTable.getSelectedRow());
+        int selected = rows+1;
+        System.out.println("Selected: "+selected);
+        String sql = "SELECT * FROM `suppliescard` where ID = '"+selected+"' ";
+        ResultSet rrs = st.executeQuery(sql);
+
+        DefaultTableModel model = (DefaultTableModel) stockCardTable.getModel();
+        model.setRowCount(0);
+        model.setColumnCount(0);
+        model.addColumn("Date");
+        model.addColumn("Reference");
+        model.addColumn("Receipt");
+        model.addColumn("Issue");
+        model.addColumn("Balance");
+        model.addColumn("# of Days Consume");
+
+        while (rrs.next()) {
+            String a = rrs.getString("Date");
+            String b = rrs.getString("Reference");
+            String c = rrs.getString("Receipt");
+            String d = rrs.getString("Issue");
+            String e = rrs.getString("Balance");
+            String f = rrs.getString("# of Days Consume");
+
+            Object[] row = { a, b, c, d, e, f };
+            model.addRow(row);
+        }
+
+    } catch (SQLException e) {
+        // Handle exceptions appropriately, e.g., log or display an error message.
+
+    }
 }
+  
     private void AddData3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData3ActionPerformed
-            
-            int receipt =Integer.parseInt( txtReceipt.getText());
+             int receipt = Integer.parseInt( txtReceipt.getText());
             int issue = Integer.parseInt(txtIssue.getText());
             int balance = receipt - issue;
+            
+            String data[] = {txtDate.getText(), txtReference.getText(), txtReceipt.getText(), txtIssue.getText(), txtDays.getText()};
             DefaultTableModel tblModel = (DefaultTableModel)stockCardTable.getModel();
-            tblModel.addRow(new Object[]{txtDate.getText(), txtReference.getText(), txtReceipt.getText(), txtIssue.getText(), balance, txtDays.getText()});
+            tblModel.addRow(data);
+            saveTableDataToStockCard();
+            showTableSuppliesStockCard();
+
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
             
             txtDate.setText("");
@@ -3469,92 +3157,8 @@ public void saveTableDataToppeCard() {
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void stockCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTableMouseClicked
-
+       
     }//GEN-LAST:event_stockCardTableMouseClicked
-
-    private void jButton21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseClicked
-        //show Login Page
-                Login login = new Login();
-                login.setVisible(true);
-                login.pack();
-                this.dispose();
-    }//GEN-LAST:event_jButton21MouseClicked
-
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
-
-    private void searchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchBarActionPerformed
-
-    private void jButton22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22MouseClicked
-
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22ActionPerformed
-
-    private void contactTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contactTxtActionPerformed
-
-    private void languageTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_languageTxt1ActionPerformed
-
-    private void languageTxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageTxt2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_languageTxt2ActionPerformed
-
-    private void languageTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_languageTxtActionPerformed
-
-    private void birthdateTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthdateTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_birthdateTxt1ActionPerformed
-
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
-
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
-
-    private void searchBar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchBar1ActionPerformed
 
     private void txtFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolderActionPerformed
         // TODO add your handling code here:
@@ -3615,6 +3219,262 @@ public void saveTableDataToppeCard() {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDateeActionPerformed
 
+    private void ppeTableMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeTableMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ppeTableMouseEntered
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void txtStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStockActionPerformed
+
+    private void txtMeasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMeasureActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMeasureActionPerformed
+
+    private void txtOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtOrderActionPerformed
+
+    private void txtDescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescriptionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDescriptionActionPerformed
+
+    private void txtItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtItemActionPerformed
+
+    private void AddDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDataActionPerformed
+        if(txtItem.getText().equals("") || txtDescription.getText().equals("") || txtMeasure.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please Enter All Data! (Exception..Stock No. and Re-Order Point)");
+        }else {
+            String data[] = {txtItem.getText(), txtDescription.getText(), txtStock.getText(), txtOrder.getText(), txtMeasure.getText()};
+
+            DefaultTableModel tblModel = (DefaultTableModel)suppliesTable.getModel();
+
+            tblModel.addRow(data);
+            saveTableDataToSuppliesFolder();
+            JOptionPane.showMessageDialog(this, "Data Added Successfully!");
+            showTableSuppliesFolders();
+            //jointSuppliesFolders();
+            
+            txtItem.setText("");
+            txtDescription.setText("");
+            txtOrder.setText("");
+            txtStock.setText("");
+            txtMeasure.setText("");
+
+        }
+    }//GEN-LAST:event_AddDataActionPerformed
+
+    private void suppliesTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesTableMouseClicked
+
+        if(evt.getClickCount()==1){
+            int selectedRow = suppliesTable.getSelectedRow();
+            if(selectedRow != -1){
+                showTableSuppliesStockCard();
+                itemField.setText(suppliesTable.getValueAt(selectedRow, 0).toString());
+                descriptionField.setText(suppliesTable.getValueAt(selectedRow, 1).toString());
+                stockField.setText(suppliesTable.getValueAt(selectedRow, 2).toString());
+                reorderField.setText(suppliesTable.getValueAt(selectedRow, 3).toString());
+                measureField.setText(suppliesTable.getValueAt(selectedRow, 4).toString());
+
+                stockCardPanel.show();
+                jPanel9.hide();
+                suppliesPanel.hide();
+
+            }
+        }
+    }//GEN-LAST:event_suppliesTableMouseClicked
+
+    private void suppliesSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suppliesSearchBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_suppliesSearchBarActionPerformed
+
+    private void suppliesFoldersSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suppliesFoldersSearchBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_suppliesFoldersSearchBarActionPerformed
+
+    private void seppeSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seppeSearchBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seppeSearchBarActionPerformed
+
+    private void seppeFoldersSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seppeFoldersSearchBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seppeFoldersSearchBarActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        if (!txtFolder2.getText().isEmpty()) {
+            String folderName = txtFolder2.getText();
+            String row[] = {folderName};
+
+            DefaultTableModel tblModel = (DefaultTableModel)jTable5.getModel();
+            tblModel.addRow(row);
+            saveTableDataToDBc();
+            txtFolder2.setText("");
+            showTablePpe();
+
+        }else {
+            JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
+            jPanel18.hide();
+            jTable5.hide();        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void txtFolder2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolder2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFolder2ActionPerformed
+
+    private void jTable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseClicked
+        if(evt.getClickCount()==2){
+            int selectedRow = jTable5.getSelectedRow();
+            if(selectedRow != -1){
+                showTablePpeFolders();
+                ppePanel.show();
+                jPanel13.show();
+                ppeFolder.hide();
+                jPanel18.hide();
+                jPanel2.hide();
+            }
+        }
+    }//GEN-LAST:event_jTable5MouseClicked
+
+    private void ppeSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppeSearchBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ppeSearchBarActionPerformed
+
+    private void ppeFoldersSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppeFoldersSearchBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ppeFoldersSearchBarActionPerformed
+
+    private void suppliesSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesSearchMouseClicked
+        DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        jTable1.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(suppliesSearchBar.getText()));
+        
+        
+        
+        
+    }//GEN-LAST:event_suppliesSearchMouseClicked
+
+    private void suppliesSearchBarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_suppliesSearchBarKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_suppliesSearchBarKeyPressed
+
+    private void suppliesSearchBarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_suppliesSearchBarKeyReleased
+        DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        jTable1.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(suppliesSearch.getText()));
+    }//GEN-LAST:event_suppliesSearchBarKeyReleased
+
+    private void suppliesFoldersSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesFoldersSearchMouseClicked
+       DefaultTableModel tblModel = (DefaultTableModel)suppliesTable.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        suppliesTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(suppliesFoldersSearchBar.getText()));
+    }//GEN-LAST:event_suppliesFoldersSearchMouseClicked
+
+    private void suppliesFoldersSearchBarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_suppliesFoldersSearchBarKeyReleased
+        DefaultTableModel tblModel = (DefaultTableModel)suppliesTable.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        suppliesTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(suppliesFoldersSearchBar.getText()));
+    }//GEN-LAST:event_suppliesFoldersSearchBarKeyReleased
+
+    private void seppeSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeSearchMouseClicked
+        DefaultTableModel tblModel = (DefaultTableModel)jTable3.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        jTable3.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(seppeSearchBar.getText()));
+    }//GEN-LAST:event_seppeSearchMouseClicked
+
+    private void seppeSearchBarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_seppeSearchBarKeyReleased
+        DefaultTableModel tblModel = (DefaultTableModel)jTable3.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        jTable3.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(seppeSearchBar.getText()));
+    }//GEN-LAST:event_seppeSearchBarKeyReleased
+
+    private void seppeFoldersSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeFoldersSearchMouseClicked
+        DefaultTableModel tblModel = (DefaultTableModel)seppeTable.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        seppeTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(seppeFoldersSearchBar.getText()));
+    }//GEN-LAST:event_seppeFoldersSearchMouseClicked
+
+    private void seppeFoldersSearchBarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_seppeFoldersSearchBarKeyReleased
+        DefaultTableModel tblModel = (DefaultTableModel)seppeTable.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        seppeTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(seppeFoldersSearchBar.getText()));
+    }//GEN-LAST:event_seppeFoldersSearchBarKeyReleased
+
+    private void ppeSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeSearchMouseClicked
+        DefaultTableModel tblModel = (DefaultTableModel)jTable5.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        jTable5.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(ppeSearchBar.getText()));
+    }//GEN-LAST:event_ppeSearchMouseClicked
+
+    private void ppeSearchBarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ppeSearchBarKeyReleased
+        DefaultTableModel tblModel = (DefaultTableModel)jTable5.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        jTable5.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(ppeSearchBar.getText()));
+    }//GEN-LAST:event_ppeSearchBarKeyReleased
+
+    private void ppeFoldersSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeFoldersSearchMouseClicked
+        DefaultTableModel tblModel = (DefaultTableModel)ppeTable.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        ppeTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(ppeFoldersSearchBar.getText()));
+    }//GEN-LAST:event_ppeFoldersSearchMouseClicked
+
+    private void ppeFoldersSearchBarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ppeFoldersSearchBarKeyReleased
+       DefaultTableModel tblModel = (DefaultTableModel)ppeTable.getModel();
+        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(tblModel);
+        ppeTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(ppeFoldersSearchBar.getText()));
+    }//GEN-LAST:event_ppeFoldersSearchBarKeyReleased
+
+    private void suppliesBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesBackMouseClicked
+        this.toBack();
+        Dashboard.setVisible(true);
+    }//GEN-LAST:event_suppliesBackMouseClicked
+
+    private void suppliesFoldersBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesFoldersBackMouseClicked
+        this.toBack();
+        tablePanel.setVisible(true);
+    }//GEN-LAST:event_suppliesFoldersBackMouseClicked
+
+    private void seppeBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeBackMouseClicked
+        this.toBack();
+        Dashboard.setVisible(true);
+    }//GEN-LAST:event_seppeBackMouseClicked
+
+    private void seppeFoldersBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeFoldersBackMouseClicked
+        this.toBack();
+        seppeFolder.setVisible(true);
+    }//GEN-LAST:event_seppeFoldersBackMouseClicked
+
+    private void ppeBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeBackMouseClicked
+        this.toBack();
+        Dashboard.setVisible(true);
+    }//GEN-LAST:event_ppeBackMouseClicked
+
+    private void ppeFoldersBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeFoldersBackMouseClicked
+        this.toBack();
+        ppeFolder.setVisible(true);
+    }//GEN-LAST:event_ppeFoldersBackMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3660,15 +3520,11 @@ public void saveTableDataToppeCard() {
     private javax.swing.JPanel Dashboard;
     private javax.swing.JPanel Inventory;
     private javax.swing.JPanel UserManagement;
-    private javax.swing.JTextField birthdateTxt;
-    private javax.swing.JTextField birthdateTxt1;
-    private javax.swing.JTextField contactTxt;
     private javax.swing.JTextField desField;
     private javax.swing.JTextField desSField;
     private javax.swing.JTextField descriptionField;
     private javax.swing.JTextField entityField;
     private javax.swing.JTextField entityYField;
-    private javax.swing.JLabel fullNameTxt;
     private javax.swing.JTextField fundDField;
     private javax.swing.JTextField fundField;
     private javax.swing.JTextField itemField;
@@ -3679,8 +3535,6 @@ public void saveTableDataToppeCard() {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
@@ -3692,7 +3546,6 @@ public void saveTableDataToppeCard() {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -3712,7 +3565,7 @@ public void saveTableDataToppeCard() {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -3739,7 +3592,6 @@ public void saveTableDataToppeCard() {
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
@@ -3764,42 +3616,20 @@ public void saveTableDataToppeCard() {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -3820,44 +3650,36 @@ public void saveTableDataToppeCard() {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField languageTxt;
-    private javax.swing.JTextField languageTxt1;
-    private javax.swing.JTextField languageTxt2;
     private javax.swing.JTextField measureField;
-    private javax.swing.JLabel nameTxt;
     private javax.swing.JTextField numberField;
     private javax.swing.JPanel ppe;
+    private javax.swing.JLabel ppeBack;
     private javax.swing.JPanel ppeCard;
     private javax.swing.JTable ppeCardTable;
     private javax.swing.JPanel ppeCardTablePanel;
     private javax.swing.JTextField ppeField;
     private javax.swing.JPanel ppeFolder;
+    private javax.swing.JLabel ppeFoldersBack;
+    private javax.swing.JLabel ppeFoldersSearch;
+    private javax.swing.JTextField ppeFoldersSearchBar;
     private javax.swing.JPanel ppePanel;
+    private javax.swing.JLabel ppeSearch;
+    private javax.swing.JTextField ppeSearchBar;
     private javax.swing.JTable ppeTable;
     private javax.swing.JTextField reorderField;
     private javax.swing.JTextField sePropertyField;
     private javax.swing.JTextField sePropertyNoField;
-    private javax.swing.JTextField searchBar;
-    private javax.swing.JTextField searchBar1;
-    private javax.swing.JLabel searchIcon;
+    private javax.swing.JLabel seppeBack;
     private javax.swing.JPanel seppeCard;
     private javax.swing.JTable seppeCardTable;
     private javax.swing.JPanel seppeCardTablePanel;
     private javax.swing.JPanel seppeFolder;
-    private javax.swing.JPanel seppeFolder1;
+    private javax.swing.JLabel seppeFoldersBack;
+    private javax.swing.JLabel seppeFoldersSearch;
+    private javax.swing.JTextField seppeFoldersSearchBar;
     private javax.swing.JPanel seppePanel;
+    private javax.swing.JLabel seppeSearch;
+    private javax.swing.JTextField seppeSearchBar;
     private javax.swing.JTable seppeTable;
     private javax.swing.JPanel smppe;
     private javax.swing.JPanel stockCardPanel;
@@ -3865,7 +3687,13 @@ public void saveTableDataToppeCard() {
     private javax.swing.JPanel stockCardTablePanel;
     private javax.swing.JTextField stockField;
     private javax.swing.JPanel supplies;
+    private javax.swing.JLabel suppliesBack;
+    private javax.swing.JLabel suppliesFoldersBack;
+    private javax.swing.JLabel suppliesFoldersSearch;
+    private javax.swing.JTextField suppliesFoldersSearchBar;
     private javax.swing.JPanel suppliesPanel;
+    private javax.swing.JLabel suppliesSearch;
+    private javax.swing.JTextField suppliesSearchBar;
     private javax.swing.JTable suppliesTable;
     private javax.swing.JPanel tablePanel;
     private javax.swing.JLabel titleCard;

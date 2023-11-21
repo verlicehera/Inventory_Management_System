@@ -286,7 +286,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginMouseExited
 
     private void signUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpMouseClicked
-       SignUp signupFrame = new SignUp();
+        SignUp signupFrame = new SignUp();
         signupFrame.setVisible(true);
         signupFrame.pack();
         signupFrame.setLocationRelativeTo(null);
