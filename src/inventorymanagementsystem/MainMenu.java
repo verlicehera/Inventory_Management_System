@@ -2444,6 +2444,7 @@ public class MainMenu extends javax.swing.JFrame {
             if(selectedRow != -1){
                 showTableSuppliesFolders();
                 suppliesPanel.show();
+                jPanel9.show();
                 jPanel3.show();
                 tablePanel.hide();
                 jPanel2.hide();
