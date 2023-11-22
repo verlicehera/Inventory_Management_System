@@ -83,38 +83,23 @@ public class MainMenu extends javax.swing.JFrame {
         ppeCard.hide();
         titleCard.hide();
         
-        suppliesBack.hide();
-        suppliesSearchBar.hide();
-        suppliesSearch.hide();
-        suppliesFoldersBack.hide();
-        suppliesFoldersSearchBar.hide();
-        suppliesFoldersSearch.hide();
-        
-        seppeSearch.hide();
-        seppeSearchBar.hide();
-        seppeSearch.hide();
-        seppeFoldersBack.hide();
-        seppeFoldersSearchBar.hide();
-        seppeFoldersSearch.hide();
-        
-        ppeBack.hide();
-        ppeSearchBar.hide();
-        ppeSearch.hide();
-        ppeFoldersBack.hide();
-        ppeFoldersSearchBar.hide();
-        ppeFoldersSearch.hide();
-        
-
-        
         UserManagement.hide();
         
         showTableSupplies();
         showTableSeppe();
         showTablePpe();
+        
         showTableSuppliesFolders();
         showTableSeppeFolders();
         showTablePpeFolders();
+
         showTableSuppliesStockCard();
+        showTableDataToSeppeCard();
+        showTableDataToPpeCard();
+        
+        
+        
+        
        
         
         
@@ -218,7 +203,6 @@ public class MainMenu extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         stockCardTable = new javax.swing.JTable();
         jPanel10 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
         jLabel66 = new javax.swing.JLabel();
         txtDate = new javax.swing.JTextField();
         AddData3 = new javax.swing.JButton();
@@ -230,6 +214,7 @@ public class MainMenu extends javax.swing.JFrame {
         txtIssue = new javax.swing.JTextField();
         jLabel70 = new javax.swing.JLabel();
         txtDays = new javax.swing.JTextField();
+        stockCardBack = new javax.swing.JLabel();
         seppeFolder = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -273,7 +258,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel75 = new javax.swing.JLabel();
         txtAmount = new javax.swing.JTextField();
         AddData4 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
         seppeCardTablePanel = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
@@ -288,6 +272,7 @@ public class MainMenu extends javax.swing.JFrame {
         sePropertyField = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
         fundField = new javax.swing.JTextField();
+        stockCardBack1 = new javax.swing.JLabel();
         ppeFolder = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
@@ -331,7 +316,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel80 = new javax.swing.JLabel();
         txtAmounttt = new javax.swing.JTextField();
         AddData5 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
         ppeCardTablePanel = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
@@ -346,6 +330,7 @@ public class MainMenu extends javax.swing.JFrame {
         ppeField = new javax.swing.JTextField();
         jLabel65 = new javax.swing.JLabel();
         fundDField = new javax.swing.JTextField();
+        stockCardBack2 = new javax.swing.JLabel();
         titleCard = new javax.swing.JLabel();
         UserManagement = new javax.swing.JPanel();
 
@@ -1082,18 +1067,9 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
-        jButton4.setText("SAVE");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel10.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 117, 30));
-
         jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel66.setText("Date");
-        jPanel10.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+        jPanel10.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         txtDate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDate.addActionListener(new java.awt.event.ActionListener() {
@@ -1101,7 +1077,7 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDateActionPerformed(evt);
             }
         });
-        jPanel10.add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 300, 30));
+        jPanel10.add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 300, 30));
 
         AddData3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
         AddData3.setText("ADD");
@@ -1110,11 +1086,11 @@ public class MainMenu extends javax.swing.JFrame {
                 AddData3ActionPerformed(evt);
             }
         });
-        jPanel10.add(AddData3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 30));
+        jPanel10.add(AddData3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 120, 30));
 
         jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel67.setText("Reference");
-        jPanel10.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+        jPanel10.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
         txtReference.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReference.addActionListener(new java.awt.event.ActionListener() {
@@ -1122,11 +1098,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReferenceActionPerformed(evt);
             }
         });
-        jPanel10.add(txtReference, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 300, 30));
+        jPanel10.add(txtReference, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 300, 30));
 
         jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel68.setText("Receipt");
-        jPanel10.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+        jPanel10.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         txtReceipt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReceipt.addActionListener(new java.awt.event.ActionListener() {
@@ -1134,11 +1110,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReceiptActionPerformed(evt);
             }
         });
-        jPanel10.add(txtReceipt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 300, 30));
+        jPanel10.add(txtReceipt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 300, 30));
 
         jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel69.setText("Issue");
-        jPanel10.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        jPanel10.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         txtIssue.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtIssue.addActionListener(new java.awt.event.ActionListener() {
@@ -1146,11 +1122,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtIssueActionPerformed(evt);
             }
         });
-        jPanel10.add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 300, 30));
+        jPanel10.add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 300, 30));
 
         jLabel70.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel70.setText("Number of Days Consume");
-        jPanel10.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        jPanel10.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
         txtDays.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDays.addActionListener(new java.awt.event.ActionListener() {
@@ -1158,9 +1134,17 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDaysActionPerformed(evt);
             }
         });
-        jPanel10.add(txtDays, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 300, 30));
+        jPanel10.add(txtDays, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 300, 30));
 
-        stockCardPanel.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
+        stockCardPanel.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 90, 320, 360));
+
+        stockCardBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        stockCardBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stockCardBackMouseClicked(evt);
+            }
+        });
+        stockCardPanel.add(stockCardBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, -1, 30));
 
         Inventory.add(stockCardPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -1463,7 +1447,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel71.setText("Date");
-        jPanel16.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+        jPanel16.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         txtDatee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDatee.addActionListener(new java.awt.event.ActionListener() {
@@ -1471,11 +1455,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDateeActionPerformed(evt);
             }
         });
-        jPanel16.add(txtDatee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 300, 30));
+        jPanel16.add(txtDatee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
 
         jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel72.setText("Reference");
-        jPanel16.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        jPanel16.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
         txtReferencee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReferencee.addActionListener(new java.awt.event.ActionListener() {
@@ -1483,11 +1467,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReferenceeActionPerformed(evt);
             }
         });
-        jPanel16.add(txtReferencee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 300, 30));
+        jPanel16.add(txtReferencee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
 
         jLabel73.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel73.setText("Receipt");
-        jPanel16.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+        jPanel16.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         txtReceiptt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReceiptt.addActionListener(new java.awt.event.ActionListener() {
@@ -1495,11 +1479,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReceipttActionPerformed(evt);
             }
         });
-        jPanel16.add(txtReceiptt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 300, 30));
+        jPanel16.add(txtReceiptt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
 
         jLabel74.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel74.setText("Issue");
-        jPanel16.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jPanel16.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         txtIssuee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtIssuee.addActionListener(new java.awt.event.ActionListener() {
@@ -1507,11 +1491,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtIssueeActionPerformed(evt);
             }
         });
-        jPanel16.add(txtIssuee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 300, 30));
+        jPanel16.add(txtIssuee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
 
         jLabel75.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel75.setText("Amount");
-        jPanel16.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
+        jPanel16.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         txtAmount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtAmount.addActionListener(new java.awt.event.ActionListener() {
@@ -1519,7 +1503,7 @@ public class MainMenu extends javax.swing.JFrame {
                 txtAmountActionPerformed(evt);
             }
         });
-        jPanel16.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 300, 30));
+        jPanel16.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
 
         AddData4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
         AddData4.setText("ADD ");
@@ -1528,18 +1512,9 @@ public class MainMenu extends javax.swing.JFrame {
                 AddData4ActionPerformed(evt);
             }
         });
-        jPanel16.add(AddData4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 120, 30));
+        jPanel16.add(AddData4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 120, 30));
 
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
-        jButton16.setText("SAVE");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
-        jPanel16.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 117, 30));
-
-        seppeCard.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, 320, 410));
+        seppeCard.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 80, 320, 360));
 
         seppeCardTablePanel.setBackground(new java.awt.Color(255, 255, 255));
         seppeCardTablePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1623,6 +1598,14 @@ public class MainMenu extends javax.swing.JFrame {
         seppeCardTablePanel.add(fundField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
 
         seppeCard.add(seppeCardTablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
+
+        stockCardBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        stockCardBack1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stockCardBack1MouseClicked(evt);
+            }
+        });
+        seppeCard.add(stockCardBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, -1, 30));
 
         Inventory.add(seppeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -1928,7 +1911,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel76.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel76.setText("Date");
-        jPanel19.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+        jPanel19.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         txtDateee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtDateee.addActionListener(new java.awt.event.ActionListener() {
@@ -1936,11 +1919,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtDateeeActionPerformed(evt);
             }
         });
-        jPanel19.add(txtDateee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 300, 30));
+        jPanel19.add(txtDateee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
 
         jLabel77.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel77.setText("Reference");
-        jPanel19.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+        jPanel19.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
         txtReferenceee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReferenceee.addActionListener(new java.awt.event.ActionListener() {
@@ -1948,11 +1931,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReferenceeeActionPerformed(evt);
             }
         });
-        jPanel19.add(txtReferenceee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 300, 30));
+        jPanel19.add(txtReferenceee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 300, 30));
 
         jLabel78.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel78.setText("Receipt");
-        jPanel19.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+        jPanel19.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         txtReceipttt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtReceipttt.addActionListener(new java.awt.event.ActionListener() {
@@ -1960,11 +1943,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtReceiptttActionPerformed(evt);
             }
         });
-        jPanel19.add(txtReceipttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 300, 30));
+        jPanel19.add(txtReceipttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 30));
 
         jLabel79.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel79.setText("Issue");
-        jPanel19.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        jPanel19.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         txtIssueee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtIssueee.addActionListener(new java.awt.event.ActionListener() {
@@ -1972,11 +1955,11 @@ public class MainMenu extends javax.swing.JFrame {
                 txtIssueeeActionPerformed(evt);
             }
         });
-        jPanel19.add(txtIssueee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 300, 30));
+        jPanel19.add(txtIssueee, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 300, 30));
 
         jLabel80.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel80.setText("Amount");
-        jPanel19.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        jPanel19.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         txtAmounttt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtAmounttt.addActionListener(new java.awt.event.ActionListener() {
@@ -1984,7 +1967,7 @@ public class MainMenu extends javax.swing.JFrame {
                 txtAmountttActionPerformed(evt);
             }
         });
-        jPanel19.add(txtAmounttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 300, 30));
+        jPanel19.add(txtAmounttt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 300, 30));
 
         AddData5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/add.png"))); // NOI18N
         AddData5.setText("ADD ");
@@ -1993,18 +1976,9 @@ public class MainMenu extends javax.swing.JFrame {
                 AddData5ActionPerformed(evt);
             }
         });
-        jPanel19.add(AddData5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 30));
+        jPanel19.add(AddData5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 120, 30));
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/save.png"))); // NOI18N
-        jButton18.setText("SAVE");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
-            }
-        });
-        jPanel19.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 117, 30));
-
-        ppeCard.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 320, 430));
+        ppeCard.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 90, 320, 360));
 
         ppeCardTablePanel.setBackground(new java.awt.Color(255, 255, 255));
         ppeCardTablePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2083,6 +2057,14 @@ public class MainMenu extends javax.swing.JFrame {
         ppeCardTablePanel.add(fundDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 280, -1));
 
         ppeCard.add(ppeCardTablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 760, 470));
+
+        stockCardBack2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/back2.png"))); // NOI18N
+        stockCardBack2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stockCardBack2MouseClicked(evt);
+            }
+        });
+        ppeCard.add(stockCardBack2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, -1, 30));
 
         Inventory.add(ppeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1110, 490));
 
@@ -2357,8 +2339,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void ppeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeMouseClicked
         jTabbedPane1.setSelectedIndex(1);
-        /*searchIcon.show();
-        searchBar.show();*/
+        
         jPanel3.show();
         ppeFolder.show();
         enlarge();
@@ -2366,6 +2347,7 @@ public class MainMenu extends javax.swing.JFrame {
         
         titleCard.setText("PROPERTY, PLANT AND EQUIPMENT");
         titleCard.show();
+        
     }//GEN-LAST:event_ppeMouseClicked
 
     private void suppliesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesMouseClicked
@@ -2451,7 +2433,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     
@@ -2470,13 +2452,12 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MouseClicked
 public void saveTableDataToSuppliesFolder() {
             System.out.println("Test");
-            DefaultTableModel model = (DefaultTableModel) suppliesTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
-
-            String sql = "INSERT INTO suppliesfolders (ID,Item, Description, `Stock Number`, `Re-Order Point`, `Unit of Measurement`) VALUES (?,?,?,?,?,?)"; 
+            String sql = "INSERT INTO suppliesfolders (ID,Item, Description, `Stock No.`, `Re-Order Point`, `Unit of Measurement`) VALUES (?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
             int row =  jTable1.convertRowIndexToModel(jTable1.getSelectedRow());
@@ -2497,13 +2478,14 @@ public void saveTableDataToSuppliesFolder() {
         }
 }
     public void showTableSuppliesFolders() {
-    try {
-        Connection conn = (Connection) My_CNX.getConnection();
-        st = (Statement) conn.createStatement();
         int rows =  jTable1.convertRowIndexToModel(jTable1.getSelectedRow());
-        int selected = rows+1;
-        String sql = "SELECT * FROM `suppliesfolders` where ID = '"+selected+"' ";
-        ResultSet rrs = st.executeQuery(sql);
+        int select = rows+1;
+        System.out.println("Test: "+rows);
+        String sql = ("SELECT suppliesfolders.* FROM suppliesfolders INNER JOIN supplies ON suppliesfolders.ID = supplies.ID WHERE supplies.ID = '"+select+"'");
+        try (
+        Connection conn = (Connection) My_CNX.getConnection();
+        Statement st = (Statement) conn.createStatement();
+        ResultSet rrs = st.executeQuery(sql)){
 
         DefaultTableModel model = (DefaultTableModel) suppliesTable.getModel();
         model.setRowCount(0);
@@ -2517,7 +2499,7 @@ public void saveTableDataToSuppliesFolder() {
         while (rrs.next()) {
             String a = rrs.getString("Item");
             String b = rrs.getString("Description");
-            String c = rrs.getString("Stock Number");
+            String c = rrs.getString("Stock No.");
             String d = rrs.getString("Re-Order Point");
             String e = rrs.getString("Unit of Measurement");
 
@@ -2543,10 +2525,6 @@ public void saveTableDataToSuppliesFolder() {
     private void stockFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stockFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_stockFieldActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      
-    }//GEN-LAST:event_jButton4ActionPerformed
  
     private void smppeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smppeMouseClicked
         jTabbedPane1.setSelectedIndex(1);
@@ -2564,6 +2542,7 @@ public void saveTableDataToSuppliesFolder() {
        if(evt.getClickCount()==1){
             int selectedRow = seppeTable.getSelectedRow();
             if(selectedRow != -1){
+                showTableDataToSeppeCard();
                 entityField.setText(seppeTable.getValueAt(selectedRow, 0).toString());
                 fundField.setText(seppeTable.getValueAt(selectedRow, 1).toString());
                 sePropertyField.setText(seppeTable.getValueAt(selectedRow, 2).toString());
@@ -2580,13 +2559,12 @@ public void saveTableDataToSuppliesFolder() {
     }//GEN-LAST:event_seppeTableMouseClicked
 public void saveTableDataToSeppeFolder() {
             System.out.println("Test");
-            DefaultTableModel model = (DefaultTableModel) seppeTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
             int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
-
-            String sql = "INSERT INTO seppefolders (ID, `Entity Name`, `Fund Cluster`, `SE Property`, `Description`, `SE Property Number`) VALUES (?,?,?,?,?,?)"; 
+            String sql = "INSERT INTO seppefolders (ID, `Entity Name`, `Fund Cluster`, `SE Property`, Description, `SE Property No.`) VALUES (?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
             int row =  jTable3.convertRowIndexToModel(jTable3.getSelectedRow());
@@ -2606,12 +2584,14 @@ public void saveTableDataToSeppeFolder() {
         }
 }
 public void showTableSeppeFolders() {
+        int rows =  jTable3.convertRowIndexToModel(jTable3.getSelectedRow());
+        int select = rows+1;
+        System.out.println("Test: "+rows);
+        String sql = "SELECT seppefolders.* FROM seppefolders INNER JOIN seppe ON seppefolders.ID = seppe.ID WHERE seppe.ID = '"+select+"'";
+
     try {
         Connection conn = (Connection) My_CNX.getConnection();
         st = (Statement) conn.createStatement();
-        int rows =  jTable3.convertRowIndexToModel(jTable3.getSelectedRow());
-        int selected = rows+1;
-        String sql = "SELECT * FROM `seppefolders` where ID ='"+selected+"'";
         ResultSet rrs = st.executeQuery(sql);
 
         DefaultTableModel model = (DefaultTableModel) seppeTable.getModel();
@@ -2628,7 +2608,7 @@ public void showTableSeppeFolders() {
             String b = rrs.getString("Fund Cluster");
             String c = rrs.getString("SE Property");
             String d = rrs.getString("Description");
-            String e = rrs.getString("SE Property Number");
+            String e = rrs.getString("SE Property No.");
 
             Object[] row = { a, b, c, d, e };
             model.addRow(row);
@@ -2640,9 +2620,8 @@ public void showTableSeppeFolders() {
     }
 }
     private void AddData1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData1ActionPerformed
-        if(txtEntity.getText().equals("") || txtFund.getText().equals("") || txtSEProperty.getText().isEmpty()
-                || txtDes.getText().equals("") || txtSEPropertyNo.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter Data!");
+        if(txtDes.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Need Data for Description!");
         }else {
             String data[] = {txtEntity.getText(), txtFund.getText(), txtSEProperty.getText(), txtDes.getText(), txtSEPropertyNo.getText()};
 
@@ -2832,6 +2811,7 @@ public void saveTableDataToDBc() {
        if(evt.getClickCount()==1){
             int selectedRow = ppeTable.getSelectedRow();
             if(selectedRow != -1){
+                showTableDataToPpeCard();
                 entityYField.setText(ppeTable.getValueAt(selectedRow, 0).toString());
                 fundDField.setText(ppeTable.getValueAt(selectedRow, 1).toString());
                 ppeField.setText(ppeTable.getValueAt(selectedRow, 2).toString());
@@ -2847,13 +2827,13 @@ public void saveTableDataToDBc() {
     }//GEN-LAST:event_ppeTableMouseClicked
 public void saveTableDataToPpeFolder() {
             System.out.println("Test");
-            DefaultTableModel model = (DefaultTableModel) ppeTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) jTable5.getModel();
             int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
 
-            String sql = "INSERT INTO ppefolders(ID, `Entity Name`, `Fund Cluster`, `PPE`, `Description`, `Property Number`) VALUES (?,?,?,?,?,?)"; 
+            String sql = "INSERT INTO ppefolders(ID, `Entity Name`, `Fund Cluster`, PPE, Description, `Property Number`) VALUES (?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
             int row =  jTable5.convertRowIndexToModel(jTable5.getSelectedRow());
@@ -2873,12 +2853,15 @@ public void saveTableDataToPpeFolder() {
         }
 }
 public void showTablePpeFolders() {
+        int rows =  jTable5.convertRowIndexToModel(jTable5.getSelectedRow());
+        int select = rows+1;
+        System.out.println("Test: "+rows);
+        String sql = "SELECT ppefolders.* FROM ppefolders INNER JOIN ppe ON ppefolders.ID = ppe.ID WHERE ppe.ID = '"+select+"'";
+        
     try {
         Connection conn = (Connection) My_CNX.getConnection();
         st = (Statement) conn.createStatement();
-        int rows =  jTable5.convertRowIndexToModel(jTable5.getSelectedRow());
-        int selected = rows+1;
-        String sql = "SELECT * FROM `ppefolders` where ID = '"+selected+"'";
+        
         ResultSet rrs = st.executeQuery(sql);
 
         DefaultTableModel model = (DefaultTableModel) ppeTable.getModel();
@@ -2907,8 +2890,7 @@ public void showTablePpeFolders() {
     }
 }
     private void AddData2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData2ActionPerformed
-        if(txtEntityY.getText().equals("") || txtFundD.getText().equals("") || txtPPE.getText().isEmpty()
-                || txtDesS.getText().equals("") || txtNumber.getText().equals("")) {
+        if(txtDesS.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Please Enter Data!");
         }else {
             String data[] = {txtEntityY.getText(), txtFundD.getText(), txtPPE.getText(), txtDesS.getText(), txtNumber.getText()};
@@ -2971,30 +2953,31 @@ public void showTablePpeFolders() {
     }//GEN-LAST:event_txtDateActionPerformed
 public void saveTableDataToStockCard() {
             System.out.println("");
-            DefaultTableModel model = (DefaultTableModel) stockCardTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) suppliesTable.getModel();
+            int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
-
             String sql = "INSERT INTO suppliescard (ID, Date, Reference, Receipt, Issue, Balance, `# of Days Consume`) VALUES (?,?,?,?,?,?,?)"; 
 
-            
             PreparedStatement statement = conn.prepareStatement(sql);
-            int rows =  suppliesTable.convertRowIndexToModel(suppliesTable.getSelectedRow());
-            statement.setInt(1,rows+1 );
+            int row =  suppliesTable.convertRowIndexToModel(suppliesTable.getSelectedRow());
+            statement.setInt(1, row+1);
             statement.setString(2, txtDate.getText());
             statement.setString(3, txtReference.getText());
             statement.setString(4, txtReceipt.getText());
             statement.setString(5, txtIssue.getText());
-            if(txtReceipt.getText().equals("")){
-                
+            
+            if(txtReceipt.getText().equals("")){   
             }else{
             int receipt = Integer.parseInt( txtReceipt.getText());
             int issue = Integer.parseInt(txtIssue.getText());
             int balance = receipt - issue;
+            
             statement.setInt(6, balance);
-            }
             statement.setString(7, txtDays.getText());
+            }
+            
             
             statement.executeUpdate();
   
@@ -3004,14 +2987,15 @@ public void saveTableDataToStockCard() {
         }
     } 
     public void showTableSuppliesStockCard() {
-    try {
-        Connection conn = (Connection) My_CNX.getConnection();
-        st = (Statement) conn.createStatement();
         int rows =  suppliesTable.convertRowIndexToModel(suppliesTable.getSelectedRow());
-        int selected = rows+1;
-        System.out.println("Selected: "+selected);
-        String sql = "SELECT * FROM `suppliescard` where ID = '"+selected+"' ";
-        ResultSet rrs = st.executeQuery(sql);
+        int select = rows+1;
+        System.out.println("Test: "+select);
+        
+        String sql = "SELECT suppliescard.* FROM suppliescard INNER JOIN suppliesfolders ON suppliescard.ID = suppliesfolders.ID2 WHERE suppliescard.ID= '"+select+"'";
+        try {
+            Connection conn = (Connection) My_CNX.getConnection();
+            st = (Statement) conn.createStatement();
+            ResultSet rrs = st.executeQuery(sql);
 
         DefaultTableModel model = (DefaultTableModel) stockCardTable.getModel();
         model.setRowCount(0);
@@ -3042,10 +3026,10 @@ public void saveTableDataToStockCard() {
 }
   
     private void AddData3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData3ActionPerformed
-             int receipt = Integer.parseInt( txtReceipt.getText());
-            int issue = Integer.parseInt(txtIssue.getText());
-            int balance = receipt - issue;
-            
+            if(txtReceipt.getText().equals("") || txtIssue.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Enter Data for Receipt and Issue!");
+            }else {
+         
             String data[] = {txtDate.getText(), txtReference.getText(), txtReceipt.getText(), txtIssue.getText(), txtDays.getText()};
             DefaultTableModel tblModel = (DefaultTableModel)stockCardTable.getModel();
             tblModel.addRow(data);
@@ -3060,7 +3044,7 @@ public void saveTableDataToStockCard() {
             txtIssue.setText("");
             txtDays.setText("");
 
-        
+            }
     }//GEN-LAST:event_AddData3ActionPerformed
 
     private void txtReferenceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReferenceActionPerformed
@@ -3080,23 +3064,80 @@ public void saveTableDataToStockCard() {
     }//GEN-LAST:event_txtDaysActionPerformed
 public void saveTableDataToSeppeCard() {
             System.out.println("");
-            DefaultTableModel model = (DefaultTableModel) seppeCardTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) seppeTable.getModel();
             int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
 
-            String sql = "INSERT INTO suppliesfolders (Folders) VALUES (?)"; 
+            String sql = "INSERT INTO seppecard (ID, Date, Reference, Receipt, Issue, Balance, Amount, Remarks) VALUES (?,?,?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
-
-            statement.setString(1, txtReference.getText());
-            statement.executeUpdate();
+            int row =  seppeTable.convertRowIndexToModel(seppeTable.getSelectedRow());
+            statement.setInt(1,row+1);
+            statement.setString(2, txtDatee.getText());
+            statement.setString(3, txtReferencee.getText());
+            statement.setString(4, txtReceiptt.getText());
+            statement.setString(5, txtIssuee.getText());
+            
+           if(txtReceiptt.getText().equals("")){   
+            }else{
+            int receipt = Integer.parseInt( txtReceiptt.getText());
+            int issue = Integer.parseInt(txtIssuee.getText());
+            int balance = receipt - issue;
+             
+            statement.setInt(6, balance);
+            statement.setString(7, txtAmount.getText());
+            statement.setString(8, "");
+            }
   
+            statement.executeUpdate();
+           
             statement.close();
+            
             conn.close(); // Close the connection
         } catch (SQLException e) {
         }
+}
+public void showTableDataToSeppeCard () {
+        int rows =  seppeTable.convertRowIndexToModel(seppeTable.getSelectedRow());
+        int select = rows+1;
+        System.out.println("Test: "+select);
+        
+        String sql = "SELECT seppecard.* FROM seppecard INNER JOIN seppefolders ON seppecard.ID = seppefolders.ID2 WHERE seppecard.ID= '"+select+"'";
+        try {
+            Connection conn = (Connection) My_CNX.getConnection();
+            st = (Statement) conn.createStatement();
+            ResultSet rrs = st.executeQuery(sql);
+
+            DefaultTableModel model = (DefaultTableModel) seppeCardTable.getModel();
+            model.setRowCount(0);
+            model.setColumnCount(0);
+            model.addColumn("Date");
+            model.addColumn("Reference");
+            model.addColumn("Receipt");
+            model.addColumn("Issue");
+            model.addColumn("Balance");
+            model.addColumn("Amount");
+            model.addColumn("Remarks");
+
+        while (rrs.next()) {
+            String a = rrs.getString("Date");
+            String b = rrs.getString("Reference");
+            String c = rrs.getString("Receipt");
+            String d = rrs.getString("Issue");
+            String e = rrs.getString("Balance");
+            String f = rrs.getString("Amount");
+            String g = rrs.getString("Remarks");
+
+            Object[] row = { a, b, c, d, e, f, g };
+            model.addRow(row);
+        }
+
+    } catch (SQLException e) {
+        // Handle exceptions appropriately, e.g., log or display an error message.
+
+    }
 }
     private void txtDateeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateeeActionPerformed
         // TODO add your handling code here:
@@ -3117,32 +3158,91 @@ public void saveTableDataToSeppeCard() {
     private void txtAmountttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountttActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAmountttActionPerformed
-public void saveTableDataToppeCard() {
+public void saveTableDataToPpeCard() {
             System.out.println("");
-            DefaultTableModel model = (DefaultTableModel) ppeCardTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) ppeTable.getModel();
             int rows = model.getRowCount();
             
             try {
             Connection conn = (Connection) My_CNX.getConnection(); 
-
-            String sql = "INSERT INTO suppliesfolders (Folders) VALUES (?)"; 
+            String sql = "INSERT INTO ppecard (ID, Date, Reference, Receipt, Issue, Balance, Amount, Remarks) VALUES (?,?,?,?,?,?,?,?)"; 
 
             PreparedStatement statement = conn.prepareStatement(sql);
-
-            statement.setString(1, txtReferenceee.getText());
+            int row =  ppeTable.convertRowIndexToModel(ppeTable.getSelectedRow());
+            statement.setInt(1,row+1);
+            statement.setString(2, txtDateee.getText());
+            statement.setString(3, txtReferenceee.getText());
+            statement.setString(4, txtReceipttt.getText());
+            statement.setString(5, txtIssueee.getText());
+            
+            if(txtReceipttt.getText().equals("")){   
+            }else{
+            int receipt = Integer.parseInt( txtReceipttt.getText());
+            int issue = Integer.parseInt(txtIssueee.getText());
+            int balance = receipt - issue;
+            
+            statement.setInt(6, balance);
+            statement.setString(7, txtAmounttt.getText());
+            statement.setString(8, "");
+            
+            }
             statement.executeUpdate();
-  
             statement.close();
             conn.close(); // Close the connection
         } catch (SQLException e) {
         }
+
+}
+public void showTableDataToPpeCard() {
+        int rows =  ppeTable.convertRowIndexToModel(ppeTable.getSelectedRow());
+        int select = rows+1;
+        System.out.println("Test: "+rows);
+        
+        String sql = "SELECT ppecard.* FROM ppecard INNER JOIN ppefolders ON ppecard.ID = ppefolders.ID2 WHERE ppecard.ID= '"+select+"'";
+        try {
+            Connection conn = (Connection) My_CNX.getConnection();
+            st = (Statement) conn.createStatement();
+            ResultSet rrs = st.executeQuery(sql);
+
+        DefaultTableModel model = (DefaultTableModel) ppeCardTable.getModel();
+        model.setRowCount(0);
+        model.setColumnCount(0);
+        model.addColumn("Date");
+        model.addColumn("Reference");
+        model.addColumn("Receipt");
+        model.addColumn("Issue");
+        model.addColumn("Balance");
+        model.addColumn("Amount");
+        model.addColumn("Remarks");
+
+        while (rrs.next()) {
+            String a = rrs.getString("Date");
+            String b = rrs.getString("Reference");
+            String c = rrs.getString("Receipt");
+            String d = rrs.getString("Issue");
+            String e = rrs.getString("Balance");
+            String f = rrs.getString("Amount");
+            String g = rrs.getString("Remarks");
+
+            Object[] row = { a, b, c, d, e, f, g };
+            model.addRow(row);
+        }
+
+    } catch (SQLException e) {
+        // Handle exceptions appropriately, e.g., log or display an error message.
+
+    }
 }
     private void AddData5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData5ActionPerformed
-            int receipt =Integer.parseInt( txtReceipttt.getText());
-            int issue = Integer.parseInt(txtIssueee.getText());
-            int balance = receipt - issue;
+            if(txtReceipttt.getText().equals("") || txtIssueee.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Enter Data for Receipt and Issue!");
+            }else {
+         
+            String data[] = {txtDateee.getText(), txtReferenceee.getText(), txtReceipttt.getText(), txtIssueee.getText(), txtAmounttt.getText()};
             DefaultTableModel tblModel = (DefaultTableModel)ppeCardTable.getModel();
-            tblModel.addRow(new Object[]{txtDateee.getText(), txtReferenceee.getText(), txtReceipttt.getText(), txtIssueee.getText(), balance, txtAmounttt.getText(), " "});
+            tblModel.addRow(data);
+            saveTableDataToPpeCard();
+            showTableDataToPpeCard();
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
             
             txtDateee.setText("");
@@ -3150,11 +3250,8 @@ public void saveTableDataToppeCard() {
             txtReceipttt.setText("");
             txtIssueee.setText("");
             txtAmounttt.setText("");
+            }
     }//GEN-LAST:event_AddData5ActionPerformed
-
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
 
     private void stockCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTableMouseClicked
        
@@ -3180,16 +3277,16 @@ public void saveTableDataToppeCard() {
         // TODO add your handling code here:
     }//GEN-LAST:event_desFieldActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
-
     private void AddData4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddData4ActionPerformed
-        int receipt =Integer.parseInt( txtReceiptt.getText());
-        int issue = Integer.parseInt(txtIssuee.getText());
-        int balance = receipt - issue;
+        if(txtReceiptt.getText().equals("") || txtIssuee.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Enter Data for Receipt and Issue!");
+            }else {
+         
+        String data[] = {txtDatee.getText(), txtReferencee.getText(), txtReceiptt.getText(), txtIssuee.getText(), txtAmount.getText()};
         DefaultTableModel tblModel = (DefaultTableModel)seppeCardTable.getModel();
-        tblModel.addRow(new Object[]{txtDatee.getText(), txtReferencee.getText(), txtReceiptt.getText(), txtIssuee.getText(), balance, txtAmount.getText(), " "});
+        tblModel.addRow(data);
+        saveTableDataToSeppeCard();
+        showTableDataToSeppeCard();
         JOptionPane.showMessageDialog(this, "Data Added Successfully!");
 
         txtDatee.setText("");
@@ -3197,6 +3294,7 @@ public void saveTableDataToppeCard() {
         txtReceiptt.setText("");
         txtIssuee.setText("");
         txtAmount.setText("");
+        }
     }//GEN-LAST:event_AddData4ActionPerformed
 
     private void txtAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountActionPerformed
@@ -3257,9 +3355,9 @@ public void saveTableDataToppeCard() {
 
             tblModel.addRow(data);
             saveTableDataToSuppliesFolder();
+
             JOptionPane.showMessageDialog(this, "Data Added Successfully!");
             showTableSuppliesFolders();
-            //jointSuppliesFolders();
             
             txtItem.setText("");
             txtDescription.setText("");
@@ -3446,34 +3544,40 @@ public void saveTableDataToppeCard() {
     }//GEN-LAST:event_ppeFoldersSearchBarKeyReleased
 
     private void suppliesBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesBackMouseClicked
-        this.toBack();
         Dashboard.setVisible(true);
     }//GEN-LAST:event_suppliesBackMouseClicked
 
     private void suppliesFoldersBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesFoldersBackMouseClicked
-        this.toBack();
         tablePanel.setVisible(true);
     }//GEN-LAST:event_suppliesFoldersBackMouseClicked
 
     private void seppeBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeBackMouseClicked
-        this.toBack();
         Dashboard.setVisible(true);
     }//GEN-LAST:event_seppeBackMouseClicked
 
     private void seppeFoldersBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeFoldersBackMouseClicked
-        this.toBack();
         seppeFolder.setVisible(true);
     }//GEN-LAST:event_seppeFoldersBackMouseClicked
 
     private void ppeBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeBackMouseClicked
-        this.toBack();
         Dashboard.setVisible(true);
     }//GEN-LAST:event_ppeBackMouseClicked
 
     private void ppeFoldersBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeFoldersBackMouseClicked
-        this.toBack();
         ppeFolder.setVisible(true);
     }//GEN-LAST:event_ppeFoldersBackMouseClicked
+
+    private void stockCardBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardBackMouseClicked
+        suppliesPanel.setVisible(true);
+    }//GEN-LAST:event_stockCardBackMouseClicked
+
+    private void stockCardBack1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardBack1MouseClicked
+        seppePanel.setVisible(true);
+    }//GEN-LAST:event_stockCardBack1MouseClicked
+
+    private void stockCardBack2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardBack2MouseClicked
+        ppePanel.setVisible(true);
+    }//GEN-LAST:event_stockCardBack2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -3532,11 +3636,8 @@ public void saveTableDataToppeCard() {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -3682,6 +3783,9 @@ public void saveTableDataToppeCard() {
     private javax.swing.JTextField seppeSearchBar;
     private javax.swing.JTable seppeTable;
     private javax.swing.JPanel smppe;
+    private javax.swing.JLabel stockCardBack;
+    private javax.swing.JLabel stockCardBack1;
+    private javax.swing.JLabel stockCardBack2;
     private javax.swing.JPanel stockCardPanel;
     private javax.swing.JTable stockCardTable;
     private javax.swing.JPanel stockCardTablePanel;

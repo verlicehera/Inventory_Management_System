@@ -10,7 +10,7 @@ public class My_CNX {
     
     private static String fullname = "localhost";
     private static String username = "root";
-    private static String dbname = "inventory_system";
+    private static String dbname = "inventory_magement_system";
     private static Integer portnumber = 3306;
     private static String password = "";
     

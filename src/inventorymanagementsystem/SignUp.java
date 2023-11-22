@@ -331,7 +331,7 @@ public class SignUp extends javax.swing.JFrame {
             if(!checkUsername(username)) {
                 PreparedStatement ps;
                 ResultSet rs;
-                String registerUserQuery = "INSERT INTO `signup`(`Fullname`, `Username`, `Password`, `Contact Number`, `Birthdate`, `Email`, `Position`) VALUES (?,?,?,?,?,?,?)";
+                String registerUserQuery = "INSERT INTO `signup`(`Full Name`, `Username`, `Password`, `Contact Number`, `Birthdate`, `Email`, `Position`) VALUES (?,?,?,?,?,?,?)";
                 
                 try {
                     

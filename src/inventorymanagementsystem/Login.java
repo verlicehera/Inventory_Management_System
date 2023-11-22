@@ -222,7 +222,7 @@ public class Login extends javax.swing.JFrame {
         String password = String.valueOf(Password.getPassword());
         
         //create a query to check if the username and the password exist in the database
-        String query = "SELECT * FROM signup WHERE  username = ? and password = ?";
+        String query = "SELECT * FROM signup WHERE  Username = ? and Password = ?";
         
         try {
             st = My_CNX.getConnection().prepareStatement(query);
@@ -259,7 +259,7 @@ public class Login extends javax.swing.JFrame {
         String password = String.valueOf(Password.getPassword());
         
         //create a query to check if the username and the password exist in the database
-        String query = "SELECT * FROM signup WHERE  username = '"+username+"' and password = '"+password+"'";
+        String query = "SELECT * FROM signup WHERE  Username = '"+username+"' and Password = '"+password+"'";
         
         try {
             st = My_CNX.getConnection().prepareStatement(query);
