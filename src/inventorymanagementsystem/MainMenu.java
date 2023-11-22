@@ -3545,6 +3545,8 @@ public void showTableDataToPpeCard() {
     }//GEN-LAST:event_ppeFoldersSearchBarKeyReleased
 
     private void suppliesBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suppliesBackMouseClicked
+        jPanel2.setVisible(true);
+        jPanel4.setVisible(true);
         Dashboard.setVisible(true);
     }//GEN-LAST:event_suppliesBackMouseClicked
 
@@ -3553,6 +3555,8 @@ public void showTableDataToPpeCard() {
     }//GEN-LAST:event_suppliesFoldersBackMouseClicked
 
     private void seppeBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeBackMouseClicked
+        jPanel2.setVisible(true);
+        jPanel4.setVisible(true);
         Dashboard.setVisible(true);
     }//GEN-LAST:event_seppeBackMouseClicked
 
@@ -3561,6 +3565,8 @@ public void showTableDataToPpeCard() {
     }//GEN-LAST:event_seppeFoldersBackMouseClicked
 
     private void ppeBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeBackMouseClicked
+        jPanel2.setVisible(true);
+        jPanel4.setVisible(true);
         Dashboard.setVisible(true);
     }//GEN-LAST:event_ppeBackMouseClicked
 
