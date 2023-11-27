@@ -160,7 +160,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         txtFolder = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         suppliesSearchBar = new javax.swing.JTextField();
@@ -181,7 +180,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel45 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         txtStock = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
         suppliesFoldersBack = new javax.swing.JLabel();
         suppliesFoldersSearchBar = new javax.swing.JTextField();
         suppliesFoldersSearch = new javax.swing.JLabel();
@@ -222,7 +220,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         txtFolder1 = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         seppeBack = new javax.swing.JLabel();
         seppeSearchBar = new javax.swing.JTextField();
         seppeSearch = new javax.swing.JLabel();
@@ -241,7 +238,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel47 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         txtSEProperty = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
         seppeFoldersBack = new javax.swing.JLabel();
         seppeFoldersSearchBar = new javax.swing.JTextField();
         seppeFoldersSearch = new javax.swing.JLabel();
@@ -280,7 +276,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         txtFolder2 = new javax.swing.JTextField();
         jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
         ppeBack = new javax.swing.JLabel();
         ppeSearchBar = new javax.swing.JTextField();
         ppeSearch = new javax.swing.JLabel();
@@ -299,7 +294,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel56 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
         txtPPE = new javax.swing.JTextField();
-        jButton13 = new javax.swing.JButton();
         ppeFoldersBack = new javax.swing.JLabel();
         ppeFoldersSearchBar = new javax.swing.JTextField();
         ppeFoldersSearch = new javax.swing.JLabel();
@@ -696,16 +690,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 120, 30));
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton2.setText("Remove");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 30));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 120, 30));
 
         tablePanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 310, 210));
 
@@ -865,14 +850,6 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton3.setText("REMOVE");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -880,27 +857,28 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(txtMeasure, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtOrder, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtStock, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtDescription, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addComponent(AddData)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(txtItem, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, Short.MAX_VALUE)))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel18)
                             .addComponent(jLabel20)
                             .addComponent(jLabel19))
-                        .addGap(83, 83, 83)))
-                .addGap(17, 17, 17))
+                        .addGap(100, 100, 100))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtMeasure, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtOrder, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtStock, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDescription, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtItem, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(17, 17, 17))))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(AddData)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -926,9 +904,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtMeasure, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AddData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(AddData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
         );
 
@@ -1200,16 +1176,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 120, 30));
-
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton8.setText("Remove");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel15.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 30));
+        jPanel15.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 120, 30));
 
         seppeFolder.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 310, 210));
 
@@ -1338,14 +1305,6 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton6.setText("REMOVE");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -1355,10 +1314,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(AddData1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
                             .addComponent(txtSEPropertyNo, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDes, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtSEProperty)
@@ -1368,14 +1323,17 @@ public class MainMenu extends javax.swing.JFrame {
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel11Layout.createSequentialGroup()
+                                        .addGap(61, 61, 61)
+                                        .addComponent(AddData1)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(14, 14, 14))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel30)
                             .addComponent(jLabel47))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(37, Short.MAX_VALUE))))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1401,9 +1359,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSEPropertyNo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AddData1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(AddData1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
 
@@ -1661,16 +1617,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        jPanel18.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 120, 30));
-
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton12.setText("Remove");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-        jPanel18.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 30));
+        jPanel18.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 120, 30));
 
         ppeFolder.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 160, 310, 210));
 
@@ -1802,14 +1749,6 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventorymanagementsystem/Icon/delete.png"))); // NOI18N
-        jButton13.setText("REMOVE");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -1819,10 +1758,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addComponent(AddData2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
                             .addComponent(txtNumber, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDesS, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtPPE)
@@ -1833,13 +1768,17 @@ public class MainMenu extends javax.swing.JFrame {
                                     .addComponent(jLabel57, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel50, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel49, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 5, Short.MAX_VALUE)))
                         .addGap(14, 14, 14))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel55)
                             .addComponent(jLabel56))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(AddData2)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1864,11 +1803,9 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(jLabel56)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AddData2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(18, 18, 18))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(AddData2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         ppePanel.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 300, 360));
@@ -2040,6 +1977,11 @@ public class MainMenu extends javax.swing.JFrame {
             }
         ));
         ppeCardTable.setShowGrid(true);
+        ppeCardTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ppeCardTableMouseClicked(evt);
+            }
+        });
         jScrollPane9.setViewportView(ppeCardTable);
 
         ppeCardTablePanel.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 740, 280));
@@ -2432,10 +2374,6 @@ public class MainMenu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     
     
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
@@ -2661,10 +2599,6 @@ public void showTableSeppeFolders() {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSEPropertyActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
         if(evt.getClickCount()==2){
             int selectedRow = jTable3.getSelectedRow();
@@ -2743,20 +2677,6 @@ public void showTableSeppeFolders() {
             JOptionPane.showMessageDialog(this,"No Folder Name", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-    }
-        private void jTable7MouseClicked(java.awt.event.MouseEvent evt) {                                     
-        if(evt.getClickCount()==2){
-            int selectedRow = jTable3.getSelectedRow();
-            if(selectedRow != -1){
-                seppePanel.show();
-                jPanel11.show();
-                seppeFolder.hide();
-                jPanel2.hide();
-            }
-        } 
-    }//GEN-LAST:event_jButton8ActionPerformed
 
     private void stockCardTablePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTablePanelMouseClicked
         // TODO add your handling code here:
@@ -2931,12 +2851,6 @@ public void showTablePpeFolders() {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPPEActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-    
-    
-  
-    }//GEN-LAST:event_jButton13ActionPerformed
-
     private void desSFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desSFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_desSFieldActionPerformed
@@ -2977,16 +2891,16 @@ public void saveTableDataToStockCard() {
             
             statement.setInt(6, balance);
             statement.setString(7, txtDays.getText());
-            }
-            
             
             statement.executeUpdate();
-  
+          
+            }
             statement.close();
             conn.close(); // Close the connection
         } catch (SQLException e) {
         }
     } 
+
     public void showTableSuppliesStockCard() {
         int rows =  suppliesTable.convertRowIndexToModel(suppliesTable.getSelectedRow());
         int select = rows+1;
@@ -3255,7 +3169,14 @@ public void showTableDataToPpeCard() {
     }//GEN-LAST:event_AddData5ActionPerformed
 
     private void stockCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockCardTableMouseClicked
-       
+        int i = stockCardTable.getSelectedRow();
+        DefaultTableModel tblModel = (DefaultTableModel)stockCardTable.getModel();
+        txtDate.setText(tblModel.getValueAt(i,0).toString());
+        txtReference.setText(tblModel.getValueAt(i,1).toString());
+        txtReceipt.setText(tblModel.getValueAt(i,2).toString());
+        txtIssue.setText(tblModel.getValueAt(i,3).toString());
+        txtDays.setText(tblModel.getValueAt(i,5).toString());
+          
     }//GEN-LAST:event_stockCardTableMouseClicked
 
     private void txtFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolderActionPerformed
@@ -3267,7 +3188,13 @@ public void showTableDataToPpeCard() {
     }//GEN-LAST:event_seppeCardTablePanelMouseClicked
 
     private void seppeCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seppeCardTableMouseClicked
-
+        int i = seppeCardTable.getSelectedRow();
+        DefaultTableModel tblModel = (DefaultTableModel)seppeCardTable.getModel();
+        txtDatee.setText(tblModel.getValueAt(i,0).toString());
+        txtReferencee.setText(tblModel.getValueAt(i,1).toString());
+        txtReceiptt.setText(tblModel.getValueAt(i,2).toString());
+        txtIssuee.setText(tblModel.getValueAt(i,3).toString());
+        txtAmount.setText(tblModel.getValueAt(i,5).toString());
     }//GEN-LAST:event_seppeCardTableMouseClicked
 
     private void sePropertyNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sePropertyNoFieldActionPerformed
@@ -3321,10 +3248,6 @@ public void showTableDataToPpeCard() {
     private void ppeTableMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeTableMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_ppeTableMouseEntered
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void txtStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockActionPerformed
         // TODO add your handling code here:
@@ -3404,10 +3327,6 @@ public void showTableDataToPpeCard() {
     private void seppeFoldersSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seppeFoldersSearchBarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_seppeFoldersSearchBarActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         if (!txtFolder2.getText().isEmpty()) {
@@ -3586,6 +3505,16 @@ public void showTableDataToPpeCard() {
         ppePanel.setVisible(true);
     }//GEN-LAST:event_stockCardBack2MouseClicked
 
+    private void ppeCardTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppeCardTableMouseClicked
+        int i = ppeCardTable.getSelectedRow();
+        DefaultTableModel tblModel = (DefaultTableModel)ppeCardTable.getModel();
+        txtDateee.setText(tblModel.getValueAt(i,0).toString());
+        txtReferenceee.setText(tblModel.getValueAt(i,1).toString());
+        txtReceipttt.setText(tblModel.getValueAt(i,2).toString());
+        txtIssueee.setText(tblModel.getValueAt(i,3).toString());
+        txtAmounttt.setText(tblModel.getValueAt(i,5).toString());
+    }//GEN-LAST:event_ppeCardTableMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3641,13 +3570,7 @@ public void showTableDataToPpeCard() {
     private javax.swing.JTextField itemField;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
